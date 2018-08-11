@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "first",
+      "description": "this is the first dummy publication",
+      "url": "https://medium.com/about",
+      "imageUrl": "https://cdn-images-1.medium.com/fit/c/200/200/0*ae1jbP_od0W6EulE.jpeg"
+    },
+    {
+      "id": "2",
+      "name": "second",
+      "description": "this is the second dummy publication",
+      "url": "https://medium.com/developers",
+      "imageUrl": "https://cdn-images-1.medium.com/fit/c/200/200/1*ccokMT4VXmDDO1EoQQHkzg@2x.png"
+    },
+    {
+      "id": "3",
+      "name": "third",
+      "description": "this is the third dummy publication",
+      "url": "https://medium.com/about",
+      "imageUrl": "https://cdn-images-1.medium.com/fit/c/200/200/0*ae1jbP_od0W6EulE.jpeg"
+    },
+    {
+      "id": "4",
+      "name": "fourth",
+      "description": "this is the fourth dummy publication",
+      "url": "https://medium.com/developers",
+      "imageUrl": "https://cdn-images-1.medium.com/fit/c/200/200/1*ccokMT4VXmDDO1EoQQHkzg@2x.png"
+    }
+  ]
+}
