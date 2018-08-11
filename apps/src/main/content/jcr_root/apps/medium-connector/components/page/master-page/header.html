@@ -1,0 +1,16 @@
+<div class="header">
+    <div class="header__top-bar">
+        <div class="container">
+            <sly
+                data-sly-resource="${ 'top-bar' @ resourceType='library/components/general/language-component'}"></sly>
+        </div>
+    </div>
+    <div class="header__nav-bar">
+        <div class="container">
+            <sly data-sly-test.headerpath="${'/content/experience-fragments/{0}/header' @ format=[currentDesign.id]}"
+                 data-sly-resource="${@path=headerpath, selectors='content', wcmmode='disabled'}"></sly>
+        </div>
+    </div>
+</div>
+
+

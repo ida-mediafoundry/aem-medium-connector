@@ -1,0 +1,11 @@
+<sly data-sly-include="meta.html"/>
+
+<!--- Custom CSS files -->
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-test.entityClientlib="${'clientlib.{0}' @ format=[currentDesign.id]}"
+     data-sly-call="${clientLib.css @ categories=entityClientlib }" data-sly-unwrap/>
+
+<!--- Author CSS files -->
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-test="${ wcmmode.edit || wcmmode.design }"
+     data-sly-call="${clientLib.css @ categories='coralui3'}"></sly>
