@@ -51,7 +51,7 @@
                         <!-- Import any version of javax.inject, to allow running on multiple versions of AEM -->
                         <Import-Package>javax.inject;version=0.0.0,*</Import-Package>
                         <Sling-Model-Packages>
-                            be.ida.core
+                            be.ida.component.core
                         </Sling-Model-Packages>
                     </instructions>
                 </configuration>

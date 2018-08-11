@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package be.ida.core.models;
+package be.ida.component.general;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -25,13 +25,17 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.settings.SlingSettingsService;
 
 @Model(adaptables=Resource.class)
-public class HelloWorldModel {
+public class PublicationComponent {
 
     @Inject
     private SlingSettingsService settings;
 
     @Inject @Named("sling:resourceType") @Default(values="No resourceType")
     protected String resourceType;
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     private String message;
 

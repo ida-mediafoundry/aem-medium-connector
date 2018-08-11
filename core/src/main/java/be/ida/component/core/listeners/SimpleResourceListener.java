@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package be.ida.core.listeners;
+package be.ida.component.core.listeners;
 
 import org.apache.sling.api.SlingConstants;
 import org.osgi.framework.Constants;
