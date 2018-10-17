@@ -10,7 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class DataAcquisitionService {
-    private final Logger LOG = LoggerFactory.getLogger(DataAcquisitionService.class);
+    private static Logger LOG = LoggerFactory.getLogger(DataAcquisitionService.class);
     private final String USER_AGENT = "Mozilla/5.0";
     private String url = "https://medium.com/feed/ida-mediafoundry";
 
