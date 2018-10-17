@@ -1,12 +1,12 @@
 package be.ida.medium.service;
 
 import be.ida.medium.model.MediumPost;
-import be.ida.medium.repository.MediumAEMRepository;
+import be.ida.medium.repository.MediumRepository;
 
 public class MediumService {
-    private MediumAEMRepository mediumRepository;
+    private MediumRepository mediumRepository;
 
-    public MediumService(MediumAEMRepository mediumRepository) {
+    public MediumService(MediumRepository mediumRepository) {
         this.mediumRepository = mediumRepository;
     }
 
