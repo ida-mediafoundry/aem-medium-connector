@@ -3,6 +3,8 @@ package be.ida.medium.service;
 import be.ida.medium.model.MediumPost;
 import be.ida.medium.repository.MediumRepository;
 
+import java.util.List;
+
 public class MediumService {
     private MediumRepository mediumRepository;
 
@@ -10,8 +12,8 @@ public class MediumService {
         this.mediumRepository = mediumRepository;
     }
 
-    public void storeMediumPost(MediumPost mediumPost){
+    public void storeMediumPost(List<MediumPost> mediumPosts){
         //TODO: business logic
-        mediumRepository.storeMediumPost(mediumPost);
+        mediumRepository.storeMediumPost(mediumPosts);
     }
 }

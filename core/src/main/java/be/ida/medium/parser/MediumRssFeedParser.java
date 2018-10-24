@@ -1,31 +1,36 @@
 package be.ida.medium.parser;
 
 import be.ida.medium.model.MediumPost;
+import be.ida.medium.model.MediumPublication;
 import com.rometools.rome.feed.synd.SyndEntry;
 import com.rometools.rome.feed.synd.SyndFeed;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MediumRssFeedParser {
-    public MediumPost syndFeedToMediumPost(SyndFeed syndFeed){
-        MediumPost mediumPost = null;
-
-        //TODO: map syndFeed to mediumPost
-
-        //.getAuthor()
-        //.getPublishedDate()
-        //.getTitle()
-        //.getUri()
-
-        //TODO: get photo author en article out of syndFeed
+    public List<MediumPost> syndFeedToMediumPosts(SyndFeed syndFeed){
+        List<MediumPost> mediumPosts = new ArrayList<>();
 
         for (SyndEntry syndEntry: syndFeed.getEntries()){
+            MediumPublication mediumPublication = new MediumPublication();
+
+            mediumPublication.setCreator(syndFeed.getAuthor());
+            mediumPublication.setPublicationDate(syndFeed.getPublishedDate().toString());
+            mediumPublication.setLink(syndFeed.getUri());
+            mediumPublication.setTitle(syndFeed.getTitle());
+
             if(!syndEntry.getContents().isEmpty()){
                 Document doc = Jsoup.parseBodyFragment(syndEntry.getContents().get(0).getValue());
                 String publicationImageUrl = doc.select("img").first().attr("src");
+                mediumPublication.setImageSource(publicationImageUrl);
             }
+
+            mediumPosts.add(mediumPublication);
         }
 
-        return mediumPost;
+        return mediumPosts;
     }
 }

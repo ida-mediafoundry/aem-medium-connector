@@ -2,8 +2,11 @@ package be.ida.medium.repository;
 
 import be.ida.medium.model.MediumPost;
 
+import java.util.List;
+
 public class MediumAEMRepository implements MediumRepository{
-    public void storeMediumPost(MediumPost mediumPost){
+    @Override
+    public void storeMediumPost(List<MediumPost> mediumPosts) {
         //TODO store object in AEM
     }
 }
