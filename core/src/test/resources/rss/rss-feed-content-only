@@ -1,0 +1,44 @@
+<h3>Pitfalls of coding emails — lessons learned (part 2)</h3>
+<p><em>Expects the reader to have a basic knowledge of coding (responsive) emails</em></p>
+<figure><img alt="" src="https://cdn-images-1.medium.com/max/1024/1*o6hiCteU7wHTzKhTauIPzg.jpeg" /></figure>
+<p>As mentioned in <a href="https://medium.com/ida-mediafoundry/pitfalls-of-coding-emails-lessons-learned-part-1-7532803ead2c">part 1</a>, this post will include more useful tips and tricks to make sure your email looks (almost) the same across multiple mail clients.</p>
+<p>Let’s get started.</p>
+<h4>Table cell defaults</h4>
+<p>Default values for the align and valign attributes on a “td” are respectively “left” and “center”. You don’t have to set these attributes if the default values are the ones you need.</p>
+<p>—</p>
+<h4>Color issue on AOL</h4>
+<p>I made it a custom to put all text-related styling inline on table level like the font-size, color, font-weight etc. AOL ignores the color attribute though and renders the text in default black. To get around this issue, move the color to the “td” tag.</p>
+<pre>&#60;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; style=&#34;font-family: &#39;Arial&#39;, sans-serif; font-size: 14px; color: red&#34;&#62;<br> &#60;tr&#62;<br>  &#60;td valign=&#34;top&#34;&#62;AOL will render this in black&#60;/td&#62;<br> &#60;/tr&#62;<br>&#60;/table&#62;</pre>
+<pre>&#60;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; style=&#34;font-family: &#39;Arial&#39;, sans-serif; font-size: 14px;&#34;&#62;<br> &#60;tr&#62;<br>  &#60;td valign=&#34;top&#34; style=&#34;color: red&#34;&#62;AOL will render this in red&#60;/td&#62;<br> &#60;/tr&#62;<br>&#60;/table&#62;</pre>
+<p>—</p>
+<h4>How to prevent iOS detecting date and time</h4>
+<p>If there is any sort of date/time, phone number or address, iOS will put a blue, underlined link on it. If you don’t want iOS to detect these elements you can trick their algorithm by adding a zero width character (&#38;#8203;) in-between your string.</p>
+<p><em>Example: June 22, 2018 becomes June&#38;#8203; 22, 2018</em></p>
+<p>—</p>
+<h4>Using lists</h4>
+<p>Even if you use lists for web apps, they render differently across browsers: different bullet point weight, spacing between bullet point and text, spacing between list items themselves, … This is the same when it comes to email.</p>
+<p>Replacing the bullet symbol with a custom one is easy to do for web applications by setting the list-style-image attribute. You can do this for your email too, but Gmail and Outlook will ignore it. So, instead of using the “ul” tag, I use tables to render a list.</p>
+<p>Here is an example of how I build a list item:</p>
+<pre>&#60;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34;&#62;<br> &#60;tr&#62;<br>  &#60;td valign=&#34;top&#34;&#62;<br>   &#60;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; style=&#34;line-height: 8px;&#34;&#62;<br>    &#60;tr&#62;<br>     &#60;td valign=&#34;top&#34; style=&#34;padding-top: 6px; font-size: 8px; line-height: 8px;&#34;&#62;&#60;img src=&#34;[url to custom bullet point]&quot; border=&#34;0&#34; align=&#34;top&#34; width=&#34;5&#34; height=&#34;8&#34; /&#62;&#60;/td&#62;<br>    &#60;/tr&#62;<br>   &#60;/table&#62;<br>  &#60;/td&#62;<br>  &#60;td valign=&#34;top&#34;&#62;List item text&#60;/td&#62;<br> &#60;/tr&#62;<br>&#60;/table&#62;</pre>
+<p>Notice that the bullet symbol has its own wrapper table. This gives the possibility to move the image vertically. Without the table wrapper, the padding set on the image td would also affect the text td. I also recommend to set the line-height on the wrapper table at the same height of your image, otherwise it will mess up your list item height.</p>
+<p>Another advantage to this method is that you have full control over the spacing. It looks a bit overkill, but the result is worth it!</p>
+<p>—</p>
+<h4>Vertically aligning a logo and text side-by-side</h4>
+<p>The following code represents a logo with the brand name next to it:</p>
+<pre>&#60;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34; style=&#34;font-family: &#39;Arial&#39;, sans-serif; font-size: 22px; line-height: 140%;&#34;&#62;<br> &#60;tr&#62;<br>  &#60;td valign=&#34;top&#34;&#62;<br>   &#60;img src=&#34;[url to logo]&quot; border=&#34;0&#34; align=&#34;top&#34; width=&#34;40&#34; height=&#34;40&#34; /&#62;<br>  &#60;/td&#62;<br>  &#60;td&#62;Brand name here&#60;/td&#62;<br> &#60;/tr&#62;<br>&#60;/table&#62;</pre>
+<p>Line-height overrides vertically centered text on Outlook. You can fix this by setting the line-height at the same value as the height of the image or remove the line-height all together.</p>
+<p>—</p>
+<h4>Adding whitespace</h4>
+<p>Use divs instead of wrapper tables to add whitespace between components where possible. Results in lesser HTML bloat.</p>
+<pre>/* From */<br>&#60;table cellpadding=&#34;0&#34; cellspacing=&#34;0&#34; border=&#34;0&#34;&#62;<br> &#60;tr&#62;<br>  &#60;td valign=&#34;top&#34; style=&#34;padding-bottom: 20px&#34;&#62;[content comes here]&lt;/td&#62;<br> &#60;/tr&#62;<br>&#60;/table&#62;</pre>
+<pre>/* To */<br>&#60;div style=&#34;margin-bottom: 20px&#34;&#62;<br>[content comes here]<br>&#60;/div&#62;</pre>
+<p>—</p>
+<p>I am, of course, not the only one writing about this. You can consult the following pages for more best practices:<br><a href="https://templates.mailchimp.com/development/css/reset-styles/">Reset Styles</a><br><a href="https://templates.mailchimp.com/development/css/client-specific-styles/">Client-specific CSS Styles</a><br><a href="https://templates.mailchimp.com/development/css/outlook-conditional-css/">Outlook Conditional CSS</a></p>
+<p>We have come to an end.<br><strong>Reduce pitfalls: completed.</strong></p>
+<p>If you have more tips ’n tricks worth mentioning that I’ve overlooked, please let me know through the comment section below.</p>
+<figure><a href="https://www.ida-mediafoundry.be/"><img alt="" src="https://cdn-images-1.medium.com/max/960/1*4Ok5LRR3a7Le46_8VYUrkg.png" /></a></figure>
+<figure><a href="https://www.ida-mediafoundry.be/nl/jobs.html"><img alt="" src="https://cdn-images-1.medium.com/max/480/1*CmJeDyI92a6wdUXsxr3JqQ.png" /></a></figure>
+<figure><a href="https://medium.com/ida-mediafoundry"><img alt="" src="https://cdn-images-1.medium.com/max/480/1*HxprJR4afmWbGfoA1-Wh1A.png" /></a></figure>
+<img src="https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=dea34a3ec034" width="1" height="1">
+<hr>
+<p><a href="https://medium.com/ida-mediafoundry/pitfalls-of-coding-emails-lessons-learned-part-2-dea34a3ec034">Pitfalls of coding emails — lessons learned (part 2)</a> was originally published in <a href="https://medium.com/ida-mediafoundry">ida mediafoundry</a> on Medium, where people are continuing the conversation by highlighting and responding to this story.</p>
