@@ -15,7 +15,6 @@ import java.net.URL;
 import java.util.List;
 
 public class MediumConnector {
-    private final String USER_AGENT = "Mozilla/5.0";
     private final static Logger LOG = LoggerFactory.getLogger(MediumConnector.class);
 
     //TODO make configurable
@@ -32,7 +31,7 @@ public class MediumConnector {
     public void process() {
         SyndFeed syndFeed = retrieveRssFeed();
 
-        List<MediumPost> mediumPosts = mediumRssFeedParser.syndFeedToMediumPost(syndFeed);
+        List<MediumPost> mediumPosts = mediumRssFeedParser.syndFeedToMediumPosts(syndFeed);
 
         mediumService.storeMediumPost(mediumPosts);
     }
