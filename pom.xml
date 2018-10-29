@@ -447,6 +447,19 @@
     <!-- ====================================================================== -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.jsoup</artifactId>
+                <version>1.5.2_2</version>
+                <type>zip</type>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.servicemix.bundles</groupId>
+                <artifactId>org.apache.servicemix.bundles.rome</artifactId>
+                <version>1.0_3</version>
+                <type>zip</type>
+            </dependency>
+
             <!-- Rss Feed Parsing Dependencies -->
             <dependency>
                 <groupId>org.jsoup</groupId>
