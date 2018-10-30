@@ -49,10 +49,12 @@
                 <configuration>
                     <instructions>
                         <!-- Import any version of javax.inject, to allow running on multiple versions of AEM -->
-                        <Import-Package>javax.inject;version=0.0.0,*</Import-Package>
+                        <Import-Package>javax.inject;version=0.0.0</Import-Package>
                         <Sling-Model-Packages>
-                            be.ida.component.core
+                            be.ida.component.general
                         </Sling-Model-Packages>
+                        <Embed-Transitive>true</Embed-Transitive>
+                        <Embed-Dependency>rome;jsoup;inline=true</Embed-Dependency>
                     </instructions>
                 </configuration>
             </plugin>

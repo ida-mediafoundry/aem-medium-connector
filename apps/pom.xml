@@ -144,45 +144,6 @@
                 <artifactId>htl-maven-plugin</artifactId>
             </plugin>
         </plugins>
-
-
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <id>copy</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>copy</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <artifactItems>
-                            <artifactItem>
-                                <groupId>org.apache.servicemix.bundles</groupId>
-                                <artifactId>org.apache.servicemix.bundles.jsoup</artifactId>
-                                <type>zip</type>
-                                <overWrite>true</overWrite>
-                                <outputDirectory>${target.install}/jsoup</outputDirectory>
-                                <destFileName>jsoup.zip</destFileName>
-                            </artifactItem>
-                            <artifactItem>
-                                <groupId>org.apache.servicemix.bundles</groupId>
-                                <artifactId>org.apache.servicemix.bundles.rome</artifactId>
-                                <type>zip</type>
-                                <overWrite>true</overWrite>
-                                <outputDirectory>${target.install}/rome</outputDirectory>
-                                <destFileName>rome.zip</destFileName>
-                            </artifactItem>
-                        </artifactItems>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
 
     <!-- ====================================================================== -->
