@@ -48,16 +48,27 @@
                 </executions>
                 <configuration>
                     <instructions>
-                        <!-- Import any version of javax.inject, to allow running on multiple versions of AEM -->
+                        <!-- TODO: CLEANUP THIS MESS! -->
+                        <!--<Import-Package>-->
+                            <!--javax.inject;version=0.0.0,-->
+                            <!--org.slf4j,-->
+                            <!--org.xml.sax,-->
+                            <!--org.xml.sax.ext,-->
+                            <!--org.xml.sax.helpers,-->
+                            <!--*-->
+                        <!--</Import-Package>-->
                         <Import-Package>
                             javax.inject;version=0.0.0,
-                            org.slf4j
+                            !org.jaxen,
+                            !org.jaxen.*,
+                            *
                         </Import-Package>
                         <Sling-Model-Packages>
                             be.ida.component.general
                         </Sling-Model-Packages>
                         <Embed-Transitive>true</Embed-Transitive>
-                        <Embed-Dependency>rome;jsoup;inline=true</Embed-Dependency>
+                        <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
+                        <!--<Embed-Dependency>rome;jsoup;inline=true</Embed-Dependency>-->
                     </instructions>
                 </configuration>
             </plugin>

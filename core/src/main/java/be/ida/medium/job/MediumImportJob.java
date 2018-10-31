@@ -8,6 +8,7 @@ import be.ida.medium.service.MediumService;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.metatype.annotations.AttributeDefinition;
+import org.osgi.service.metatype.annotations.AttributeType;
 import org.osgi.service.metatype.annotations.Designate;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 import org.slf4j.Logger;
@@ -27,6 +28,9 @@ public class MediumImportJob implements Runnable {
         @AttributeDefinition(name = "Concurrent task",
                 description = "Whether or not to schedule this task concurrently")
         boolean scheduler_concurrent() default false;
+
+        @AttributeDefinition(name = "Enabled", description = "Enable Scheduler", type = AttributeType.BOOLEAN)
+        boolean serviceEnabled() default true;
 
     }
 
@@ -48,6 +52,8 @@ public class MediumImportJob implements Runnable {
     public void run() {
         logger.info("MediumImportJob runnable is being triggered.");
 
-        mediumConnector.process();
+        if(mediumConnector != null){
+            mediumConnector.process();
+        }
     }
 }
