@@ -13,7 +13,7 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Designate(ocd= MediumImportJob.Config.class)
+@Designate(ocd=MediumImportJob.Config.class)
 @Component(service=Runnable.class)
 public class MediumImportJob implements Runnable {
 
@@ -21,21 +21,21 @@ public class MediumImportJob implements Runnable {
                            description = "Initiates Medium rss feed import workflow")
     public static @interface Config {
 
-        @AttributeDefinition(name = "scheduler.expression")
-        String scheduler_expression() default "*/1 * * * * ?";
+        @AttributeDefinition(name = "Cron-job expression")
+        String scheduler_expression() default "*/30 * * * * ?";
 
-        @AttributeDefinition(name = "scheduler.concurrent",
-                             description = "Whether or not to schedule this task concurrently")
+        @AttributeDefinition(name = "Concurrent task",
+                description = "Whether or not to schedule this task concurrently")
         boolean scheduler_concurrent() default false;
+
     }
 
-    private static final Logger LOG = LoggerFactory.getLogger(MediumImportJob.class);
-
+    private final Logger logger = LoggerFactory.getLogger(getClass());
     MediumConnector mediumConnector = null;
 
     @Activate
-    protected void activate() {
-        LOG.info("MediumImportJob runnable activated.");
+    protected void activate(final Config config) {
+        logger.info("MediumImportJob runnable activated.");
 
         MediumRssFeedParser mediumRssFeedParser = new MediumRssFeedParser();
         MediumRepository mediumRepository = new MediumAEMRepository();
@@ -46,7 +46,7 @@ public class MediumImportJob implements Runnable {
 
     @Override
     public void run() {
-        LOG.info("MediumImportJob runnable is being triggered.");
+        logger.info("MediumImportJob runnable is being triggered.");
 
         mediumConnector.process();
     }
