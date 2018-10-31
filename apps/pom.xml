@@ -133,7 +133,7 @@
                         <embedded>
                             <groupId>be.ida</groupId>
                             <artifactId>medium-connector.core</artifactId>
-                            <target>/apps/medium-connector/install</target>
+                            <target>/apps/medium-connector/ </target>
                         </embedded>
                     </embeddeds>
                 </configuration>
