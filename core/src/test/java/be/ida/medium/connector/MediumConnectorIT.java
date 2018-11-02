@@ -1,7 +1,7 @@
 package be.ida.medium.connector;
 
 import be.ida.medium.parser.MediumRssFeedParser;
-import be.ida.medium.repository.MediumAEMRepository;
+import be.ida.medium.repository.JcrMediumRepository;
 import be.ida.medium.repository.MediumRepository;
 import be.ida.medium.service.MediumService;
 import org.junit.Before;
@@ -16,7 +16,7 @@ public class MediumConnectorIT {
     @Before
     public void init() {
         MediumRssFeedParser mediumRssFeedParser = new MediumRssFeedParser();
-        MediumRepository mediumRepository = new MediumAEMRepository();
+        MediumRepository mediumRepository = new JcrMediumRepository();
         MediumService mediumService = new MediumService(mediumRepository);
 
         mediumConnector = new MediumConnector(mediumService, mediumRssFeedParser);

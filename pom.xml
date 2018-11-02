@@ -496,9 +496,10 @@
             <dependency>
                 <groupId>org.osgi</groupId>
                 <artifactId>osgi.annotation</artifactId>
-                <version>6.0.1</version>
+                <version>6.0.0</version>
                 <scope>provided</scope>
             </dependency>
+
             <!-- Logging Dependencies -->
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -516,7 +517,7 @@
             <dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>uber-jar</artifactId>
-                <version>6.2.0</version>
+                <version>6.3.0</version>
                 <classifier>apis</classifier>
                 <scope>provided</scope>
             </dependency>

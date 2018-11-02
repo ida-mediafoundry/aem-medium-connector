@@ -48,15 +48,7 @@
                 </executions>
                 <configuration>
                     <instructions>
-                        <!-- TODO: CLEANUP THIS MESS! -->
-                        <!--<Import-Package>-->
-                            <!--javax.inject;version=0.0.0,-->
-                            <!--org.slf4j,-->
-                            <!--org.xml.sax,-->
-                            <!--org.xml.sax.ext,-->
-                            <!--org.xml.sax.helpers,-->
-                            <!--*-->
-                        <!--</Import-Package>-->
+                        <_dsannotations>*</_dsannotations>
                         <Import-Package>
                             javax.inject;version=0.0.0,
                             !org.jaxen,

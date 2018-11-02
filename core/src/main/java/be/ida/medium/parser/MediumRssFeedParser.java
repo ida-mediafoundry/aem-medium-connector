@@ -1,6 +1,6 @@
 package be.ida.medium.parser;
 
-import be.ida.medium.model.MediumPublication;
+import be.ida.medium.model.MediumPost;
 import com.rometools.rome.feed.synd.SyndEntry;
 import com.rometools.rome.feed.synd.SyndFeed;
 import org.jsoup.Jsoup;
@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MediumRssFeedParser {
-    public List<MediumPublication> syndFeedToMediumPosts(SyndFeed syndFeed){
-        List<MediumPublication> mediumPublications = new ArrayList<>();
+    public List<MediumPost> syndFeedToMediumPosts(SyndFeed syndFeed){
+        List<MediumPost> mediumPublications = new ArrayList<>();
 
         for (SyndEntry syndEntry : syndFeed.getEntries()){
-            MediumPublication mediumPublication = new MediumPublication();
+            MediumPost mediumPublication = new MediumPost();
 
             mediumPublication.setCreator(syndEntry.getAuthor());
             mediumPublication.setPublicationDate(syndEntry.getPublishedDate().toString());

@@ -1,7 +1,7 @@
 package be.ida.medium.parser;
 
 import be.ida.TestResourceUtil;
-import be.ida.medium.model.MediumPublication;
+import be.ida.medium.model.MediumPost;
 import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.FeedException;
 import com.rometools.rome.io.SyndFeedInput;
@@ -29,13 +29,13 @@ public class MediumRssFeedParserTest {
 
     @Test
     public void test_syndFeedToMediumPosts_happyPath() throws IOException, FeedException {
-        List<MediumPublication> mediumPublications = mediumRssFeedParser.syndFeedToMediumPosts(getMockSyndFeed("rss/rss-feed-full"));
+        List<MediumPost> mediumPublications = mediumRssFeedParser.syndFeedToMediumPosts(getMockSyndFeed("rss/rss-feed-full"));
 
         assertThat(mediumPublications).isNotEmpty();
         assertThat(mediumPublications.size()).isEqualTo(10);
         assertThat(mediumPublications.get(2)).isNotNull();
 
-        MediumPublication firstMediumPublication = mediumPublications.get(0);
+        MediumPost firstMediumPublication = mediumPublications.get(0);
 
         assertThat(firstMediumPublication.getTitle()).isEqualTo(EXAMPLE_TITLE);
         assertThat(firstMediumPublication.getLink()).isEqualTo(EXAMPLE_LINK);

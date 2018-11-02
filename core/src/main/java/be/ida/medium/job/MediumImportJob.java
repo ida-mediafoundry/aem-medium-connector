@@ -2,7 +2,7 @@ package be.ida.medium.job;
 
 import be.ida.medium.connector.MediumConnector;
 import be.ida.medium.parser.MediumRssFeedParser;
-import be.ida.medium.repository.MediumAEMRepository;
+import be.ida.medium.repository.JcrMediumRepository;
 import be.ida.medium.repository.MediumRepository;
 import be.ida.medium.service.MediumService;
 import org.osgi.service.component.annotations.Activate;
@@ -42,7 +42,7 @@ public class MediumImportJob implements Runnable {
         logger.info("MediumImportJob runnable activated.");
 
         MediumRssFeedParser mediumRssFeedParser = new MediumRssFeedParser();
-        MediumRepository mediumRepository = new MediumAEMRepository();
+        MediumRepository mediumRepository = new JcrMediumRepository();
         MediumService mediumService = new MediumService(mediumRepository);
 
         mediumConnector = new MediumConnector(mediumService, mediumRssFeedParser);

@@ -1,6 +1,6 @@
 package be.ida.medium.connector;
 
-import be.ida.medium.model.MediumPublication;
+import be.ida.medium.model.MediumPost;
 import be.ida.medium.parser.MediumRssFeedParser;
 import be.ida.medium.service.MediumService;
 import com.rometools.rome.feed.synd.SyndFeed;
@@ -31,7 +31,7 @@ public class MediumConnector {
     public void process() {
         SyndFeed syndFeed = retrieveRssFeed();
 
-        List<MediumPublication> mediumPublications = mediumRssFeedParser.syndFeedToMediumPosts(syndFeed);
+        List<MediumPost> mediumPublications = mediumRssFeedParser.syndFeedToMediumPosts(syndFeed);
 
         mediumService.storeMediumPost(mediumPublications);
     }

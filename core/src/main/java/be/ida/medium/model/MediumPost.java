@@ -1,6 +1,6 @@
 package be.ida.medium.model;
 
-public class MediumPublication {
+public class MediumPost {
     private String title;
     private String link;
     private String imageSource;

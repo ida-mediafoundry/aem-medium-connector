@@ -1,9 +1,7 @@
 package be.ida.medium.repository;
 
-import be.ida.medium.model.MediumPublication;
-
-import java.util.List;
+import be.ida.medium.model.MediumPost;
 
 public interface MediumRepository {
-    void storeMediumPost(List<MediumPublication> mediumPublications);
+    void storeMediumPost(MediumPost mediumPost);
 }
