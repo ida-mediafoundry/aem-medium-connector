@@ -1,6 +1,6 @@
 package be.ida.medium.parser;
 
-import be.ida.medium.model.MediumPost;
+import be.ida.medium.bean.MediumPost;
 import com.rometools.rome.feed.synd.SyndEntry;
 import com.rometools.rome.feed.synd.SyndFeed;
 import org.jsoup.Jsoup;

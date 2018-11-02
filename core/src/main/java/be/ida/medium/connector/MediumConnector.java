@@ -1,10 +1,8 @@
 package be.ida.medium.connector;
 
-import be.ida.medium.model.MediumPost;
+import be.ida.medium.bean.MediumPost;
 import be.ida.medium.parser.MediumRssFeedParser;
-import be.ida.medium.repository.MediumRepository;
 import be.ida.medium.service.MediumService;
-import be.ida.medium.service.impl.MediumServiceImpl;
 import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.FeedException;
 import com.rometools.rome.io.SyndFeedInput;

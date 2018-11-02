@@ -1,4 +1,5 @@
-package be.ida.medium.model;
+package be.ida.medium.bean;
+
 
 public class MediumPost {
     private String title;

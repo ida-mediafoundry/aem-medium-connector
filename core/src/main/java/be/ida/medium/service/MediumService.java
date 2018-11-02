@@ -1,6 +1,6 @@
 package be.ida.medium.service;
 
-import be.ida.medium.model.MediumPost;
+import be.ida.medium.bean.MediumPost;
 
 import java.util.List;
 
