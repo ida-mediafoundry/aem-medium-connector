@@ -1,15 +1,22 @@
 package be.ida.medium.repository.impl;
 
+import be.ida.medium.connector.MediumConnector;
 import be.ida.medium.model.MediumPost;
 import be.ida.medium.repository.MediumRepository;
 import org.apache.sling.api.resource.*;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Component(name="Medium Repository", service= MediumRepository.class, immediate=true)
 public class MediumRepositoryImpl implements MediumRepository{
+    private final static Logger LOG = LoggerFactory.getLogger(MediumConnector.class);
+
+    // TODO make configurable
     private static final String DEFAULT_USER = "admin";
     private static final String DEFAULT_SERVICE = "admin";
 
@@ -17,19 +24,22 @@ public class MediumRepositoryImpl implements MediumRepository{
     private ResourceResolverFactory resourceResolverFactory;
 
     @Override
-    public void storeMediumPost(MediumPost mediumPublication) {
+    public void storeMediumPost(MediumPost mediumPost) {
         try(ResourceResolver resourceResolver = resourceResolverFactory.getResourceResolver(getCredentials())){
-            Resource publicationResource = resourceResolver.getResource("/content");
+            Resource publicationResource = resourceResolver.getResource(getPublicationFolder());
 
             if(publicationResource != null){
-                resourceResolver.create(publicationResource, "postName", getProperties(mediumPublication));
+                resourceResolver.create(publicationResource, "postName", extractProperties(mediumPost));
                 resourceResolver.commit();
             }
-        } catch (LoginException e) {
-            e.printStackTrace();
-        } catch (PersistenceException e) {
-            e.printStackTrace();
+        } catch (LoginException | PersistenceException e) {
+            LOG.error("Impossible to store medium post for link {}", mediumPost.getLink(), e);
         }
+    }
+
+    private String getPublicationFolder() {
+        // TODO "/content/data/medium/<e.g. ida>"
+        return "/content";
     }
 
     private Map<String, Object> getCredentials() {
@@ -39,13 +49,14 @@ public class MediumRepositoryImpl implements MediumRepository{
         return credentials;
     }
 
-    private Map<String, Object> getProperties(MediumPost mediumPublication) {
+    private Map<String, Object> extractProperties(MediumPost mediumPost) {
         Map<String, Object> properties = new HashMap<>();
-        properties.put("postTitle", mediumPublication.getTitle());
-        properties.put("postImageSource", mediumPublication.getImageSource());
-        properties.put("postCreator", mediumPublication.getCreator());
-        properties.put("postLink", mediumPublication.getLink());
-        properties.put("postDate", mediumPublication.getPublicationDate());
+        properties.put("postTitle", mediumPost.getTitle());
+        properties.put("postImageSource", mediumPost.getImageSource());
+        properties.put("postCreator", mediumPost.getCreator());
+        properties.put("postLink", mediumPost.getLink());
+        properties.put("postDate", mediumPost.getPublicationDate());
+
         return properties;
     }
 }

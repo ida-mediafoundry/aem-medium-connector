@@ -17,8 +17,7 @@ public class MediumServiceImpl implements MediumService{
         this.mediumRepository = mediumRepository;
     }
 
-    public void storeMediumPost(List<MediumPost> mediumPosts){
-        //TODO: business logic
+    public void storeMediumPosts(List<MediumPost> mediumPosts){
         mediumPosts.forEach(post -> mediumRepository.storeMediumPost(post));
     }
 }
