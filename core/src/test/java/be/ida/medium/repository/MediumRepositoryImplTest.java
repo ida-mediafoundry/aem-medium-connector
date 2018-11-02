@@ -15,6 +15,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import static be.ida.medium.repository.impl.MediumRepositoryImpl.JCR_CONTENT_BASE_PATH;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.anyMap;
 import static org.mockito.Mockito.when;
@@ -38,16 +39,16 @@ public class MediumRepositoryImplTest {
 
     @Before
     public void init() throws LoginException {
-        when(resourceResolverFactory.getResourceResolver(anyMap())).thenReturn(context.resourceResolver());
+        when(resourceResolverFactory.getServiceResourceResolver(anyMap())).thenReturn(context.resourceResolver());
         context.addModelsForPackage("be.ida.medium");
-        context.create().page("/content");
+        context.create().page(JCR_CONTENT_BASE_PATH + "/publicationName");
     }
 
     @Test
     public void test_storeMediumPost_givenProperMediumPost_expectJcrNodeAdded() {
         mediumRepository.storeMediumPost(getMediumPostStub());
 
-        Resource mediumPostResource = context.resourceResolver().getResource("/content/postName");
+        Resource mediumPostResource = context.resourceResolver().getResource(JCR_CONTENT_BASE_PATH + "/publicationName/" + MEDIUM_POST_TITLE_VALUE);
         MediumPostModel mediumPostModel = mediumPostResource.adaptTo(MediumPostModel.class);
 
         assertThat(mediumPostModel.getTitle()).isEqualTo(MEDIUM_POST_TITLE_VALUE);

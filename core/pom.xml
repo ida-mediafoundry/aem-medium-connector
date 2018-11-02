@@ -46,6 +46,9 @@
                         </Import-Package>
                         <Embed-Transitive>true</Embed-Transitive>
                         <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
+                        <Sling-Initial-Content>
+                            SLING-INF/content;path:=/libs/system/config;overwrite:=true;
+                        </Sling-Initial-Content>
                     </instructions>
                 </configuration>
             </plugin>

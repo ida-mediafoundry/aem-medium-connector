@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+    <primaryNodeType>sling:OsgiConfig</primaryNodeType>
+    <property>
+        <name>user.default</name>
+        <value>medium-service-user</value>
+    </property>
+    <property>
+        <name>user.mapping</name>
+        <values>
+            <value>be.ida.medium=medium-service-user</value>
+        </values>
+    </property>
+</node>

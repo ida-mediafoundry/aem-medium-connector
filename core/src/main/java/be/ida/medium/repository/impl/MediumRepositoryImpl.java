@@ -19,19 +19,21 @@ public class MediumRepositoryImpl implements MediumRepository{
     private final static Logger LOG = LoggerFactory.getLogger(MediumConnector.class);
 
     // TODO make configurable
-    private static final String DEFAULT_USER = "admin";
-    private static final String DEFAULT_SERVICE = "admin";
+    private static final String DEFAULT_USER = "medium-service-user";
+    private static final String DEFAULT_SERVICE = "be.ida.medium";
+
+    public static final String JCR_CONTENT_BASE_PATH = "/content/data/medium";
 
     @Reference
     private ResourceResolverFactory resourceResolverFactory;
 
     @Override
     public void storeMediumPost(MediumPost mediumPost) {
-        try(ResourceResolver resourceResolver = resourceResolverFactory.getResourceResolver(getCredentials())){
+        try(ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())){
             Resource publicationResource = resourceResolver.getResource(getPublicationFolder());
 
             if(publicationResource != null){
-                resourceResolver.create(publicationResource, "postName", extractProperties(mediumPost));
+                resourceResolver.create(publicationResource, mediumPost.getTitle(), extractProperties(mediumPost));
                 resourceResolver.commit();
             }
         } catch (LoginException | PersistenceException e) {
@@ -40,14 +42,16 @@ public class MediumRepositoryImpl implements MediumRepository{
     }
 
     private String getPublicationFolder() {
-        // TODO "/content/data/medium/<e.g. ida>"
-        return "/content";
+        // TODO retrieve publicationName"
+        return JCR_CONTENT_BASE_PATH + "/publicationName";
     }
 
     private Map<String, Object> getCredentials() {
         Map<String, Object> credentials = new HashMap<>();
+
         credentials.put(ResourceResolverFactory.USER, DEFAULT_USER);
-        credentials.put(ResourceResolverFactory.PASSWORD, DEFAULT_SERVICE);
+        credentials.put(ResourceResolverFactory.SUBSERVICE, DEFAULT_SERVICE);
+
         return credentials;
     }
 
