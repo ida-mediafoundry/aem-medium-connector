@@ -1,6 +1,7 @@
-package be.ida.medium.repository;
+package be.ida.medium.repository.impl;
 
 import be.ida.medium.model.MediumPost;
+import be.ida.medium.repository.MediumRepository;
 import org.apache.sling.api.resource.*;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -8,8 +9,7 @@ import org.osgi.service.component.annotations.Reference;
 import java.util.HashMap;
 import java.util.Map;
 
-@Component(name="Jcr Medium Repository", service=MediumRepository.class, immediate=true)
-public class JcrMediumRepository implements MediumRepository{
+public class MediumRepositoryImpl implements MediumRepository{
     private static final String DEFAULT_USER = "admin";
     private static final String DEFAULT_SERVICE = "admin";
 

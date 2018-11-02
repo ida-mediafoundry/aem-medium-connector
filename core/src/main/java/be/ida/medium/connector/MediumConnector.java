@@ -2,7 +2,7 @@ package be.ida.medium.connector;
 
 import be.ida.medium.model.MediumPost;
 import be.ida.medium.parser.MediumRssFeedParser;
-import be.ida.medium.service.MediumService;
+import be.ida.medium.service.impl.MediumServiceImpl;
 import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.FeedException;
 import com.rometools.rome.io.SyndFeedInput;
@@ -20,10 +20,10 @@ public class MediumConnector {
     //TODO make configurable
     private final String URL = "https://medium.com/feed/ida-mediafoundry";
 
-    private MediumService mediumService;
+    private MediumServiceImpl mediumService;
     private MediumRssFeedParser mediumRssFeedParser;
 
-    public MediumConnector(MediumService mediumService, MediumRssFeedParser mediumRssFeedParser) {
+    public MediumConnector(MediumServiceImpl mediumService, MediumRssFeedParser mediumRssFeedParser) {
         this.mediumService = mediumService;
         this.mediumRssFeedParser = mediumRssFeedParser;
     }
