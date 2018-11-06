@@ -20,7 +20,7 @@ public class MediumRepositoryImpl implements MediumRepository{
 
     // TODO make configurable
     private static final String DEFAULT_USER = "medium-service-user";
-    private static final String DEFAULT_SERVICE = "be.ida.medium";
+    private static final String DEFAULT_SERVICE = "medium-service-user";
 
     public static final String JCR_CONTENT_BASE_PATH = "/content/data/medium";
 
@@ -33,16 +33,24 @@ public class MediumRepositoryImpl implements MediumRepository{
             Resource publicationResource = resourceResolver.getResource(getPublicationFolder());
 
             if(publicationResource != null){
-                resourceResolver.create(publicationResource, mediumPost.getTitle(), extractProperties(mediumPost));
-                resourceResolver.commit();
+                publicationResource = createPublicationResource(resourceResolver);
             }
+
+            resourceResolver.create(publicationResource, mediumPost.getTitle(), extractProperties(mediumPost));
+            resourceResolver.commit();
         } catch (LoginException | PersistenceException e) {
             LOG.error("Impossible to store medium post for link {}", mediumPost.getLink(), e);
         }
     }
 
+    private Resource createPublicationResource(ResourceResolver resourceResolver) {
+        Resource resource = null;
+        //TODO: create publicationResource if it doesnt exist yet.
+        return resource;
+    }
+
     private String getPublicationFolder() {
-        // TODO retrieve publicationName"
+        // TODO retrieve publicationName
         return JCR_CONTENT_BASE_PATH + "/publicationName";
     }
 
