@@ -7,6 +7,8 @@ public class MediumPost {
     private String imageSource;
     private String creator;
     private String publicationDate;
+    private String id;
+
 
     public String getTitle() {
         return title;
@@ -47,4 +49,8 @@ public class MediumPost {
     public void setPublicationDate(String publicationDate) {
         this.publicationDate = publicationDate;
     }
+
+    public String getId() {return id;}
+
+    public void setId(String id) {this.id = id;}
 }

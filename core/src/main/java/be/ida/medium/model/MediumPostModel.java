@@ -13,6 +13,7 @@ public class MediumPostModel {
     public static final String MEDIUM_POST_IMAGE_SOURCE = "mediumPostImageSource";
     public static final String MEDIUM_POST_CREATOR = "mediumPostCreator";
     public static final String MEDIUM_POST_PUBLICATION_DATE = "mediumPostPublicationDate";
+    public static final String MEDIUM_POST_ID = "mediumPostId";
 
     @Inject
     @Named(MEDIUM_POST_TITLE)
@@ -33,6 +34,10 @@ public class MediumPostModel {
     @Inject
     @Named(MEDIUM_POST_PUBLICATION_DATE)
     private String publicationDate;
+
+    @Inject
+    @Named(MEDIUM_POST_ID)
+    private String id;
 
     public String getTitle() {
         return title;
@@ -73,4 +78,8 @@ public class MediumPostModel {
     public void setPublicationDate(String publicationDate) {
         this.publicationDate = publicationDate;
     }
+
+    public String getId() {return id;}
+
+    public void setId(String id) {this.id = id;}
 }

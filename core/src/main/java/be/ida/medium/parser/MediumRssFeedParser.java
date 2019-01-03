@@ -15,11 +15,13 @@ public class MediumRssFeedParser {
 
         for (SyndEntry syndEntry : syndFeed.getEntries()){
             MediumPost mediumPublication = new MediumPost();
+            int idStartPosition = syndEntry.getUri().lastIndexOf("rss----") + 1 ;
 
             mediumPublication.setCreator(syndEntry.getAuthor());
             mediumPublication.setPublicationDate(syndEntry.getPublishedDate().toString());
             mediumPublication.setLink(syndEntry.getUri());
             mediumPublication.setTitle(syndEntry.getTitle());
+            mediumPublication.setId(syndEntry.getUri().substring(idStartPosition, idStartPosition + 12));
 
             if(!syndEntry.getContents().isEmpty()){
                 Document doc = Jsoup.parseBodyFragment(syndEntry.getContents().get(0).getValue());
@@ -29,7 +31,7 @@ public class MediumRssFeedParser {
 
             mediumPublications.add(mediumPublication);
         }
-
+        https://medium.com/ida-mediafoundry?source=rss----a1a776694b7a---4
         return mediumPublications;
     }
 }

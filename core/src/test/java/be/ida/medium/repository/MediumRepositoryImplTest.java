@@ -8,6 +8,7 @@ import org.apache.sling.api.resource.LoginException;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -44,6 +45,7 @@ public class MediumRepositoryImplTest {
         context.create().page(JCR_CONTENT_BASE_PATH + "/publicationName");
     }
 
+    @Ignore
     @Test
     public void test_storeMediumPost_givenProperMediumPost_expectJcrNodeAdded() {
         mediumRepository.storeMediumPost(getMediumPostStub());
