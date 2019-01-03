@@ -31,7 +31,6 @@ public class MediumRssFeedParser {
 
             mediumPublications.add(mediumPublication);
         }
-        https://medium.com/ida-mediafoundry?source=rss----a1a776694b7a---4
         return mediumPublications;
     }
 }
