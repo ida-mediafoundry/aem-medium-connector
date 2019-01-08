@@ -3,13 +3,17 @@ package be.ida.medium.repository.impl;
 import be.ida.medium.bean.MediumPost;
 import be.ida.medium.connector.MediumConnector;
 import be.ida.medium.repository.MediumRepository;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.jackrabbit.vault.util.JcrConstants;
 import org.apache.sling.api.resource.*;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import static be.ida.medium.model.MediumPostModel.*;
@@ -30,22 +34,37 @@ public class MediumRepositoryImpl implements MediumRepository{
     @Override
     public void storeMediumPost(MediumPost mediumPost) {
         try(ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())){
-            Resource publicationResource = resourceResolver.getResource(getPublicationFolder());
+            Resource mediumResource = resourceResolver.getResource(getPublicationFolder());
 
-            if(publicationResource != null){
-                publicationResource = createPublicationResource(resourceResolver);
+            if(mediumResource == null){
+                mediumResource = createMediumResource(resourceResolver);
             }
 
-            resourceResolver.create(publicationResource, mediumPost.getTitle(), extractProperties(mediumPost));
+            resourceResolver.create(mediumResource, mediumPost.getTitle(), extractProperties(mediumPost));
             resourceResolver.commit();
         } catch (LoginException | PersistenceException e) {
             LOG.error("Impossible to store medium post for link {}", mediumPost.getLink(), e);
         }
     }
 
-    private Resource createPublicationResource(ResourceResolver resourceResolver) {
-        Resource resource = null;
-        //TODO: create publicationResource if it doesnt exist yet.
+    private Resource createMediumResource(ResourceResolver resourceResolver) {
+        String[] nodesList = StringUtils.split(JCR_CONTENT_BASE_PATH, "/");
+        Iterator<String> nodesIterator = Arrays.stream(nodesList).iterator();
+
+        Resource resource = resourceResolver.getResource("/" + nodesIterator.next());
+
+
+        while(nodesIterator.hasNext()){
+            String currentNode = nodesIterator.next();
+            String newPath = resource.getPath() + "/" + currentNode;
+            try {
+                resourceResolver.create(resource, currentNode, new HashMap<>());
+            } catch (PersistenceException e) {
+                LOG.error("Unable to create node: " + currentNode, e);
+            }
+            resource = resourceResolver.getResource(newPath);
+        }
+
         return resource;
     }
 
@@ -66,6 +85,7 @@ public class MediumRepositoryImpl implements MediumRepository{
     private Map<String, Object> extractProperties(MediumPost mediumPost) {
         Map<String, Object> properties = new HashMap<>();
 
+        properties.put(JcrConstants.JCR_PRIMARYTYPE, JcrConstants.NT_UNSTRUCTURED);
         properties.put(MEDIUM_POST_TITLE, mediumPost.getTitle());
         properties.put(MEDIUM_POST_LINK, mediumPost.getLink());
         properties.put(MEDIUM_POST_IMAGE_SOURCE, mediumPost.getImageSource());
