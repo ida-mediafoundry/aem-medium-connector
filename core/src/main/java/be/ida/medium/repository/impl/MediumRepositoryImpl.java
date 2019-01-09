@@ -40,7 +40,7 @@ public class MediumRepositoryImpl implements MediumRepository{
                 mediumResource = createMediumResource(resourceResolver);
             }
 
-            resourceResolver.create(mediumResource, mediumPost.getTitle(), extractProperties(mediumPost));
+            resourceResolver.create(mediumResource, mediumPost.getId(), extractProperties(mediumPost));
             resourceResolver.commit();
         } catch (LoginException | PersistenceException e) {
             LOG.error("Impossible to store medium post for link {}", mediumPost.getLink(), e);
@@ -86,12 +86,12 @@ public class MediumRepositoryImpl implements MediumRepository{
         Map<String, Object> properties = new HashMap<>();
 
         properties.put(JcrConstants.JCR_PRIMARYTYPE, JcrConstants.NT_UNSTRUCTURED);
+        properties.put(MEDIUM_POST_ID, mediumPost.getId());
         properties.put(MEDIUM_POST_TITLE, mediumPost.getTitle());
         properties.put(MEDIUM_POST_LINK, mediumPost.getLink());
         properties.put(MEDIUM_POST_IMAGE_SOURCE, mediumPost.getImageSource());
         properties.put(MEDIUM_POST_CREATOR, mediumPost.getCreator());
         properties.put(MEDIUM_POST_PUBLICATION_DATE, mediumPost.getPublicationDate());
-        properties.put(MEDIUM_POST_ID, mediumPost.getId());
         return properties;
     }
 }
