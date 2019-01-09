@@ -15,24 +15,27 @@ public class MediumRssFeedParser {
     public List<MediumPost> syndFeedToMediumPosts(SyndFeed syndFeed){
         List<MediumPost> mediumPublications = new ArrayList<>();
 
-        for (SyndEntry syndEntry : syndFeed.getEntries()){
-            MediumPost mediumPublication = new MediumPost();
-            String mediumPublicationId = StringUtils.substringAfterLast(syndEntry.getUri(), "/");
+        if(syndFeed != null){
+            for (SyndEntry syndEntry : syndFeed.getEntries()){
+                MediumPost mediumPublication = new MediumPost();
+                String mediumPublicationId = StringUtils.substringAfterLast(syndEntry.getUri(), "/");
 
-            mediumPublication.setCreator(syndEntry.getAuthor());
-            mediumPublication.setPublicationDate(syndEntry.getPublishedDate().toString());
-            mediumPublication.setLink(syndEntry.getUri());
-            mediumPublication.setTitle(syndEntry.getTitle());
-            mediumPublication.setId(mediumPublicationId);
+                mediumPublication.setCreator(syndEntry.getAuthor());
+                mediumPublication.setPublicationDate(syndEntry.getPublishedDate().toString());
+                mediumPublication.setLink(syndEntry.getUri());
+                mediumPublication.setTitle(syndEntry.getTitle());
+                mediumPublication.setId(mediumPublicationId);
 
-            if(!syndEntry.getContents().isEmpty()){
-                Document doc = Jsoup.parseBodyFragment(syndEntry.getContents().get(0).getValue());
-                String publicationImageUrl = doc.select("img").first().attr("src");
-                mediumPublication.setImageSource(publicationImageUrl);
+                if(!syndEntry.getContents().isEmpty()){
+                    Document doc = Jsoup.parseBodyFragment(syndEntry.getContents().get(0).getValue());
+                    String publicationImageUrl = doc.select("img").first().attr("src");
+                    mediumPublication.setImageSource(publicationImageUrl);
+                }
+
+                mediumPublications.add(mediumPublication);
             }
-
-            mediumPublications.add(mediumPublication);
         }
+
         return mediumPublications;
     }
 }
