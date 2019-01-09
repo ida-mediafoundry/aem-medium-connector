@@ -24,7 +24,7 @@ public class MediumConnector {
     @Reference
     private MediumService mediumService;
 
-    @Reference
+   @Reference
     private MediumConnectorConfig mediumConnectorConfig;
 
     public void process() {
@@ -40,8 +40,7 @@ public class MediumConnector {
         SyndFeed feed = null;
 
         try {
-//            feed = new SyndFeedInput().build(new XmlReader(new URL(mediumConnectorConfig.getMediumFeedUrl())));
-            feed = new SyndFeedInput().build(new XmlReader(new URL("https://medium.com/feed/ida-mediafactory")));
+            feed = new SyndFeedInput().build(new XmlReader(new URL(mediumConnectorConfig.getMediumFeedUrl())));
         } catch (IOException e) {
             LOG.error("Could not retrieve RSS feed", e);
         } catch (FeedException e) {

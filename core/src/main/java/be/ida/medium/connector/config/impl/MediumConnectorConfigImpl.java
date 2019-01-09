@@ -14,13 +14,11 @@ import org.slf4j.LoggerFactory;
 
 @Designate(ocd = MediumConnectorConfigImpl.Config.class)
 @Component(service = MediumConnectorConfig.class,
-        immediate = true,
-        configurationPolicy = ConfigurationPolicy.REQUIRE
+        immediate = true
 )
 public class MediumConnectorConfigImpl implements MediumConnectorConfig {
     private final static Logger LOG = LoggerFactory.getLogger(MediumConnectorConfig.class);
     private String mediumFeedUrl;
-
 
     @Activate
     @Modified
@@ -38,7 +36,7 @@ public class MediumConnectorConfigImpl implements MediumConnectorConfig {
             description = "Configure the Medium feed URL.")
     public static @interface Config {
         @AttributeDefinition(name = "Medium Feed URL")
-        String medium_feed_url() default "https://medium.com/feed/ida-mediafactory";
+        String medium_feed_url() default "https://medium.com/feed/ida-mediafoundry";
     }
 }
 
