@@ -1,6 +1,7 @@
 package be.ida.medium.connector;
 
 import be.ida.medium.bean.MediumPost;
+import be.ida.medium.connector.config.MediumConnectorConfig;
 import be.ida.medium.parser.MediumRssFeedParser;
 import be.ida.medium.service.MediumService;
 import com.rometools.rome.feed.synd.SyndFeed;
@@ -20,11 +21,11 @@ import java.util.List;
 public class MediumConnector {
     private final static Logger LOG = LoggerFactory.getLogger(MediumConnector.class);
 
-    //TODO make configurable
-    private final String URL = "https://medium.com/feed/ida-mediafoundry";
-
     @Reference
     private MediumService mediumService;
+
+    @Reference
+    private MediumConnectorConfig mediumConnectorConfig;
 
     public void process() {
         SyndFeed syndFeed = retrieveRssFeed();
@@ -39,7 +40,8 @@ public class MediumConnector {
         SyndFeed feed = null;
 
         try {
-            feed = new SyndFeedInput().build(new XmlReader(new URL(URL)));
+//            feed = new SyndFeedInput().build(new XmlReader(new URL(mediumConnectorConfig.getMediumFeedUrl())));
+            feed = new SyndFeedInput().build(new XmlReader(new URL("https://medium.com/feed/ida-mediafactory")));
         } catch (IOException e) {
             LOG.error("Could not retrieve RSS feed", e);
         } catch (FeedException e) {
