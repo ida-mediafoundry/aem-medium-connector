@@ -1,6 +1,7 @@
 package be.ida.medium.repository;
 
 import be.ida.medium.bean.MediumPost;
+import be.ida.medium.bean.MediumPublication;
 import be.ida.medium.model.MediumPostModel;
 import be.ida.medium.repository.impl.MediumRepositoryImpl;
 import io.wcm.testing.mock.aem.junit.AemContext;
@@ -15,6 +16,9 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static be.ida.medium.repository.impl.MediumRepositoryImpl.JCR_CONTENT_BASE_PATH;
 import static org.assertj.core.api.Java6Assertions.assertThat;
@@ -32,6 +36,7 @@ public class MediumRepositoryImplTest {
     @InjectMocks
     private MediumRepositoryImpl mediumRepository;
 
+    private String MEDIUM_PUBLICATION_TITLE = "Ida-mediafoundry";
     private String MEDIUM_POST_TITLE_VALUE = "Article about AEM";
     private String MEDIUM_POST_CREATOR_VALUE = "Thijs Lanssens";
     private String MEDIUM_POST_LINK_VALUE = "google.be";
@@ -48,7 +53,7 @@ public class MediumRepositoryImplTest {
     @Ignore
     @Test
     public void test_storeMediumPost_givenProperMediumPost_expectJcrNodeAdded() {
-        mediumRepository.storeMediumPost(getMediumPostStub());
+        mediumRepository.storeMediumPublication(getMediumPostStub());
 
         Resource mediumPostResource = context.resourceResolver().getResource(JCR_CONTENT_BASE_PATH + "/publicationName/" + MEDIUM_POST_TITLE_VALUE);
         MediumPostModel mediumPostModel = mediumPostResource.adaptTo(MediumPostModel.class);
@@ -58,15 +63,23 @@ public class MediumRepositoryImplTest {
         assertThat(mediumPostModel.getLink()).isEqualTo(MEDIUM_POST_LINK_VALUE);
         assertThat(mediumPostModel.getImageSource()).isEqualTo(MEDIUM_POST_IMAGE_SOURCE_VALUE);
         assertThat(mediumPostModel.getPublicationDate()).isEqualTo(MEDIUM_POST_PUBLICATION_DATE_VALUE);
+        assertThat(mediumPostModel.getPublicationDate()).isEqualTo(MEDIUM_POST_PUBLICATION_DATE_VALUE);
     }
 
-    private MediumPost getMediumPostStub() {
+    private MediumPublication getMediumPostStub() {
+        MediumPublication mediumPublication = new MediumPublication();
+        mediumPublication.setName(MEDIUM_PUBLICATION_TITLE);
+
+        List<MediumPost> mediumPosts = new ArrayList<>();
         MediumPost mediumPost = new MediumPost();
+
         mediumPost.setTitle(MEDIUM_POST_TITLE_VALUE);
         mediumPost.setCreator(MEDIUM_POST_CREATOR_VALUE);
         mediumPost.setLink(MEDIUM_POST_LINK_VALUE);
         mediumPost.setImageSource(MEDIUM_POST_IMAGE_SOURCE_VALUE);
         mediumPost.setPublicationDate(MEDIUM_POST_PUBLICATION_DATE_VALUE);
-        return mediumPost;
+        mediumPosts.add(mediumPost);
+        mediumPublication.setPosts(mediumPosts);
+        return mediumPublication;
     }
 }

@@ -1,6 +1,7 @@
 package be.ida.medium.connector;
 
 import be.ida.medium.bean.MediumPost;
+import be.ida.medium.bean.MediumPublication;
 import be.ida.medium.parser.MediumRssFeedParser;
 import be.ida.medium.service.MediumService;
 import com.rometools.rome.feed.synd.SyndFeed;
@@ -28,11 +29,11 @@ public class MediumConnector {
 
     public void process() {
         SyndFeed syndFeed = retrieveRssFeed();
-
         final MediumRssFeedParser mediumRssFeedParser = new MediumRssFeedParser();
-        List<MediumPost> mediumPosts = mediumRssFeedParser.syndFeedToMediumPosts(syndFeed);
 
-        mediumService.storeMediumPosts(mediumPosts);
+        MediumPublication mediumPublication = mediumRssFeedParser.syndFeedToMediumPosts(syndFeed);
+
+        mediumService.storeMediumPublication(mediumPublication);
     }
 
     private SyndFeed retrieveRssFeed(){

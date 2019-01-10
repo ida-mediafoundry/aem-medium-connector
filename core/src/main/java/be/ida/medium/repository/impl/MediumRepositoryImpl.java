@@ -1,8 +1,11 @@
 package be.ida.medium.repository.impl;
 
 import be.ida.medium.bean.MediumPost;
+import be.ida.medium.bean.MediumPublication;
 import be.ida.medium.connector.MediumConnector;
 import be.ida.medium.repository.MediumRepository;
+import com.rometools.rome.feed.synd.SyndEntry;
+import com.rometools.rome.feed.synd.SyndFeed;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jackrabbit.vault.util.JcrConstants;
 import org.apache.sling.api.resource.*;
@@ -26,33 +29,39 @@ public class MediumRepositoryImpl implements MediumRepository{
     private static final String DEFAULT_USER = "medium-service-user";
     private static final String DEFAULT_SERVICE = "medium-service-user";
 
-    public static final String JCR_CONTENT_BASE_PATH = "/content/data/medium";
+    public static final String JCR_CONTENT_BASE_PATH = "/content/data/medium/";
 
     @Reference
     private ResourceResolverFactory resourceResolverFactory;
 
     @Override
-    public void storeMediumPost(MediumPost mediumPost) {
+    public void storeMediumPublication(MediumPublication mediumPublication) {
+
         try(ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())){
-            Resource mediumResource = resourceResolver.getResource(getPublicationFolder());
+            Resource mediumResource = resourceResolver.getResource(getPublicationFolder(mediumPublication));
 
             if(mediumResource == null){
-                mediumResource = createMediumResource(resourceResolver);
+                mediumResource = createMediumResource(resourceResolver, mediumPublication);
             }
 
-            resourceResolver.create(mediumResource, mediumPost.getTitle(), extractProperties(mediumPost));
-            resourceResolver.commit();
-        } catch (LoginException | PersistenceException e) {
-            LOG.error("Impossible to store medium post for link {}", mediumPost.getLink(), e);
+            for (MediumPost mediumPost : mediumPublication.getPosts()) {
+                resourceResolver.create(mediumResource, mediumPost.getTitle(), extractProperties(mediumPost));
+                resourceResolver.commit();
+            }
+        }
+        catch (LoginException | PersistenceException e) {
+            LOG.error("Impossible to store medium post for link {}"
+//                    mediumPost.getLink()
+                    , e);
         }
     }
 
-    private Resource createMediumResource(ResourceResolver resourceResolver) {
-        String[] nodesList = StringUtils.split(JCR_CONTENT_BASE_PATH, "/");
+    private Resource createMediumResource(ResourceResolver resourceResolver, MediumPublication mediumPublication) {
+        String pathWithPubTitle = JCR_CONTENT_BASE_PATH + mediumPublication.getName();
+        String[] nodesList = StringUtils.split(pathWithPubTitle, "/");
         Iterator<String> nodesIterator = Arrays.stream(nodesList).iterator();
 
         Resource resource = resourceResolver.getResource("/" + nodesIterator.next());
-
 
         while(nodesIterator.hasNext()){
             String currentNode = nodesIterator.next();
@@ -68,9 +77,9 @@ public class MediumRepositoryImpl implements MediumRepository{
         return resource;
     }
 
-    private String getPublicationFolder() {
+    private String getPublicationFolder(MediumPublication mediumPublication) {
         // TODO retrieve publicationName
-        return JCR_CONTENT_BASE_PATH + "/publicationName";
+        return JCR_CONTENT_BASE_PATH + mediumPublication.getName();
     }
 
     private Map<String, Object> getCredentials() {
@@ -81,6 +90,8 @@ public class MediumRepositoryImpl implements MediumRepository{
 
         return credentials;
     }
+
+
 
     private Map<String, Object> extractProperties(MediumPost mediumPost) {
         Map<String, Object> properties = new HashMap<>();
