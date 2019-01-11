@@ -4,8 +4,6 @@ import be.ida.medium.bean.MediumPost;
 import be.ida.medium.bean.MediumPublication;
 import be.ida.medium.connector.MediumConnector;
 import be.ida.medium.repository.MediumRepository;
-import com.rometools.rome.feed.synd.SyndEntry;
-import com.rometools.rome.feed.synd.SyndFeed;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jackrabbit.vault.util.JcrConstants;
 import org.apache.sling.api.resource.*;
@@ -36,7 +34,6 @@ public class MediumRepositoryImpl implements MediumRepository{
 
     @Override
     public void storeMediumPublication(MediumPublication mediumPublication) {
-
         try(ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())){
             Resource mediumResource = resourceResolver.getResource(getPublicationFolder(mediumPublication));
 
@@ -45,19 +42,23 @@ public class MediumRepositoryImpl implements MediumRepository{
             }
 
             for (MediumPost mediumPost : mediumPublication.getPosts()) {
-                resourceResolver.create(mediumResource, mediumPost.getTitle(), extractProperties(mediumPost));
-                resourceResolver.commit();
+                try{
+                    resourceResolver.create(mediumResource, mediumPost.getId(), extractProperties(mediumPost));
+                } catch ( PersistenceException e) {
+                    LOG.error("Could not create new node in JCR", e);
+                }
             }
+            resourceResolver.commit();
         }
-        catch (LoginException | PersistenceException e) {
-            LOG.error("Impossible to store medium post for link {}"
-//                    mediumPost.getLink()
-                    , e);
+        catch (LoginException e) {
+            LOG.error("Could not open ResourceResolver properly", e);
+        } catch ( PersistenceException e) {
+            LOG.error("Could not commit changes to JCR", e);
         }
     }
 
     private Resource createMediumResource(ResourceResolver resourceResolver, MediumPublication mediumPublication) {
-        String pathWithPubTitle = JCR_CONTENT_BASE_PATH + mediumPublication.getName();
+        String pathWithPubTitle = getPublicationFolder(mediumPublication);
         String[] nodesList = StringUtils.split(pathWithPubTitle, "/");
         Iterator<String> nodesIterator = Arrays.stream(nodesList).iterator();
 
@@ -78,7 +79,6 @@ public class MediumRepositoryImpl implements MediumRepository{
     }
 
     private String getPublicationFolder(MediumPublication mediumPublication) {
-        // TODO retrieve publicationName
         return JCR_CONTENT_BASE_PATH + mediumPublication.getName();
     }
 
@@ -103,6 +103,7 @@ public class MediumRepositoryImpl implements MediumRepository{
         properties.put(MEDIUM_POST_CREATOR, mediumPost.getCreator());
         properties.put(MEDIUM_POST_PUBLICATION_DATE, mediumPost.getPublicationDate());
         properties.put(MEDIUM_POST_ID, mediumPost.getId());
+
         return properties;
     }
 }
