@@ -39,7 +39,7 @@ public class MediumImportJob implements Runnable {
         String scheduler_expression() default "*/30 * * * * ?";
 
         @AttributeDefinition(name = "Concurrent task",
-                description = "Whether or not to schedule this task concurrently")
+                                                description = "Whether or not to schedule this task concurrently")
         boolean scheduler_concurrent() default false;
 
         @AttributeDefinition(name = "Enabled", description = "Enable Scheduler", type = AttributeType.BOOLEAN)

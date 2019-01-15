@@ -79,7 +79,7 @@ public class MediumRepositoryImpl implements MediumRepository{
     }
 
     private String getPublicationFolder(MediumPublication mediumPublication) {
-        return JCR_CONTENT_BASE_PATH + mediumPublication.getName();
+        return JCR_CONTENT_BASE_PATH + StringUtils.removeAll(mediumPublication.getName(), " ");
     }
 
     private Map<String, Object> getCredentials() {
