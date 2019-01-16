@@ -8,19 +8,18 @@ import com.rometools.rome.feed.synd.SyndFeed;
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MediumRssFeedParser {
-    public MediumPublication syndFeedToMediumPosts(SyndFeed syndFeed){
+    public MediumPublication syndFeedToMediumPosts(SyndFeed syndFeed) {
         MediumPublication mediumPublication = new MediumPublication();
         List<MediumPost> mediumPosts = new ArrayList<>();
 
 
-        for (SyndEntry syndEntry : syndFeed.getEntries()){
+        for (SyndEntry syndEntry : syndFeed.getEntries()) {
             MediumPost mediumPost = new MediumPost();
             String mediumPostId = StringUtils.substringAfterLast(syndEntry.getUri(), "/");
 
@@ -32,14 +31,19 @@ public class MediumRssFeedParser {
 
             List<SyndContent> syndContents = syndEntry.getContents();
 
-            if(!syndContents.isEmpty() && syndContents.get(0) != null){
-                Document doc = Jsoup.parseBodyFragment(syndContents.get(0).getValue());
+            if (!syndContents.isEmpty()) {
+                SyndContent syndContent = syndContents.get(0);
 
-                Elements imageTag = doc.select("img");
+                if (syndContent != null) {
+                    Document doc = Jsoup.parseBodyFragment(syndContent.getValue());
 
-                if(imageTag != null){
-                String publicationImageUrl = imageTag.first().attr("src");
-                mediumPost.setImageSource(publicationImageUrl);}
+                    Elements imageTag = doc.select("img");
+
+                    if (imageTag != null) {
+                        String publicationImageUrl = imageTag.first().attr("src");
+                        mediumPost.setImageSource(publicationImageUrl);
+                    }
+                }
             }
 
             mediumPosts.add(mediumPost);
