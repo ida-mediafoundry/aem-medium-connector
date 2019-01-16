@@ -1,6 +1,6 @@
 package be.ida.medium.connector;
 
-import be.ida.medium.bean.MediumPost;
+import be.ida.medium.bean.MediumPublication;
 import be.ida.medium.connector.config.MediumConnectorConfig;
 import be.ida.medium.parser.MediumRssFeedParser;
 import be.ida.medium.service.MediumService;
@@ -15,7 +15,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 
 @Component(name="Medium Connector", service= MediumConnector.class, immediate=true)
 public class MediumConnector {
@@ -29,11 +28,11 @@ public class MediumConnector {
 
     public void process() {
         SyndFeed syndFeed = retrieveRssFeed();
-
         final MediumRssFeedParser mediumRssFeedParser = new MediumRssFeedParser();
-        List<MediumPost> mediumPosts = mediumRssFeedParser.syndFeedToMediumPosts(syndFeed);
 
-        mediumService.storeMediumPosts(mediumPosts);
+        MediumPublication mediumPublication = mediumRssFeedParser.syndFeedToMediumPosts(syndFeed);
+
+        mediumService.storeMediumPublication(mediumPublication);
     }
 
     private SyndFeed retrieveRssFeed(){

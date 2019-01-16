@@ -1,6 +1,7 @@
 package be.ida.medium.service.impl;
 
 import be.ida.medium.bean.MediumPost;
+import be.ida.medium.bean.MediumPublication;
 import be.ida.medium.repository.MediumRepository;
 import be.ida.medium.service.MediumService;
 import org.osgi.service.component.annotations.Component;
@@ -13,7 +14,7 @@ public class MediumServiceImpl implements MediumService{
     @Reference
     private MediumRepository mediumRepository;
 
-    public void storeMediumPosts(List<MediumPost> mediumPosts){
-        mediumPosts.forEach(post -> mediumRepository.storeMediumPost(post));
+    public void storeMediumPublication(MediumPublication mediumPublication){
+        mediumRepository.storeMediumPublication(mediumPublication);
     }
 }
