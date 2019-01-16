@@ -2,11 +2,14 @@ package be.ida.medium.parser;
 
 import be.ida.medium.bean.MediumPost;
 import be.ida.medium.bean.MediumPublication;
+import com.rometools.rome.feed.synd.SyndContent;
 import com.rometools.rome.feed.synd.SyndEntry;
 import com.rometools.rome.feed.synd.SyndFeed;
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,11 +30,16 @@ public class MediumRssFeedParser {
             mediumPost.setTitle(syndEntry.getTitle());
             mediumPost.setId(mediumPostId);
 
+            List<SyndContent> syndContents = syndEntry.getContents();
 
-            if(!syndEntry.getContents().isEmpty()){
-                Document doc = Jsoup.parseBodyFragment(syndEntry.getContents().get(0).getValue());
-                String publicationImageUrl = doc.select("img").first().attr("src");
-                mediumPost.setImageSource(publicationImageUrl);
+            if(!syndContents.isEmpty() && syndContents.get(0) != null){
+                Document doc = Jsoup.parseBodyFragment(syndContents.get(0).getValue());
+
+                Elements imageTag = doc.select("img");
+
+                if(imageTag != null){
+                String publicationImageUrl = imageTag.first().attr("src");
+                mediumPost.setImageSource(publicationImageUrl);}
             }
 
             mediumPosts.add(mediumPost);
