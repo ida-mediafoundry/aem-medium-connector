@@ -16,14 +16,14 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.net.URL;
 
-@Component(name="Medium Connector", service= MediumConnector.class, immediate=true)
+@Component(name = "Medium Connector", service = MediumConnector.class, immediate = true)
 public class MediumConnector {
     private final static Logger LOG = LoggerFactory.getLogger(MediumConnector.class);
 
     @Reference
     private MediumService mediumService;
 
-   @Reference
+    @Reference
     private MediumConnectorConfig mediumConnectorConfig;
 
     public void process() {
@@ -33,9 +33,10 @@ public class MediumConnector {
         MediumPublication mediumPublication = mediumRssFeedParser.syndFeedToMediumPosts(syndFeed);
 
         mediumService.storeMediumPublication(mediumPublication);
+        mediumService.getMediumPublication("idamediafoundry-Medium");
     }
 
-    private SyndFeed retrieveRssFeed(){
+    private SyndFeed retrieveRssFeed() {
         SyndFeed feed = null;
 
         try {
