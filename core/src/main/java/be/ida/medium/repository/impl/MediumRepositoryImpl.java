@@ -12,7 +12,10 @@ import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 import static be.ida.medium.model.MediumPostModel.*;
 
@@ -36,9 +39,11 @@ public class MediumRepositoryImpl implements MediumRepository {
                 mediumResource = createMediumResource(resourceResolver, mediumPublication);
             }
 
+            Resource postsResource = resourceResolver.create(mediumResource, "posts", new HashMap<>());
+
             for (MediumPost mediumPost : mediumPublication.getPosts()) {
                 try {
-                    resourceResolver.create(mediumResource, mediumPost.getId(), extractProperties(mediumPost));
+                    resourceResolver.create(postsResource, mediumPost.getId(), extractProperties(mediumPost));
                 } catch (PersistenceException e) {
                     LOG.error("Could not create new node in JCR", e);
                 }
@@ -55,20 +60,10 @@ public class MediumRepositoryImpl implements MediumRepository {
     public MediumPublication getMediumPublication(String resourcePath) {
         try (ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())) {
             Resource mediumResource = resourceResolver.getResource(JCR_CONTENT_BASE_PATH + resourcePath);
-            MediumPublication mediumPublication = new MediumPublication();
-            mediumPublication.setName("test");
-            List<MediumPost> posts = new ArrayList<>();
-            Iterator<Resource> iterator = mediumResource.listChildren();
 
-            while (iterator.hasNext()) {
-                Resource postResource = iterator.next();
-                MediumPost retrieved = postResource.adaptTo(MediumPost.class);
-                posts.add(retrieved);
-            }
-            mediumPublication.setPosts(posts);
+            MediumPublication mediumPublication = mediumResource.adaptTo(MediumPublication.class);
 
-
-            return null;
+            return mediumPublication;
         } catch (LoginException e) {
             LOG.error("Could not retrieve resource from JCR", e);
             return null;
@@ -109,7 +104,6 @@ public class MediumRepositoryImpl implements MediumRepository {
 
         return credentials;
     }
-
 
     private Map<String, Object> extractProperties(MediumPost mediumPost) {
         Map<String, Object> properties = new HashMap<>();

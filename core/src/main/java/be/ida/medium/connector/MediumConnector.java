@@ -34,6 +34,7 @@ public class MediumConnector {
 
         mediumService.storeMediumPublication(mediumPublication);
         mediumService.getMediumPublication("idamediafoundry-Medium");
+
     }
 
     private SyndFeed retrieveRssFeed() {
