@@ -17,6 +17,16 @@ public class MediumPublication {
     @Inject
     private List<MediumPost> posts;
 
+    private String Id;
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
+
     public String getName() {
         return name;
     }

@@ -49,8 +49,18 @@ public class MediumRssFeedParser {
             mediumPosts.add(mediumPost);
         }
 
+
         mediumPublication.setPosts(mediumPosts);
         mediumPublication.setName(syndFeed.getTitle());
+        mediumPublication.setId(getPublicationId(syndFeed));
         return mediumPublication;
+    }
+
+    public String getPublicationId(SyndFeed syndFeed) {
+        String link = syndFeed.getLink();
+        String publicationId = StringUtils.substringAfter(link, "source=rss");
+
+        return publicationId;
+
     }
 }
