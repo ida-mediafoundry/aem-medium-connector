@@ -124,7 +124,7 @@ public class MediumRepositoryImpl implements MediumRepository {
     private void setPublicationNodeName(MediumPublication mediumPublication, ResourceResolver resourceResolver) {
         Resource resource = resourceResolver.getResource(JCR_CONTENT_BASE_PATH + mediumPublication.getId());
         ModifiableValueMap map = resource.adaptTo(ModifiableValueMap.class);
-        map.put("Name", mediumPublication.getName());
+        map.put("name", mediumPublication.getName());
     }
 
 

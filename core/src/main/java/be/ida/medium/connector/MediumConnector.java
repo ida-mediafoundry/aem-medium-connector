@@ -33,7 +33,7 @@ public class MediumConnector {
         MediumPublication mediumPublication = mediumRssFeedParser.syndFeedToMediumPosts(syndFeed);
 
         mediumService.storeMediumPublication(mediumPublication);
-        mediumService.getMediumPublication("idamediafoundry-Medium");
+        mediumService.getMediumPublication("----a1a776694b7a---4");
 
     }
 

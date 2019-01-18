@@ -17,7 +17,7 @@ public class MediumServiceImpl implements MediumService {
     }
 
     public MediumPublication getMediumPublication(String resourcePath) {
-        MediumPublication mediumPublication = mediumRepository.getMediumPublication(resourcePath);
-        return mediumPublication;
+        return mediumRepository.getMediumPublication(resourcePath);
+
     }
 }
