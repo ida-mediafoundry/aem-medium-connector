@@ -58,16 +58,18 @@ public class MediumRepositoryImpl implements MediumRepository {
 
     @Override
     public MediumPublication getMediumPublication(String resourcePath) {
+        MediumPublication mediumPublication = new MediumPublication();
         try (ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())) {
             Resource mediumResource = resourceResolver.getResource(JCR_CONTENT_BASE_PATH + resourcePath);
 
-            MediumPublication mediumPublication = mediumResource.adaptTo(MediumPublication.class);
+            mediumPublication = mediumResource.adaptTo(MediumPublication.class);
 
-            return mediumPublication;
         } catch (LoginException e) {
+            LOG.error("Could not open ResourceResolver properly", e);
+        } catch (NullPointerException e) {
             LOG.error("Could not retrieve resource from JCR", e);
-            return null;
         }
+        return mediumPublication;
     }
 
     private Resource createMediumResource(ResourceResolver resourceResolver, MediumPublication mediumPublication) {
