@@ -12,10 +12,7 @@ import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 import static be.ida.medium.model.MediumPostModel.*;
 
@@ -59,16 +56,15 @@ public class MediumRepositoryImpl implements MediumRepository {
     @Override
     public MediumPublication getMediumPublication(String resourcePath) {
         MediumPublication mediumPublication = new MediumPublication();
+
         try (ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())) {
-            Resource mediumResource = resourceResolver.getResource(JCR_CONTENT_BASE_PATH + resourcePath);
-
-            mediumPublication = mediumResource.adaptTo(MediumPublication.class);
-
+            mediumPublication = Optional.ofNullable(resourceResolver.getResource(JCR_CONTENT_BASE_PATH + resourcePath))
+                    .map(resource -> resource.adaptTo(MediumPublication.class))
+                    .orElse(null);
         } catch (LoginException e) {
             LOG.error("Could not open ResourceResolver properly", e);
-        } catch (NullPointerException e) {
-            LOG.error("Could not retrieve resource from JCR", e);
         }
+
         return mediumPublication;
     }
 
