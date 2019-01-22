@@ -15,18 +15,19 @@
  */
 package be.ida.component.general;
 
+import be.ida.medium.bean.MediumPublication;
+import be.ida.medium.service.MediumService;
+import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.settings.SlingSettingsService;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 @Model(adaptables = Resource.class)
 public class PublicationComponent {
-
     @Inject
     @Named("sling:resourceType")
     @Default(values = "No resourceType")
@@ -34,22 +35,22 @@ public class PublicationComponent {
 
     @Inject
     private SlingSettingsService settings;
-    private String message;
 
+    @Inject
+    private String publicationNodePath;
 
-    @PostConstruct
-    protected void init() {
-        message = "\tHello Wrld!\n";
-        message += "\tThis is instance: " + settings.getSlingId() + "\n";
-        message += "\tResource type is: " + resourceType + "\n";
+    @OSGiService
+    private MediumService mediumService;
 
+    public String getPublicationNodePath() {
+        return publicationNodePath;
     }
 
-    public String getMessage() {
-        return message;
+    public void setPublicationNodePath( String publicationNodePath ) {
+        this.publicationNodePath = publicationNodePath;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public MediumPublication getMediumPublication(){
+        return mediumService.getMediumPublication(publicationNodePath);
     }
 }
