@@ -37,7 +37,7 @@ public class MediumRepositoryImpl implements MediumRepository {
 
             if (mediumResource == null) {
                 mediumResource = createMediumResource(resourceResolver, mediumPublication);
-                setPublicationNodeName(mediumPublication, resourceResolver);
+                setPublicationNodeName(mediumResource, mediumPublication);
             }
 
 
@@ -121,11 +121,14 @@ public class MediumRepositoryImpl implements MediumRepository {
         return properties;
     }
 
-    private void setPublicationNodeName(MediumPublication mediumPublication, ResourceResolver resourceResolver) {
-        Resource resource = resourceResolver.getResource(JCR_CONTENT_BASE_PATH + mediumPublication.getId());
-        ModifiableValueMap map = resource.adaptTo(ModifiableValueMap.class);
-        map.put("name", mediumPublication.getName());
+
+    private void setPublicationNodeName(Resource mediumResourcePosts, MediumPublication mediumPublication) {
+        if (mediumResourcePosts != null) {
+            Resource mediumResource = mediumResourcePosts.getParent();
+            if (mediumResource != null) {
+                ModifiableValueMap map = mediumResource.adaptTo(ModifiableValueMap.class);
+                map.put("name", mediumPublication.getName());
+            }
+        }
     }
-
-
 }
