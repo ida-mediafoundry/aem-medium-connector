@@ -12,49 +12,60 @@ import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 import static be.ida.medium.model.MediumPostModel.*;
 
-@Component(name="Medium Repository", service= MediumRepository.class, immediate=true)
-public class MediumRepositoryImpl implements MediumRepository{
-    private final static Logger LOG = LoggerFactory.getLogger(MediumConnector.class);
 
+@Component(name = "Medium Repository", service = MediumRepository.class, immediate = true)
+public class MediumRepositoryImpl implements MediumRepository {
+    public static final String JCR_CONTENT_BASE_PATH = "/content/data/medium/";
+    private final static Logger LOG = LoggerFactory.getLogger(MediumConnector.class);
     // TODO make configurable
     private static final String DEFAULT_USER = "medium-service-user";
     private static final String DEFAULT_SERVICE = "medium-service-user";
-
-    public static final String JCR_CONTENT_BASE_PATH = "/content/data/medium/";
-
     @Reference
     private ResourceResolverFactory resourceResolverFactory;
 
     @Override
     public void storeMediumPublication(MediumPublication mediumPublication) {
-        try(ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())){
+        try (ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())) {
             Resource mediumResource = resourceResolver.getResource(getPublicationFolder(mediumPublication));
 
-            if(mediumResource == null){
+            if (mediumResource == null) {
                 mediumResource = createMediumResource(resourceResolver, mediumPublication);
             }
 
+            Resource postsResource = resourceResolver.create(mediumResource, "posts", new HashMap<>());
+
             for (MediumPost mediumPost : mediumPublication.getPosts()) {
-                try{
-                    resourceResolver.create(mediumResource, mediumPost.getId(), extractProperties(mediumPost));
-                } catch ( PersistenceException e) {
+                try {
+                    resourceResolver.create(postsResource, mediumPost.getId(), extractProperties(mediumPost));
+                } catch (PersistenceException e) {
                     LOG.error("Could not create new node in JCR", e);
                 }
             }
             resourceResolver.commit();
-        }
-        catch (LoginException e) {
+        } catch (LoginException e) {
             LOG.error("Could not open ResourceResolver properly", e);
-        } catch ( PersistenceException e) {
+        } catch (PersistenceException e) {
             LOG.error("Could not commit changes to JCR", e);
         }
+    }
+
+    @Override
+    public MediumPublication getMediumPublication(String resourcePath) {
+        MediumPublication mediumPublication = new MediumPublication();
+
+        try (ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())) {
+            mediumPublication = Optional.ofNullable(resourceResolver.getResource(JCR_CONTENT_BASE_PATH + resourcePath))
+                    .map(resource -> resource.adaptTo(MediumPublication.class))
+                    .orElse(null);
+        } catch (LoginException e) {
+            LOG.error("Could not open ResourceResolver properly", e);
+        }
+
+        return mediumPublication;
     }
 
     private Resource createMediumResource(ResourceResolver resourceResolver, MediumPublication mediumPublication) {
@@ -64,7 +75,7 @@ public class MediumRepositoryImpl implements MediumRepository{
 
         Resource resource = resourceResolver.getResource("/" + nodesIterator.next());
 
-        while(nodesIterator.hasNext()){
+        while (nodesIterator.hasNext()) {
             String currentNode = nodesIterator.next();
             String newPath = resource.getPath() + "/" + currentNode;
             try {
@@ -82,6 +93,7 @@ public class MediumRepositoryImpl implements MediumRepository{
         return JCR_CONTENT_BASE_PATH + StringUtils.removeAll(mediumPublication.getName(), " ");
     }
 
+
     private Map<String, Object> getCredentials() {
         Map<String, Object> credentials = new HashMap<>();
 
@@ -90,8 +102,6 @@ public class MediumRepositoryImpl implements MediumRepository{
 
         return credentials;
     }
-
-
 
     private Map<String, Object> extractProperties(MediumPost mediumPost) {
         Map<String, Object> properties = new HashMap<>();
@@ -106,4 +116,5 @@ public class MediumRepositoryImpl implements MediumRepository{
 
         return properties;
     }
+
 }
