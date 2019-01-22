@@ -34,13 +34,13 @@ public class MediumRepositoryImpl implements MediumRepository {
 
             if (mediumResource == null) {
                 mediumResource = createMediumResource(resourceResolver, mediumPublication);
+                setPublicationNodeName(mediumPublication, resourceResolver);
             }
 
-            Resource postsResource = resourceResolver.create(mediumResource, "posts", new HashMap<>());
 
             for (MediumPost mediumPost : mediumPublication.getPosts()) {
                 try {
-                    resourceResolver.create(postsResource, mediumPost.getId(), extractProperties(mediumPost));
+                    resourceResolver.create(mediumResource, mediumPost.getId(), extractProperties(mediumPost));
                 } catch (PersistenceException e) {
                     LOG.error("Could not create new node in JCR", e);
                 }
@@ -71,7 +71,9 @@ public class MediumRepositoryImpl implements MediumRepository {
     private Resource createMediumResource(ResourceResolver resourceResolver, MediumPublication mediumPublication) {
         String pathWithPubTitle = getPublicationFolder(mediumPublication);
         String[] nodesList = StringUtils.split(pathWithPubTitle, "/");
+
         Iterator<String> nodesIterator = Arrays.stream(nodesList).iterator();
+
 
         Resource resource = resourceResolver.getResource("/" + nodesIterator.next());
 
@@ -90,7 +92,7 @@ public class MediumRepositoryImpl implements MediumRepository {
     }
 
     private String getPublicationFolder(MediumPublication mediumPublication) {
-        return JCR_CONTENT_BASE_PATH + StringUtils.removeAll(mediumPublication.getName(), " ");
+        return JCR_CONTENT_BASE_PATH + mediumPublication.getId() + "/posts";
     }
 
 
@@ -116,5 +118,12 @@ public class MediumRepositoryImpl implements MediumRepository {
 
         return properties;
     }
+
+    private void setPublicationNodeName(MediumPublication mediumPublication, ResourceResolver resourceResolver) {
+        Resource resource = resourceResolver.getResource(JCR_CONTENT_BASE_PATH + mediumPublication.getId());
+        ModifiableValueMap map = resource.adaptTo(ModifiableValueMap.class);
+        map.put("name", mediumPublication.getName());
+    }
+
 
 }
