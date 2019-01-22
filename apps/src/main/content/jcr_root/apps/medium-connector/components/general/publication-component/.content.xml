@@ -3,4 +3,4 @@
           jcr:primaryType="cq:Component"
           jcr:title="Publication component"
           allowedParents="[*/parsys,*/*layout]"
-          componentGroup="We.Retail"/>
+          componentGroup="publication-group"/>
