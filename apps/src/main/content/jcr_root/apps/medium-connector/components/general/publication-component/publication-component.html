@@ -1,5 +1,12 @@
-Test
 <pre data-sly-use.component="be.ida.component.general.PublicationComponent">
-    <a>${component.publicationNodePath}</a>
-    <a>${component.mediumPublication}</a>
+
+    <a>${component.mediumPublication.name}</a>
+
+<ul data-sly-list="${component.mediumPublication.posts}">
+    <div class="mediumpost">
+         <div><a href="${item.Link}">${item.Title}</a></div>
+         <div><img src="${item.ImageSource}"></div>
+    </div>
+</ul>
+
 </pre>

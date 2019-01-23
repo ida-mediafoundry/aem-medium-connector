@@ -16,6 +16,7 @@
 package be.ida.component.general;
 
 import be.ida.medium.bean.MediumPublication;
+import be.ida.medium.connector.config.MediumConnectorConfig;
 import be.ida.medium.service.MediumService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Default;
@@ -38,19 +39,30 @@ public class PublicationComponent {
 
     @Inject
     private String publicationNodePath;
+    private String mediumFeedUrl;
 
     @OSGiService
     private MediumService mediumService;
+    private MediumConnectorConfig mediumConnectorConfig;
+
 
     public String getPublicationNodePath() {
         return publicationNodePath;
     }
 
-    public void setPublicationNodePath( String publicationNodePath ) {
+    public void setPublicationNodePath(String publicationNodePath) {
         this.publicationNodePath = publicationNodePath;
     }
 
-    public MediumPublication getMediumPublication(){
+    public MediumPublication getMediumPublication() {
         return mediumService.getMediumPublication(publicationNodePath);
+    }
+
+    public MediumConnectorConfig getMediumConnectorConfig() {
+        return mediumConnectorConfig;
+    }
+
+    public void setMediumConnectorConfig(MediumConnectorConfig mediumConnectorConfig) {
+        this.mediumConnectorConfig = mediumConnectorConfig;
     }
 }
