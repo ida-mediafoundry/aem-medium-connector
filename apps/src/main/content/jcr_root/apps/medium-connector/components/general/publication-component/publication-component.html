@@ -1,12 +1,26 @@
 <pre data-sly-use.component="be.ida.component.general.PublicationComponent">
 
-    <a>${component.mediumPublication.name}</a>
+ <ul data-sly-list="${component.mediumPublication.posts}">
 
-<ul data-sly-list="${component.mediumPublication.posts}">
-    <div class="mediumpost">
-         <div><a href="${item.Link}">${item.Title}</a></div>
-         <div><img src="${item.ImageSource}"></div>
+        <div class="medium-component-tile">
+        <a class="medium-component-tile__image"
+           style="background: url('${item.ImageSource @ context='styleString'}') center top">
+            <div class="medium-component-tile__foreground">
+                <p class="medium-component-tile__foreground__title">
+                   ${item.Title}
+                </p>
+                <div class="medium-component-tile__foreground__author-info">
+                    <img class="medium-component-tile__foreground__author-info__image"
+                         src="https://data.whicdn.com/images/212941858/large.jpg"/>
+                    <div>
+                        <p class="medium-component-tile__foreground__author-info__name">${item.Creator}</p>
+                        <p class="medium-component-tile__foreground__author-info__publication-date">${item.PublicationDate}</p>
+                    </div>
+                </div>
+            </div>
+        </a>
     </div>
-</ul>
+        </ul>
+
 
 </pre>
