@@ -1,53 +1,61 @@
 package be.ida.medium.connector;
 
 import be.ida.medium.bean.MediumPublication;
+import be.ida.medium.bean.publication.Publication;
 import be.ida.medium.connector.config.MediumConnectorConfig;
 import be.ida.medium.parser.MediumRssFeedParser;
 import be.ida.medium.service.MediumService;
-import com.rometools.rome.feed.synd.SyndFeed;
-import com.rometools.rome.io.FeedException;
-import com.rometools.rome.io.SyndFeedInput;
-import com.rometools.rome.io.XmlReader;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.net.URL;
 
 @Component(name = "Medium Connector", service = MediumConnector.class, immediate = true)
 public class MediumConnector {
     private final static Logger LOG = LoggerFactory.getLogger(MediumConnector.class);
-
+    String responseString;
     @Reference
     private MediumService mediumService;
-
     @Reference
     private MediumConnectorConfig mediumConnectorConfig;
 
     public void process() {
-        SyndFeed syndFeed = retrieveRssFeed();
+        String json = retrieveJson();
+
         final MediumRssFeedParser mediumRssFeedParser = new MediumRssFeedParser();
 
-        MediumPublication mediumPublication = mediumRssFeedParser.syndFeedToMediumPosts(syndFeed);
+        Publication pub = mediumRssFeedParser.jsonToPublication(json);
+
+        MediumPublication mediumPublication = mediumRssFeedParser.publicationToMediumPublication(pub);
 
         mediumService.storeMediumPublication(mediumPublication);
-        mediumService.getMediumPublication("----a1a776694b7a---4");
-
     }
 
-    private SyndFeed retrieveRssFeed() {
-        SyndFeed feed = null;
-
+    private String retrieveJson() {
         try {
-            feed = new SyndFeedInput().build(new XmlReader(new URL(mediumConnectorConfig.getMediumFeedUrl())));
-        } catch (IOException e) {
-            LOG.error("Could not retrieve RSS feed", e);
-        } catch (FeedException e) {
-            LOG.error("Could not parse retrieved RSS feed", e);
-        }
+            CloseableHttpClient httpclient = HttpClients.createDefault();
+            HttpGet httpget = new HttpGet("https://medium.com/ida-mediafoundry/latest?format=json&limit=30");
+            CloseableHttpResponse response = httpclient.execute(httpget);
 
-        return feed;
+            HttpEntity entity = response.getEntity();
+            if (entity != null) {
+                responseString = EntityUtils.toString(entity, "UTF-8");
+            }
+        } catch (IOException e) {
+            LOG.error("unable to get HTTP request body");
+
+        }
+        int startOfJson = StringUtils.indexOf(responseString, "succes");
+        String jsonString = StringUtils.substring(responseString, startOfJson - 2);
+        return jsonString;
     }
 }

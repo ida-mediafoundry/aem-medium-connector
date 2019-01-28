@@ -6,13 +6,14 @@ import org.apache.sling.models.annotations.Model;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-@Model(adaptables= Resource.class)
+@Model(adaptables = Resource.class)
 public class MediumPostModel {
     public static final String MEDIUM_POST_TITLE = "mediumPostTitle";
     public static final String MEDIUM_POST_LINK = "mediumPostLink";
     public static final String MEDIUM_POST_IMAGE_SOURCE = "mediumPostImageSource";
     public static final String MEDIUM_POST_CREATOR = "mediumPostCreator";
     public static final String MEDIUM_POST_PUBLICATION_DATE = "mediumPostPublicationDate";
+    public static final String MEDIUM_POST_UPDATE_DATE = "mediumPostUpdateDate";
     public static final String MEDIUM_POST_ID = "mediumPostId";
 
     @Inject
@@ -30,6 +31,10 @@ public class MediumPostModel {
     @Inject
     @Named(MEDIUM_POST_CREATOR)
     private String creator;
+
+    @Inject
+    @Named(MEDIUM_POST_UPDATE_DATE)
+    private String updateDate;
 
     @Inject
     @Named(MEDIUM_POST_PUBLICATION_DATE)
@@ -79,8 +84,20 @@ public class MediumPostModel {
         this.publicationDate = publicationDate;
     }
 
-    public String getId() {return id;}
+    public String getId() {
+        return id;
+    }
 
-    public void setId(String id) {this.id = id;}
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
+    }
 
 }

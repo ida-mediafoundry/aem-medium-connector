@@ -2,65 +2,48 @@ package be.ida.medium.parser;
 
 import be.ida.medium.bean.MediumPost;
 import be.ida.medium.bean.MediumPublication;
-import com.rometools.rome.feed.synd.SyndContent;
-import com.rometools.rome.feed.synd.SyndEntry;
-import com.rometools.rome.feed.synd.SyndFeed;
-import org.apache.commons.lang3.StringUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
+import be.ida.medium.bean.publication.Post;
+import be.ida.medium.bean.publication.Publication;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MediumRssFeedParser {
-    public MediumPublication syndFeedToMediumPosts(SyndFeed syndFeed) {
+    public MediumPublication publicationToMediumPublication(Publication publication) {
         MediumPublication mediumPublication = new MediumPublication();
         List<MediumPost> mediumPosts = new ArrayList<>();
 
 
-        for (SyndEntry syndEntry : syndFeed.getEntries()) {
+        for (Post post : publication.getPayload().getPosts()) {
             MediumPost mediumPost = new MediumPost();
-            String mediumPostId = StringUtils.substringAfterLast(syndEntry.getUri(), "/");
 
-            mediumPost.setCreator(syndEntry.getAuthor());
-            mediumPost.setPublicationDate(syndEntry.getPublishedDate().toString());
-            mediumPost.setLink(syndEntry.getUri());
-            mediumPost.setTitle(syndEntry.getTitle());
-            mediumPost.setId(mediumPostId);
-
-            List<SyndContent> syndContents = syndEntry.getContents();
-
-            if (!syndContents.isEmpty()) {
-                SyndContent syndContent = syndContents.get(0);
-
-                if (syndContent != null) {
-                    Document doc = Jsoup.parseBodyFragment(syndContent.getValue());
-
-                    Elements imageTag = doc.select("img");
-
-                    if (imageTag != null) {
-                        String publicationImageUrl = imageTag.first().attr("src");
-                        mediumPost.setImageSource(publicationImageUrl);
-                    }
-                }
-            }
+            mediumPost.setCreator(post.getCreatorId());
+            mediumPost.setPublicationDate(post.getCreatedAt());
+            mediumPost.setUpdateDate(post.getUpdatedAt());
+            mediumPost.setLink(post.getUniqueSlug());
+            mediumPost.setTitle(post.getTitle());
+            mediumPost.setId(post.getId());
+            mediumPost.setImageSource(post.getVirtuals().getPreviewImage().getImageId());
 
             mediumPosts.add(mediumPost);
         }
 
 
         mediumPublication.setPosts(mediumPosts);
-        mediumPublication.setName(syndFeed.getTitle());
-        mediumPublication.setId(getPublicationId(syndFeed));
+        mediumPublication.setName(publication.getPayload().getCollection().getName());
+        mediumPublication.setId(publication.getPayload().getCollection().getId());
         return mediumPublication;
     }
 
-    public String getPublicationId(SyndFeed syndFeed) {
-        String link = syndFeed.getLink();
-        String publicationId = StringUtils.substringAfter(link, "source=rss");
-
-        return publicationId;
-
+    public Publication jsonToPublication(String json) {
+        Publication publication = new Publication();
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            publication = objectMapper.readValue(json, Publication.class);
+        } catch (IOException io) {
+        }
+        return publication;
     }
 }

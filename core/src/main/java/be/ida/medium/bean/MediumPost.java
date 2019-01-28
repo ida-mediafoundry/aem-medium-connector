@@ -31,6 +31,10 @@ public class MediumPost {
     private String publicationDate;
 
     @Inject
+    @Named(MEDIUM_POST_UPDATE_DATE)
+    private String updateDate;
+
+    @Inject
     @Named(MEDIUM_POST_ID)
     private String id;
 
@@ -67,9 +71,18 @@ public class MediumPost {
         this.creator = creator;
     }
 
+    public String getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
+    }
+
     public String getPublicationDate() {
         return publicationDate;
     }
+
 
     public void setPublicationDate(String publicationDate) {
         this.publicationDate = publicationDate;

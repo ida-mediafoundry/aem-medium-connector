@@ -1,0 +1,347 @@
+{
+  "success": true,
+  "payload": {
+    "value": {
+      "id": "a54a084bb59f",
+      "versionId": "927c0c8f0175",
+      "creatorId": "b8bb00bc8582",
+      "homeCollectionId": "a1a776694b7a",
+      "title": "Silicon valley musings",
+      "detectedLanguage": "en",
+      "latestVersion": "927c0c8f0175",
+      "latestPublishedVersion": "927c0c8f0175",
+      "hasUnpublishedEdits": false,
+      "latestRev": 1718,
+      "createdAt": 1535595788571,
+      "updatedAt": 1543341009338,
+      "acceptedAt": 0,
+      "firstPublishedAt": 1543219656439,
+      "latestPublishedAt": 1543219656439,
+      "vote": false,
+      "experimentalCss": "",
+      "displayAuthor": "",
+      "content": {},
+      "virtuals": {},
+      "coverless": true,
+      "slug": "silicon-valley-musings",
+      "translationSourcePostId": "",
+      "translationSourceCreatorId": "",
+      "isApprovedTranslation": false,
+      "inResponseToPostId": "",
+      "inResponseToRemovedAt": 0,
+      "isTitleSynthesized": false,
+      "allowResponses": true,
+      "importedUrl": "",
+      "importedPublishedAt": 0,
+      "visibility": 0,
+      "uniqueSlug": "silicon-valley-musings-a54a084bb59f",
+      "previewContent": {},
+      "license": 0,
+      "inResponseToMediaResourceId": "",
+      "canonicalUrl": "https://medium.com/ida-mediafoundry/silicon-valley-musings-a54a084bb59f",
+      "approvedHomeCollectionId": "a1a776694b7a",
+      "newsletterId": "",
+      "webCanonicalUrl": "https://medium.com/ida-mediafoundry/silicon-valley-musings-a54a084bb59f",
+      "mediumUrl": "https://medium.com/ida-mediafoundry/silicon-valley-musings-a54a084bb59f",
+      "migrationId": "",
+      "notifyFollowers": true,
+      "notifyTwitter": false,
+      "notifyFacebook": false,
+      "responseHiddenOnParentPostAt": 0,
+      "isSeries": false,
+      "isSubscriptionLocked": false,
+      "seriesLastAppendedAt": 0,
+      "audioVersionDurationSec": 0,
+      "sequenceId": "",
+      "isNsfw": false,
+      "isEligibleForRevenue": false,
+      "isBlockedFromHightower": false,
+      "deletedAt": 0,
+      "lockedPostSource": 0,
+      "hightowerMinimumGuaranteeStartsAt": 0,
+      "hightowerMinimumGuaranteeEndsAt": 0,
+      "featureLockRequestAcceptedAt": 0,
+      "mongerRequestType": 1,
+      "layerCake": 4,
+      "socialTitle": "",
+      "socialDek": "",
+      "editorialPreviewTitle": "",
+      "editorialPreviewDek": "",
+      "curationEligibleAt": 0,
+      "type": "Post"
+    },
+    "mentionedUsers": [],
+    "collaborators": [],
+    "collectionUserRelations": [],
+    "mode": null,
+    "references": {
+      "User": {
+        "b8bb00bc8582": {
+          "userId": "b8bb00bc8582",
+          "name": "Bert Swinnen",
+          "username": "bert.swinnen",
+          "createdAt": 1528438363120,
+          "imageId": "1*vboTdjt4TUPAKKj0KU7hDg.jpeg",
+          "backgroundImageId": "",
+          "bio": "Solutions Architect@iDA Mediafoundry",
+          "twitterScreenName": "",
+          "socialStats": {
+            "userId": "b8bb00bc8582",
+            "usersFollowedCount": 4,
+            "usersFollowedByCount": 13,
+            "type": "SocialStats"
+          },
+          "social": {
+            "userId": "ac862c6d178f",
+            "targetUserId": "b8bb00bc8582",
+            "type": "Social"
+          },
+          "facebookAccountId": "",
+          "allowNotes": 1,
+          "mediumMemberAt": 0,
+          "isNsfw": false,
+          "type": "User"
+        }
+      },
+      "Collection": {
+        "a1a776694b7a": {
+          "id": "a1a776694b7a",
+          "name": "ida mediafoundry",
+          "slug": "ida-mediafoundry",
+          "tags": [
+            "WEB DEVELOPMENT",
+            "JAVASCRIPT",
+            "MARKETING AUTOMATION",
+            "DESIGN",
+            "ECOMMERCE"
+          ],
+          "creatorId": "1b77bf6e3cb4",
+          "description": "Belgian company with a love for experience driven design and development.",
+          "shortDescription": "Belgian company with a love for experience driven design…",
+          "image": {
+            "imageId": "1*VGtPI86sYnHhj06NPp_YZA.png",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 200,
+            "originalHeight": 200,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "metadata": {
+            "followerCount": 77,
+            "activeAt": 1543219656897
+          },
+          "virtuals": {
+            "permissions": {
+              "canPublish": false,
+              "canPublishAll": false,
+              "canRepublish": false,
+              "canRemove": false,
+              "canManageAll": false,
+              "canSubmit": false,
+              "canEditPosts": false,
+              "canAddWriters": false,
+              "canViewStats": false,
+              "canSendNewsletter": false,
+              "canViewLockedPosts": false,
+              "canViewCloaked": false,
+              "canEditOwnPosts": false,
+              "canBeAssignedAuthor": false,
+              "canEnrollInHightower": false,
+              "canLockPostsForMediumMembers": false,
+              "canLockOwnPostsForMediumMembers": false
+            },
+            "isSubscribed": false,
+            "isNewsletterSubscribed": false,
+            "memberOfMembershipPlanId": "",
+            "isEnrolledInHightower": false,
+            "isEligibleForHightower": false
+          },
+          "logo": {
+            "imageId": "1*VGtPI86sYnHhj06NPp_YZA.png",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 200,
+            "originalHeight": 200,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "twitterUsername": "iDAMediaFoundry",
+          "facebookPageName": "idamediafoundry",
+          "publicEmail": "info@ida-mediafoundry.be",
+          "sections": [
+            {
+              "type": 2,
+              "collectionHeaderMetadata": {
+                "backgroundImage": {},
+                "logoImage": {
+                  "id": "1*RCHLi07Y7mkX2fJRINeYLA@2x.png",
+                  "originalWidth": 1600,
+                  "originalHeight": 200,
+                  "alt": "ida mediafoundry"
+                },
+                "alignment": 2,
+                "layout": 5
+              }
+            },
+            {
+              "type": 1,
+              "postListMetadata": {
+                "source": 1,
+                "layout": 2,
+                "number": 4,
+                "postIds": []
+              }
+            },
+            {
+              "type": 1,
+              "postListMetadata": {
+                "source": 1,
+                "layout": 5,
+                "number": 6,
+                "postIds": []
+              }
+            }
+          ],
+          "favicon": {
+            "imageId": "",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 0,
+            "originalHeight": 0,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "colorPalette": {
+            "defaultBackgroundSpectrum": {
+              "colorPoints": [
+                {
+                  "color": "#FF02B875",
+                  "point": 0
+                },
+                {
+                  "color": "#FF00AB6B",
+                  "point": 0.1
+                },
+                {
+                  "color": "#FF1C9963",
+                  "point": 0.2
+                },
+                {
+                  "color": "#FF092E20",
+                  "point": 1
+                }
+              ],
+              "backgroundColor": "#FFFFFFFF"
+            },
+            "highlightSpectrum": {
+              "colorPoints": [
+                {
+                  "color": "#FFFFFFFF",
+                  "point": 0
+                },
+                {
+                  "color": "#FFE9FDF0",
+                  "point": 0.1
+                },
+                {
+                  "color": "#FFE2FAEE",
+                  "point": 0.2
+                },
+                {
+                  "color": "#FFADFFCF",
+                  "point": 0.6
+                },
+                {
+                  "color": "#FF7DFFB3",
+                  "point": 1
+                }
+              ],
+              "backgroundColor": "#FFFFFFFF"
+            }
+          },
+          "navItems": [
+            {
+              "type": 1,
+              "title": "Development 🛠",
+              "tagSlug": "web-development",
+              "url": "https://medium.com/ida-mediafoundry/tagged/web-development",
+              "source": "tagSlug"
+            },
+            {
+              "type": 1,
+              "title": "Design ✏️",
+              "tagSlug": "design",
+              "url": "https://medium.com/ida-mediafoundry/tagged/design",
+              "source": "tagSlug"
+            },
+            {
+              "type": 1,
+              "title": "Marketing 💌",
+              "tagSlug": "marketing",
+              "url": "https://medium.com/ida-mediafoundry/tagged/marketing",
+              "source": "tagSlug"
+            },
+            {
+              "type": 1,
+              "title": "People 💪🏻",
+              "tagSlug": "people",
+              "url": "https://medium.com/ida-mediafoundry/tagged/people",
+              "source": "tagSlug"
+            },
+            {
+              "type": 3,
+              "title": "Who we are",
+              "url": "https://www.ida-mediafoundry.be/"
+            }
+          ],
+          "colorBehavior": 1,
+          "instantArticlesState": 0,
+          "acceleratedMobilePagesState": 0,
+          "ampLogo": {
+            "imageId": "",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 0,
+            "originalHeight": 0,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "header": {
+            "backgroundImage": {},
+            "logoImage": {
+              "id": "1*RCHLi07Y7mkX2fJRINeYLA@2x.png",
+              "originalWidth": 1600,
+              "originalHeight": 200,
+              "alt": "ida mediafoundry"
+            },
+            "alignment": 2,
+            "layout": 5
+          },
+          "type": "Collection"
+        }
+      },
+      "Social": {
+        "b8bb00bc8582": {
+          "userId": "ac862c6d178f",
+          "targetUserId": "b8bb00bc8582",
+          "type": "Social"
+        }
+      },
+      "SocialStats": {
+        "b8bb00bc8582": {
+          "userId": "b8bb00bc8582",
+          "usersFollowedCount": 4,
+          "usersFollowedByCount": 13,
+          "type": "SocialStats"
+        }
+      }
+    }
+  },
+  "v": 3,
+  "b": "36320-e307063"
+}

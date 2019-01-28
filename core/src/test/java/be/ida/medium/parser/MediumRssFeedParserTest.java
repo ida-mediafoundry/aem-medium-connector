@@ -2,37 +2,30 @@ package be.ida.medium.parser;
 
 import be.ida.TestResourceUtil;
 import be.ida.medium.bean.MediumPost;
-import be.ida.medium.bean.MediumPublication;
-import com.rometools.rome.feed.synd.SyndFeed;
+import be.ida.medium.bean.publication.Publication;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rometools.rome.io.FeedException;
-import com.rometools.rome.io.SyndFeedInput;
-import com.rometools.rome.io.XmlReader;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Java6Assertions.assertThat;
 
 @RunWith(JUnit4.class)
 public class MediumRssFeedParserTest {
-    MediumRssFeedParser mediumRssFeedParser = new MediumRssFeedParser();
-
     private static String EXAMPLE_TITLE = "Dummy title";
     private static String EXAMPLE_LINK = "https://medium.com/p/dea34a3ec034";
     private static String EXAMPLE_IMAGE_SOURCE = "https://cdn-images-1.medium.com/max/1024/1*o6hiCteU7wHTzKhTauIPzg.jpeg";
     private static String EXAMPLE_CREATOR = "Dummy user";
     private static String EXAMPLE_PUBLICATION_DATE = "Tue Oct 16 10:01:01 CEST 2018";
+    MediumRssFeedParser mediumRssFeedParser = new MediumRssFeedParser();
 
-    @Ignore
     @Test
     public void test_syndFeedToMediumPosts_happyPath() throws IOException, FeedException {
-        List<MediumPost> mediumPublications = mediumRssFeedParser.syndFeedToMediumPosts(getMockSyndFeed("rss/rss-feed-full")).getPosts();
+        List<MediumPost> mediumPublications = mediumRssFeedParser.publicationToMediumPublication(getMockPublication("medium-response-samples/medium-publication-dummy.json")).getPosts();
 
         assertThat(mediumPublications).isNotEmpty();
         assertThat(mediumPublications.size()).isEqualTo(10);
@@ -47,12 +40,11 @@ public class MediumRssFeedParserTest {
         assertThat(firstMediumPublication.getPublicationDate()).isEqualTo(EXAMPLE_PUBLICATION_DATE);
     }
 
-    private SyndFeed getMockSyndFeed(String fileName) throws IOException, FeedException {
-        SyndFeed feed = null;
+    private Publication getMockPublication(String fileName) throws IOException, FeedException {
 
-        String rawRssFeed = TestResourceUtil.getRawTestResource(fileName);
-        feed = new SyndFeedInput().build(new XmlReader(new ByteArrayInputStream(rawRssFeed.getBytes(StandardCharsets.UTF_8))));
-
-        return feed;
+        String rawJson = TestResourceUtil.getRawTestResource(fileName);
+        ObjectMapper objectMapper = new ObjectMapper();
+        Publication publication = objectMapper.readValue(rawJson, Publication.class);
+        return publication;
     }
 }

@@ -37,7 +37,6 @@ public class MediumRepositoryImpl implements MediumRepository {
                 setPublicationNodeName(mediumPublication, resourceResolver);
             }
 
-
             for (MediumPost mediumPost : mediumPublication.getPosts()) {
                 try {
                     resourceResolver.create(mediumResource, mediumPost.getId(), extractProperties(mediumPost));
@@ -114,6 +113,7 @@ public class MediumRepositoryImpl implements MediumRepository {
         properties.put(MEDIUM_POST_IMAGE_SOURCE, mediumPost.getImageSource());
         properties.put(MEDIUM_POST_CREATOR, mediumPost.getCreator());
         properties.put(MEDIUM_POST_PUBLICATION_DATE, mediumPost.getPublicationDate());
+        properties.put(MEDIUM_POST_UPDATE_DATE, mediumPost.getUpdateDate());
         properties.put(MEDIUM_POST_ID, mediumPost.getId());
 
         return properties;

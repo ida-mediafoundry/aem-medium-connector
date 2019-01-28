@@ -1,0 +1,4825 @@
+{
+  "success": true,
+  "payload": {
+    "collection": {
+      "id": "a1a776694b7a",
+      "name": "ida mediafoundry",
+      "slug": "ida-mediafoundry",
+      "tags": [
+        "WEB DEVELOPMENT",
+        "JAVASCRIPT",
+        "MARKETING AUTOMATION",
+        "DESIGN",
+        "ECOMMERCE"
+      ],
+      "creatorId": "1b77bf6e3cb4",
+      "description": "Belgian company with a love for experience driven design and development.",
+      "shortDescription": "Belgian company with a love for experience driven design…",
+      "image": {
+        "imageId": "1*VGtPI86sYnHhj06NPp_YZA.png",
+        "filter": "",
+        "backgroundSize": "",
+        "originalWidth": 200,
+        "originalHeight": 200,
+        "strategy": "resample",
+        "height": 0,
+        "width": 0
+      },
+      "metadata": {
+        "followerCount": 77,
+        "activeAt": 1543219656897
+      },
+      "virtuals": {
+        "permissions": {
+          "canPublish": false,
+          "canPublishAll": false,
+          "canRepublish": false,
+          "canRemove": false,
+          "canManageAll": false,
+          "canSubmit": false,
+          "canEditPosts": false,
+          "canAddWriters": false,
+          "canViewStats": false,
+          "canSendNewsletter": false,
+          "canViewLockedPosts": false,
+          "canViewCloaked": false,
+          "canEditOwnPosts": false,
+          "canBeAssignedAuthor": false,
+          "canEnrollInHightower": false,
+          "canLockPostsForMediumMembers": false,
+          "canLockOwnPostsForMediumMembers": false
+        },
+        "isSubscribed": false,
+        "isNewsletterSubscribed": false,
+        "memberOfMembershipPlanId": "",
+        "isEnrolledInHightower": false,
+        "isEligibleForHightower": false
+      },
+      "logo": {
+        "imageId": "1*VGtPI86sYnHhj06NPp_YZA.png",
+        "filter": "",
+        "backgroundSize": "",
+        "originalWidth": 200,
+        "originalHeight": 200,
+        "strategy": "resample",
+        "height": 0,
+        "width": 0
+      },
+      "twitterUsername": "iDAMediaFoundry",
+      "facebookPageName": "idamediafoundry",
+      "publicEmail": "info@ida-mediafoundry.be",
+      "sections": [
+        {
+          "type": 2,
+          "collectionHeaderMetadata": {
+            "backgroundImage": {},
+            "logoImage": {
+              "id": "1*RCHLi07Y7mkX2fJRINeYLA@2x.png",
+              "originalWidth": 1600,
+              "originalHeight": 200,
+              "alt": "ida mediafoundry"
+            },
+            "alignment": 2,
+            "layout": 5
+          }
+        },
+        {
+          "type": 1,
+          "postListMetadata": {
+            "source": 1,
+            "layout": 2,
+            "number": 4,
+            "postIds": []
+          }
+        },
+        {
+          "type": 1,
+          "postListMetadata": {
+            "source": 1,
+            "layout": 5,
+            "number": 6,
+            "postIds": []
+          }
+        }
+      ],
+      "favicon": {
+        "imageId": "",
+        "filter": "",
+        "backgroundSize": "",
+        "originalWidth": 0,
+        "originalHeight": 0,
+        "strategy": "resample",
+        "height": 0,
+        "width": 0
+      },
+      "colorPalette": {
+        "defaultBackgroundSpectrum": {
+          "colorPoints": [
+            {
+              "color": "#FF02B875",
+              "point": 0
+            },
+            {
+              "color": "#FF00AB6B",
+              "point": 0.1
+            },
+            {
+              "color": "#FF1C9963",
+              "point": 0.2
+            },
+            {
+              "color": "#FF092E20",
+              "point": 1
+            }
+          ],
+          "backgroundColor": "#FFFFFFFF"
+        },
+        "highlightSpectrum": {
+          "colorPoints": [
+            {
+              "color": "#FFFFFFFF",
+              "point": 0
+            },
+            {
+              "color": "#FFE9FDF0",
+              "point": 0.1
+            },
+            {
+              "color": "#FFE2FAEE",
+              "point": 0.2
+            },
+            {
+              "color": "#FFADFFCF",
+              "point": 0.6
+            },
+            {
+              "color": "#FF7DFFB3",
+              "point": 1
+            }
+          ],
+          "backgroundColor": "#FFFFFFFF"
+        }
+      },
+      "navItems": [
+        {
+          "type": 1,
+          "title": "Development 🛠",
+          "tagSlug": "web-development",
+          "url": "https://medium.com/ida-mediafoundry/tagged/web-development",
+          "source": "tagSlug"
+        },
+        {
+          "type": 1,
+          "title": "Design ✏️",
+          "tagSlug": "design",
+          "url": "https://medium.com/ida-mediafoundry/tagged/design",
+          "source": "tagSlug"
+        },
+        {
+          "type": 1,
+          "title": "Marketing 💌",
+          "tagSlug": "marketing",
+          "url": "https://medium.com/ida-mediafoundry/tagged/marketing",
+          "source": "tagSlug"
+        },
+        {
+          "type": 1,
+          "title": "People 💪🏻",
+          "tagSlug": "people",
+          "url": "https://medium.com/ida-mediafoundry/tagged/people",
+          "source": "tagSlug"
+        },
+        {
+          "type": 3,
+          "title": "Who we are",
+          "url": "https://www.ida-mediafoundry.be/"
+        }
+      ],
+      "colorBehavior": 1,
+      "instantArticlesState": 0,
+      "acceleratedMobilePagesState": 0,
+      "ampLogo": {
+        "imageId": "",
+        "filter": "",
+        "backgroundSize": "",
+        "originalWidth": 0,
+        "originalHeight": 0,
+        "strategy": "resample",
+        "height": 0,
+        "width": 0
+      },
+      "header": {
+        "backgroundImage": {},
+        "logoImage": {
+          "id": "1*RCHLi07Y7mkX2fJRINeYLA@2x.png",
+          "originalWidth": 1600,
+          "originalHeight": 200,
+          "alt": "ida mediafoundry"
+        },
+        "alignment": 2,
+        "layout": 5
+      },
+      "type": "Collection"
+    },
+    "posts": [
+      {
+        "id": "a54a084bb59f",
+        "versionId": "927c0c8f0175",
+        "creatorId": "b8bb00bc8582",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "Silicon valley musings",
+        "detectedLanguage": "en",
+        "latestVersion": "927c0c8f0175",
+        "latestPublishedVersion": "927c0c8f0175",
+        "hasUnpublishedEdits": false,
+        "latestRev": 1718,
+        "createdAt": 1535595788571,
+        "updatedAt": 1543341009338,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1543219656439,
+        "latestPublishedAt": 1543219656439,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*rv5iOqDoWuJ5CoZdyRXj8g.png",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 2165,
+            "originalHeight": 1012,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 1300,
+          "imageCount": 6,
+          "readingTime": 5.8556603773584905,
+          "subtitle": "Recently I went on vacation to the states and my first stop was at the magnificent city of San Francisco. The Walhalla of tech, the…",
+          "userPostRelation": {
+            "userId": "ac862c6d178f",
+            "postId": "a54a084bb59f",
+            "readAt": 0,
+            "readLaterAddedAt": 0,
+            "votedAt": 0,
+            "collaboratorAddedAt": 0,
+            "notesAddedAt": 0,
+            "subscribedAt": 0,
+            "lastReadSectionName": "",
+            "lastReadVersionId": "",
+            "lastReadAt": 0,
+            "lastReadParagraphName": "",
+            "lastReadPercentage": 0,
+            "viewedAt": 1548342514771,
+            "presentedCountInResponseManagement": 0,
+            "clapCount": 0,
+            "seriesUpdateNotifsOptedInAt": 0,
+            "queuedAt": 0,
+            "seriesFirstViewedAt": 0,
+            "presentedCountInStream": 7,
+            "seriesLastViewedAt": 0,
+            "audioProgressSec": 0
+          },
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 12,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "startup",
+              "name": "Startup",
+              "postCount": 339299,
+              "metadata": {
+                "postCount": 339299,
+                "coverImage": {
+                  "id": "1*22RsJ-7NHWOqbpqOFCv8Vw.jpeg"
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "people",
+              "name": "People",
+              "postCount": 11978,
+              "metadata": {
+                "postCount": 11978,
+                "coverImage": {
+                  "id": "1*8Zcyee_wdpHO4d0kuyeJBg.jpeg",
+                  "originalWidth": 4508,
+                  "originalHeight": 3220,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "america",
+              "name": "America",
+              "postCount": 12623,
+              "metadata": {
+                "postCount": 12623,
+                "coverImage": {
+                  "id": "1*h7SA_V0Z6abEizb_C_SQdA.jpeg",
+                  "originalWidth": 5568,
+                  "originalHeight": 3712,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "entrepreneurship",
+              "name": "Entrepreneurship",
+              "postCount": 232672,
+              "metadata": {
+                "postCount": 232672,
+                "coverImage": {
+                  "id": "1*tiyoLq9F0Yofv9gUOgwAFw.jpeg"
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 2,
+          "links": {
+            "entries": [
+              {
+                "url": "https://www.linkedin.com/in/bertswinnen/",
+                "alts": [],
+                "httpStatus": 999
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.metalpay.com",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1543219657827
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 68,
+          "sectionCount": 2,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "silicon-valley-musings",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": false,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "silicon-valley-musings-a54a084bb59f",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*rv5iOqDoWuJ5CoZdyRXj8g.png",
+                  "originalWidth": 2165,
+                  "originalHeight": 1012,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "1b19",
+                "type": 3,
+                "text": "Silicon Valley musings",
+                "markups": [],
+                "alignment": 1
+              },
+              {
+                "name": "6f7a",
+                "type": 1,
+                "text": "Recently, I went on vacation to the States where my first stop was the magnificent city of San Francisco. The Walhalla…",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "Recently I went on vacation to the states and my first stop was at the magnificent city of San Francisco. The Walhalla of tech, the…"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 4,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "6f72a5a59128",
+        "versionId": "4fb29ec1f046",
+        "creatorId": "2d09a386e2e7",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "Tech-fatigue and how I got over it",
+        "detectedLanguage": "en",
+        "latestVersion": "4fb29ec1f046",
+        "latestPublishedVersion": "4fb29ec1f046",
+        "hasUnpublishedEdits": false,
+        "latestRev": 1723,
+        "createdAt": 1538421632535,
+        "updatedAt": 1540888261533,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1540888261295,
+        "latestPublishedAt": 1540888261295,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*9ev7L9fbEGBmh2a6voUSGQ.png",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 2165,
+            "originalHeight": 1012,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 1560,
+          "imageCount": 5,
+          "readingTime": 6.720125786163521,
+          "subtitle": "From tech-loving fanatic to wanting to ditch every tech I had and back.",
+          "userPostRelation": {
+            "userId": "ac862c6d178f",
+            "postId": "6f72a5a59128",
+            "readAt": 0,
+            "readLaterAddedAt": 0,
+            "votedAt": 0,
+            "collaboratorAddedAt": 0,
+            "notesAddedAt": 0,
+            "subscribedAt": 0,
+            "lastReadSectionName": "",
+            "lastReadVersionId": "",
+            "lastReadAt": 0,
+            "lastReadParagraphName": "",
+            "lastReadPercentage": 0,
+            "viewedAt": 0,
+            "presentedCountInResponseManagement": 0,
+            "clapCount": 0,
+            "seriesUpdateNotifsOptedInAt": 0,
+            "queuedAt": 0,
+            "seriesFirstViewedAt": 0,
+            "presentedCountInStream": 4,
+            "seriesLastViewedAt": 0,
+            "audioProgressSec": 0
+          },
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 15,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "javascript",
+              "name": "JavaScript",
+              "postCount": 84531,
+              "metadata": {
+                "postCount": 84531,
+                "coverImage": {
+                  "id": "1*IwvkEcaGGVihZ8PBj_Y4hA.jpeg",
+                  "originalWidth": 2048,
+                  "originalHeight": 1531,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "tech",
+              "name": "Tech",
+              "postCount": 143821,
+              "metadata": {
+                "postCount": 143821,
+                "coverImage": {
+                  "id": "1*7X7-LcW3uW6rfNHQ3X9cOw.jpeg",
+                  "originalWidth": 7360,
+                  "originalHeight": 4912,
+                  "isFeatured": true,
+                  "focusPercentX": 47,
+                  "focusPercentY": 43
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "web-development",
+              "name": "Web Development",
+              "postCount": 85099,
+              "metadata": {
+                "postCount": 85099,
+                "coverImage": {
+                  "id": "1*2VozxYfmWwjphR5W_5tBWg.jpeg",
+                  "originalWidth": 630,
+                  "originalHeight": 417,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://www.linkedin.com/in/mario-van-den-eynde-8b85544/",
+                "alts": [],
+                "httpStatus": 999
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1540888263195
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 176,
+          "sectionCount": 1,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "tech-fatigue-and-how-i-got-over-it",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": false,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "tech-fatigue-and-how-i-got-over-it-6f72a5a59128",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*9ev7L9fbEGBmh2a6voUSGQ.png",
+                  "originalWidth": 2165,
+                  "originalHeight": 1012,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "8037",
+                "type": 3,
+                "text": "Tech-fatigue and how I got over it",
+                "markups": [],
+                "alignment": 1
+              },
+              {
+                "name": "5b5b",
+                "type": 13,
+                "text": "From tech-loving fanatic to wanting to ditch every tech I had and…",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "From tech-loving fanatic to wanting to ditch every tech I had and back."
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "dea34a3ec034",
+        "versionId": "b4d14392fcaa",
+        "creatorId": "6250c5e6e2e1",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "Pitfalls of coding emails — lessons learned (part 2)",
+        "detectedLanguage": "en",
+        "latestVersion": "b4d14392fcaa",
+        "latestPublishedVersion": "b4d14392fcaa",
+        "hasUnpublishedEdits": false,
+        "latestRev": 471,
+        "createdAt": 1538937061166,
+        "updatedAt": 1539847777861,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1539676861728,
+        "latestPublishedAt": 1539847777861,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*o6hiCteU7wHTzKhTauIPzg.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 1500,
+            "originalHeight": 834,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 686,
+          "imageCount": 4,
+          "readingTime": 3.288679245283019,
+          "subtitle": "As mentioned in part 1, this post will include more useful tips and tricks to make sure your email looks (almost) the same across multiple…",
+          "userPostRelation": {
+            "userId": "ac862c6d178f",
+            "postId": "dea34a3ec034",
+            "readAt": 0,
+            "readLaterAddedAt": 0,
+            "votedAt": 0,
+            "collaboratorAddedAt": 0,
+            "notesAddedAt": 0,
+            "subscribedAt": 0,
+            "lastReadSectionName": "",
+            "lastReadVersionId": "",
+            "lastReadAt": 0,
+            "lastReadParagraphName": "",
+            "lastReadPercentage": 0,
+            "viewedAt": 0,
+            "presentedCountInResponseManagement": 0,
+            "clapCount": 0,
+            "seriesUpdateNotifsOptedInAt": 0,
+            "queuedAt": 0,
+            "seriesFirstViewedAt": 0,
+            "presentedCountInStream": 4,
+            "seriesLastViewedAt": 0,
+            "audioProgressSec": 0
+          },
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 3,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "web-development",
+              "name": "Web Development",
+              "postCount": 85099,
+              "metadata": {
+                "postCount": 85099,
+                "coverImage": {
+                  "id": "1*2VozxYfmWwjphR5W_5tBWg.jpeg",
+                  "originalWidth": 630,
+                  "originalHeight": 417,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "campaign",
+              "name": "Campaign",
+              "postCount": 2452,
+              "metadata": {
+                "postCount": 2452,
+                "coverImage": {
+                  "id": "1*hlDwGN7NXUxLJ0IOpWq9yg.jpeg",
+                  "originalWidth": 880,
+                  "originalHeight": 404
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "email",
+              "name": "Email",
+              "postCount": 10961,
+              "metadata": {
+                "postCount": 10961,
+                "coverImage": {
+                  "id": "1*d8Y03ZZjBnBBxsR428COmA.png",
+                  "originalWidth": 2510,
+                  "originalHeight": 1388,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "marketing-automation",
+              "name": "Marketing Automation",
+              "postCount": 2916,
+              "metadata": {
+                "postCount": 2916,
+                "coverImage": {
+                  "id": "1*EgAemazETiMSRF09GkHEWQ.png",
+                  "originalWidth": 985,
+                  "originalHeight": 394,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "adobe",
+              "name": "Adobe",
+              "postCount": 1916,
+              "metadata": {
+                "postCount": 1916,
+                "coverImage": {
+                  "id": "1*XuJQTJkSsQNlqd5-egr_nQ.jpeg",
+                  "originalWidth": 960,
+                  "originalHeight": 540,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://templates.mailchimp.com/development/css/client-specific-styles/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://templates.mailchimp.com/development/css/reset-styles/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://templates.mailchimp.com/development/css/outlook-conditional-css/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry/pitfalls-of-coding-emails-lessons-learned-part-1-7532803ead2c",
+                "alts": [
+                  {
+                    "type": 3,
+                    "url": "medium://p/7532803ead2c"
+                  },
+                  {
+                    "type": 2,
+                    "url": "medium://p/7532803ead2c"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/nl/jobs.html",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1539847779150
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 15,
+          "sectionCount": 3,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "pitfalls-of-coding-emails-lessons-learned-part-2",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": false,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "pitfalls-of-coding-emails-lessons-learned-part-2-dea34a3ec034",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*o6hiCteU7wHTzKhTauIPzg.jpeg",
+                  "originalWidth": 1500,
+                  "originalHeight": 834,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "fb3d",
+                "type": 3,
+                "text": "Pitfalls of coding emails — lessons learned (part 2)",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "As mentioned in part 1, this post will include more useful tips and tricks to make sure your email looks (almost) the same across multiple…"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "aebc69518863",
+        "versionId": "21387c21ddb1",
+        "creatorId": "17f10995e",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "24 VSCode Extensions Every Web Developer Needs",
+        "detectedLanguage": "en",
+        "latestVersion": "21387c21ddb1",
+        "latestPublishedVersion": "21387c21ddb1",
+        "hasUnpublishedEdits": false,
+        "latestRev": 1298,
+        "createdAt": 1532176922831,
+        "updatedAt": 1538489791774,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1538467261153,
+        "latestPublishedAt": 1538489791774,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*O2pJOJL5D4VaKTP94CFO2w.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 2165,
+            "originalHeight": 1012,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 1531,
+          "imageCount": 28,
+          "readingTime": 7.9273584905660375,
+          "subtitle": "These days, we’re all looking for more efficiency in our daily workflow, no matter what kind of job we have.",
+          "userPostRelation": {
+            "userId": "ac862c6d178f",
+            "postId": "aebc69518863",
+            "readAt": 0,
+            "readLaterAddedAt": 0,
+            "votedAt": 0,
+            "collaboratorAddedAt": 0,
+            "notesAddedAt": 0,
+            "subscribedAt": 0,
+            "lastReadSectionName": "",
+            "lastReadVersionId": "",
+            "lastReadAt": 0,
+            "lastReadParagraphName": "",
+            "lastReadPercentage": 0,
+            "viewedAt": 0,
+            "presentedCountInResponseManagement": 0,
+            "clapCount": 0,
+            "seriesUpdateNotifsOptedInAt": 0,
+            "queuedAt": 0,
+            "seriesFirstViewedAt": 0,
+            "presentedCountInStream": 4,
+            "seriesLastViewedAt": 0,
+            "audioProgressSec": 0
+          },
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 3,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "vscode",
+              "name": "Vscode",
+              "postCount": 868,
+              "metadata": {
+                "postCount": 868,
+                "coverImage": {
+                  "id": "1*4pcAVkaZOTLrcUV9dio3oA.png",
+                  "originalWidth": 720,
+                  "originalHeight": 340,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "extension",
+              "name": "Extensions",
+              "postCount": 0,
+              "metadata": {
+                "postCount": 0,
+                "coverImage": {
+                  "id": "0*GxjpbDJAkxeYS1_e.png",
+                  "originalWidth": 1600,
+                  "originalHeight": 1469
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "programming",
+              "name": "Programming",
+              "postCount": 85915,
+              "metadata": {
+                "postCount": 85915,
+                "coverImage": {
+                  "id": "1*IwvkEcaGGVihZ8PBj_Y4hA.jpeg",
+                  "originalWidth": 2048,
+                  "originalHeight": 1531,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "editor",
+              "name": "Editor",
+              "postCount": 1179,
+              "metadata": {
+                "postCount": 1179,
+                "coverImage": {
+                  "id": "1*R2hDqLtZEMVz7kGa1P5eyg.png",
+                  "originalWidth": 1280,
+                  "originalHeight": 833
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "web-development",
+              "name": "Web Development",
+              "postCount": 85099,
+              "metadata": {
+                "postCount": 85099,
+                "coverImage": {
+                  "id": "1*2VozxYfmWwjphR5W_5tBWg.jpeg",
+                  "originalWidth": 630,
+                  "originalHeight": 417,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://code.visualstudio.com/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://atom.io/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/nl/jobs.html",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://wakatime.com/vs-code",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://code.visualstudio.com/blogs/2017/08/07/emmet-2.0",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=nikitaKunevich.snippet-creator",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=anseki.vscode-color",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=alexdima.copy-relative-path",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=minhthai.vscode-todo-parser",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=brpaz.file-templates",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=mlewand.select-part-of-word",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://marketplace.visualstudio.com/items?itemName=zhengxiaoyao0716.intelligence-change-case",
+                "alts": [],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1538489794097
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 35,
+          "sectionCount": 2,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "24-vscode-extensions-every-web-developer-needs",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": false,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "23-vscode-extensions-every-web-developer-needs-aebc69518863",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*O2pJOJL5D4VaKTP94CFO2w.jpeg",
+                  "originalWidth": 2165,
+                  "originalHeight": 1012,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "d4cc",
+                "type": 3,
+                "text": "VSCode Extensions Every Web Developer Needs",
+                "markups": [],
+                "alignment": 1
+              },
+              {
+                "name": "f863",
+                "type": 1,
+                "text": "These days, we’re all looking for more efficiency in our daily workflow, no matter…",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "These days, we’re all looking for more efficiency in our daily workflow, no matter what kind of job we have."
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "4f912d64178",
+        "versionId": "4f5e86be7b42",
+        "creatorId": "c4206c2f33e",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "Customer Obsessed Retail",
+        "detectedLanguage": "en",
+        "latestVersion": "4f5e86be7b42",
+        "latestPublishedVersion": "4f5e86be7b42",
+        "hasUnpublishedEdits": false,
+        "latestRev": 589,
+        "createdAt": 1537804848380,
+        "updatedAt": 1538489709721,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1537863363810,
+        "latestPublishedAt": 1538489709721,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*a19_MZGkjYiPI5y9tK637g.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 2165,
+            "originalHeight": 1012,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 841,
+          "imageCount": 4,
+          "readingTime": 3.873584905660377,
+          "subtitle": "5 things I learned on Retail Detail Day 2018",
+          "userPostRelation": {
+            "userId": "ac862c6d178f",
+            "postId": "4f912d64178",
+            "readAt": 0,
+            "readLaterAddedAt": 0,
+            "votedAt": 0,
+            "collaboratorAddedAt": 0,
+            "notesAddedAt": 0,
+            "subscribedAt": 0,
+            "lastReadSectionName": "",
+            "lastReadVersionId": "",
+            "lastReadAt": 0,
+            "lastReadParagraphName": "",
+            "lastReadPercentage": 0,
+            "viewedAt": 0,
+            "presentedCountInResponseManagement": 0,
+            "clapCount": 0,
+            "seriesUpdateNotifsOptedInAt": 0,
+            "queuedAt": 0,
+            "seriesFirstViewedAt": 0,
+            "presentedCountInStream": 1,
+            "seriesLastViewedAt": 0,
+            "audioProgressSec": 0
+          },
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 5,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "retail",
+              "name": "Retail",
+              "postCount": 16872,
+              "metadata": {
+                "postCount": 16872,
+                "coverImage": {
+                  "id": "1*_I_4YYmrwIAMOZLG0X4cPA.jpeg",
+                  "originalWidth": 3000,
+                  "originalHeight": 2000,
+                  "isFeatured": true,
+                  "focusPercentX": 51,
+                  "focusPercentY": 37
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "ecommerce",
+              "name": "Ecommerce",
+              "postCount": 44909,
+              "metadata": {
+                "postCount": 44909,
+                "coverImage": {
+                  "id": "1*bUpTcFZZSw4H_5_ofxILqw.png",
+                  "originalWidth": 2098,
+                  "originalHeight": 920
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "customer-service",
+              "name": "Customer Service",
+              "postCount": 18924,
+              "metadata": {
+                "postCount": 18924,
+                "coverImage": {
+                  "id": "1*qzHZA1XpaicNj0SROpBXyQ.jpeg",
+                  "originalWidth": 715,
+                  "originalHeight": 375,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "trends",
+              "name": "Trends",
+              "postCount": 10721,
+              "metadata": {
+                "postCount": 10721,
+                "coverImage": {
+                  "id": "1*h727FA7RWm9NaueLHg10qQ.png",
+                  "originalWidth": 2400,
+                  "originalHeight": 900,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "marketing",
+              "name": "Marketing",
+              "postCount": 174893,
+              "metadata": {
+                "postCount": 174893,
+                "coverImage": {
+                  "id": "1*2oWKibC7b2MC97cB44RP8w.jpeg",
+                  "originalWidth": 2000,
+                  "originalHeight": 1263,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://www.lauradewinterdesign.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.linkedin.com/in/lauradewinterdesign/",
+                "alts": [],
+                "httpStatus": 999
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.youtube.com/watch?v=u4ZoJKF_VuA",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "vnd.youtube://www.youtube.com/watch?v=u4ZoJKF_VuA&feature=applinks"
+                  },
+                  {
+                    "type": 3,
+                    "url": "vnd.youtube://www.youtube.com/watch?v=u4ZoJKF_VuA&feature=applinks"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.action.com",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.hema.be",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://spott.tv",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.runnerslab.be/en/home",
+                "alts": [],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1538489711247
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 49,
+          "sectionCount": 2,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "customer-obsessed-retail",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": true,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "customer-obsessed-retail-4f912d64178",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*a19_MZGkjYiPI5y9tK637g.jpeg",
+                  "originalWidth": 2165,
+                  "originalHeight": 1012,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "377a",
+                "type": 3,
+                "text": "Customer Obsessed Retail",
+                "markups": [],
+                "alignment": 1
+              },
+              {
+                "name": "d194",
+                "type": 13,
+                "text": "5 things I learned on Retail Detail Day 2018",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "5 things I learned on Retail Detail Day 2018"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "104536c76da8",
+        "versionId": "3b0c7fc1e1f2",
+        "creatorId": "e0932aedfa22",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "Adobe Experience Manager — Add links to your internal and external tools in Touch UI",
+        "detectedLanguage": "en",
+        "latestVersion": "3b0c7fc1e1f2",
+        "latestPublishedVersion": "3b0c7fc1e1f2",
+        "hasUnpublishedEdits": false,
+        "latestRev": 429,
+        "createdAt": 1535294689135,
+        "updatedAt": 1538489577229,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1537257661640,
+        "latestPublishedAt": 1538489577229,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*jEbaONDFQgVHZQNXVbCihg.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 2165,
+            "originalHeight": 1012,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 388,
+          "imageCount": 6,
+          "readingTime": 2.4141509433962263,
+          "subtitle": "Nothing is more annoying than having custom pages or tools in AEM, and not being able to find them using the UI. Plus, you can't expect…",
+          "userPostRelation": {
+            "userId": "ac862c6d178f",
+            "postId": "104536c76da8",
+            "readAt": 0,
+            "readLaterAddedAt": 0,
+            "votedAt": 0,
+            "collaboratorAddedAt": 0,
+            "notesAddedAt": 0,
+            "subscribedAt": 0,
+            "lastReadSectionName": "",
+            "lastReadVersionId": "",
+            "lastReadAt": 0,
+            "lastReadParagraphName": "",
+            "lastReadPercentage": 0,
+            "viewedAt": 0,
+            "presentedCountInResponseManagement": 0,
+            "clapCount": 0,
+            "seriesUpdateNotifsOptedInAt": 0,
+            "queuedAt": 0,
+            "seriesFirstViewedAt": 0,
+            "presentedCountInStream": 1,
+            "seriesLastViewedAt": 0,
+            "audioProgressSec": 0
+          },
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 8,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "adobe-experience-manager",
+              "name": "Adobe Experience Manager",
+              "postCount": 52,
+              "metadata": {
+                "postCount": 52,
+                "coverImage": {
+                  "id": "1*6QKjvykHutscTx1NsRGHJg.jpeg",
+                  "originalWidth": 1689,
+                  "originalHeight": 950,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "touch-ui",
+              "name": "Touch Ui",
+              "postCount": 23,
+              "metadata": {
+                "postCount": 23,
+                "coverImage": {
+                  "id": "1*jEbaONDFQgVHZQNXVbCihg.jpeg",
+                  "originalWidth": 2165,
+                  "originalHeight": 1012,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "cms",
+              "name": "CMS",
+              "postCount": 2447,
+              "metadata": {
+                "postCount": 2447,
+                "coverImage": {
+                  "id": "1*rU6KNs9KfdROiENL-UQTNA.jpeg",
+                  "originalWidth": 3000,
+                  "originalHeight": 2000,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "adobe",
+              "name": "Adobe",
+              "postCount": 1916,
+              "metadata": {
+                "postCount": 1916,
+                "coverImage": {
+                  "id": "1*XuJQTJkSsQNlqd5-egr_nQ.jpeg",
+                  "originalWidth": 960,
+                  "originalHeight": 540,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "web-development",
+              "name": "Web Development",
+              "postCount": 85099,
+              "metadata": {
+                "postCount": 85099,
+                "coverImage": {
+                  "id": "1*2VozxYfmWwjphR5W_5tBWg.jpeg",
+                  "originalWidth": 630,
+                  "originalHeight": 417,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "http://localhost:4502/libs/cq/i18n/translator.html",
+                "alts": [],
+                "httpStatus": 0
+              },
+              {
+                "url": "https://www.linkedin.com/in/michaelgeerts/",
+                "alts": [],
+                "httpStatus": 999
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1538489577929
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 54,
+          "sectionCount": 2,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "adobe-experience-manager-add-links-to-your-internal-and-external-tools-in-touch-ui",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": true,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "adobe-experience-manager-add-links-to-your-internal-and-external-tools-in-touch-ui-104536c76da8",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*jEbaONDFQgVHZQNXVbCihg.jpeg",
+                  "originalWidth": 2165,
+                  "originalHeight": 1012,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "b1ab",
+                "type": 3,
+                "text": "Adobe Experience Manager — Add links to your internal and external tools in Touch UI",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "Nothing is more annoying than having custom pages or tools in AEM, and not being able to find them using the UI. Plus, you can't expect…"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "9c178eec5ec8",
+        "versionId": "630151b3c124",
+        "creatorId": "17f10995e",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "10 Essential Elements Of A Great Website",
+        "detectedLanguage": "en",
+        "latestVersion": "630151b3c124",
+        "latestPublishedVersion": "630151b3c124",
+        "hasUnpublishedEdits": false,
+        "latestRev": 486,
+        "createdAt": 1532184805031,
+        "updatedAt": 1538489514181,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1536048061809,
+        "latestPublishedAt": 1538489514181,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*PKR98EaVr3kGhaAFZ9ty2Q.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 2165,
+            "originalHeight": 1012,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 2441,
+          "imageCount": 12,
+          "readingTime": 10.56132075471698,
+          "subtitle": "“Websites promote your brand 24/7: No employee will ever do that for you. It works continuously for you whilst you sleep!”",
+          "userPostRelation": {
+            "userId": "ac862c6d178f",
+            "postId": "9c178eec5ec8",
+            "readAt": 0,
+            "readLaterAddedAt": 0,
+            "votedAt": 0,
+            "collaboratorAddedAt": 0,
+            "notesAddedAt": 0,
+            "subscribedAt": 0,
+            "lastReadSectionName": "",
+            "lastReadVersionId": "",
+            "lastReadAt": 0,
+            "lastReadParagraphName": "",
+            "lastReadPercentage": 0,
+            "viewedAt": 0,
+            "presentedCountInResponseManagement": 0,
+            "clapCount": 0,
+            "seriesUpdateNotifsOptedInAt": 0,
+            "queuedAt": 0,
+            "seriesFirstViewedAt": 0,
+            "presentedCountInStream": 1,
+            "seriesLastViewedAt": 0,
+            "audioProgressSec": 0
+          },
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 4,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "seo",
+              "name": "SEO",
+              "postCount": 275334,
+              "metadata": {
+                "postCount": 275334,
+                "coverImage": {
+                  "id": "1*MsuvzhE8YUsZpfaagMnzkQ.jpeg",
+                  "originalWidth": 5598,
+                  "originalHeight": 3732,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "website",
+              "name": "Website",
+              "postCount": 11405,
+              "metadata": {
+                "postCount": 11405,
+                "coverImage": {
+                  "id": "1*xdK_9Br7v8GVOUnq7B4afg.png",
+                  "originalWidth": 1883,
+                  "originalHeight": 906,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "conversations",
+              "name": "Conversations",
+              "postCount": 4840,
+              "metadata": {
+                "postCount": 4840,
+                "coverImage": {
+                  "id": "0*57YApP4eUmt4LMlu",
+                  "originalWidth": 6720,
+                  "originalHeight": 4480
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "mobile",
+              "name": "Mobile",
+              "postCount": 34267,
+              "metadata": {
+                "postCount": 34267,
+                "coverImage": {
+                  "id": "1*UYDCNBLjs8XqUgnqjXmzAQ.png",
+                  "originalWidth": 4200,
+                  "originalHeight": 2040
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "marketing",
+              "name": "Marketing",
+              "postCount": 174893,
+              "metadata": {
+                "postCount": 174893,
+                "coverImage": {
+                  "id": "1*2oWKibC7b2MC97cB44RP8w.jpeg",
+                  "originalWidth": 2000,
+                  "originalHeight": 1263,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.google.com/business/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://colorlib.com/wp/best-one-page-wordpress-themes/",
+                "alts": [
+                  {
+                    "type": 1,
+                    "url": "https://cdn.ampproject.org/c/s/colorlib.com/wp/best-one-page-wordpress-themes/amp/"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://adwords.googleblog.com/2015/05/building-for-next-moment.html",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.linkedin.com/company/add/show",
+                "alts": [],
+                "httpStatus": 999
+              },
+              {
+                "url": "http://sayviget.com/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://wordpress.org/plugins/wordpress-seo/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://tools.pingdom.com/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/nl/jobs.html",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://moz.com/blog/google-organic-click-through-rates-in-2014",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "http://www.website.com/2016/08/03/aspx?article%20about%20health",
+                "alts": [],
+                "httpStatus": 0
+              },
+              {
+                "url": "http://www.seocentro.com/tools/seo/seo-analyzer.html",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.youtube.com/watch?v=5eAnQj0u7aE",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "vnd.youtube://www.youtube.com/watch?v=5eAnQj0u7aE&feature=applinks"
+                  },
+                  {
+                    "type": 3,
+                    "url": "vnd.youtube://www.youtube.com/watch?v=5eAnQj0u7aE&feature=applinks"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "http://zellwk.com/blog/how-to-write-mobile-first-css/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "http://www.website.com/article-about-health",
+                "alts": [],
+                "httpStatus": 404
+              },
+              {
+                "url": "http://bluegg.co.uk/404",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "http://www.hobo-web.co.uk/your-website-design-should-load-in-4-seconds/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://s3-eu-west-1.amazonaws.com/truetech-v3/blog/one2.png",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://s3-eu-west-1.amazonaws.com/truetech-v3/blog/one1.png",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.advancedwebranking.com/ctrstudy/",
+                "alts": [],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1538489518982
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 29,
+          "sectionCount": 4,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "10-essential-elements-of-a-great-website",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": true,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "10-essential-elements-of-a-great-website-9c178eec5ec8",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*PKR98EaVr3kGhaAFZ9ty2Q.jpeg",
+                  "originalWidth": 2165,
+                  "originalHeight": 1012,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "1da3",
+                "type": 3,
+                "text": "10 Essential Elements Of A Great Website",
+                "markups": [],
+                "alignment": 1
+              },
+              {
+                "name": "632d",
+                "type": 6,
+                "text": "“Websites promote your brand 24/7: No employee will ever do that for you. It works…",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "“Websites promote your brand 24/7: No employee will ever do that for you. It works continuously for you whilst you sleep!”"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "581ab03b6e7a",
+        "versionId": "b8f1694d7668",
+        "creatorId": "6d69c792d7ed",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "How to survive as an IT Consultancy firm",
+        "detectedLanguage": "en",
+        "latestVersion": "b8f1694d7668",
+        "latestPublishedVersion": "b8f1694d7668",
+        "hasUnpublishedEdits": false,
+        "latestRev": 559,
+        "createdAt": 1532421252679,
+        "updatedAt": 1538489424140,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1534838461661,
+        "latestPublishedAt": 1538489424140,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*vbqSD5TQkOs0DQ238U8wlA.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 2165,
+            "originalHeight": 1012,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 730,
+          "imageCount": 5,
+          "readingTime": 3.588050314465409,
+          "subtitle": "The impact of Digital Transformation on IT consultancies and how Service Design can help you serve your clients better",
+          "userPostRelation": {
+            "userId": "ac862c6d178f",
+            "postId": "581ab03b6e7a",
+            "readAt": 0,
+            "readLaterAddedAt": 0,
+            "votedAt": 0,
+            "collaboratorAddedAt": 0,
+            "notesAddedAt": 0,
+            "subscribedAt": 0,
+            "lastReadSectionName": "",
+            "lastReadVersionId": "",
+            "lastReadAt": 0,
+            "lastReadParagraphName": "",
+            "lastReadPercentage": 0,
+            "viewedAt": 0,
+            "presentedCountInResponseManagement": 0,
+            "clapCount": 0,
+            "seriesUpdateNotifsOptedInAt": 0,
+            "queuedAt": 0,
+            "seriesFirstViewedAt": 0,
+            "presentedCountInStream": 2,
+            "seriesLastViewedAt": 0,
+            "audioProgressSec": 0
+          },
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 5,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "digital-transformation",
+              "name": "Digital Transformation",
+              "postCount": 14342,
+              "metadata": {
+                "postCount": 14342,
+                "coverImage": {
+                  "id": "0*ZDS7xi7hgUqpM6Br.png",
+                  "originalWidth": 2600,
+                  "originalHeight": 817,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "service-design",
+              "name": "Service Design",
+              "postCount": 5204,
+              "metadata": {
+                "postCount": 5204,
+                "coverImage": {
+                  "id": "1*xNATnFq_-10lSB52oeCm-g.png",
+                  "originalWidth": 1306,
+                  "originalHeight": 380,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "technology-strategy",
+              "name": "Technology Strategy",
+              "postCount": 441,
+              "metadata": {
+                "postCount": 441,
+                "coverImage": {
+                  "id": "1*QhymkJZFFD1I859ZRLncmg.png",
+                  "originalWidth": 1987,
+                  "originalHeight": 1134,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "business-strategy",
+              "name": "Business Strategy",
+              "postCount": 21174,
+              "metadata": {
+                "postCount": 21174,
+                "coverImage": {
+                  "id": "1*kWdhrT-R8k_bAiW8SG0-Xg.jpeg",
+                  "originalWidth": 640,
+                  "originalHeight": 480,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "people",
+              "name": "People",
+              "postCount": 11978,
+              "metadata": {
+                "postCount": 11978,
+                "coverImage": {
+                  "id": "1*8Zcyee_wdpHO4d0kuyeJBg.jpeg",
+                  "originalWidth": 4508,
+                  "originalHeight": 3220,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.linkedin.com/in/yanadirkx/",
+                "alts": [],
+                "httpStatus": 999
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1538489424708
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 25,
+          "sectionCount": 2,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "how-to-survive-as-an-it-consultancy-firm",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": true,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "digital-transformation-581ab03b6e7a",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "3a18",
+                "type": 3,
+                "text": "How to survive as an IT Consultancy firm",
+                "markups": [],
+                "alignment": 1
+              },
+              {
+                "name": "123b",
+                "type": 13,
+                "text": "The impact of Digital Transformation on IT consultancies and how Service Design can help you serve your clients better",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "The impact of Digital Transformation on IT consultancies and how Service Design can help you serve your clients better"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "ec77a3f3cdeb",
+        "versionId": "a54f1006bc4d",
+        "creatorId": "b8bb00bc8582",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "Kind words for generationY.",
+        "detectedLanguage": "en",
+        "latestVersion": "a54f1006bc4d",
+        "latestPublishedVersion": "a54f1006bc4d",
+        "hasUnpublishedEdits": false,
+        "latestRev": 2059,
+        "createdAt": 1528551067786,
+        "updatedAt": 1538489365519,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1533110461350,
+        "latestPublishedAt": 1538489365519,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*Lm67S_0BApjUuoCjVCCFXg.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 2165,
+            "originalHeight": 1012,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 1098,
+          "imageCount": 5,
+          "readingTime": 4.976729559748428,
+          "subtitle": "Working as a solutions architect the usual suspects to write about are things like coding, architectures and whatnot. Although tempting, …",
+          "userPostRelation": {
+            "userId": "ac862c6d178f",
+            "postId": "ec77a3f3cdeb",
+            "readAt": 0,
+            "readLaterAddedAt": 0,
+            "votedAt": 0,
+            "collaboratorAddedAt": 0,
+            "notesAddedAt": 0,
+            "subscribedAt": 0,
+            "lastReadSectionName": "",
+            "lastReadVersionId": "",
+            "lastReadAt": 0,
+            "lastReadParagraphName": "",
+            "lastReadPercentage": 0,
+            "viewedAt": 0,
+            "presentedCountInResponseManagement": 0,
+            "clapCount": 0,
+            "seriesUpdateNotifsOptedInAt": 0,
+            "queuedAt": 0,
+            "seriesFirstViewedAt": 0,
+            "presentedCountInStream": 2,
+            "seriesLastViewedAt": 0,
+            "audioProgressSec": 0
+          },
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 13,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "generation-y",
+              "name": "Generation Y",
+              "postCount": 735,
+              "metadata": {
+                "postCount": 735,
+                "coverImage": {
+                  "id": "1*ILNsuJn5H9n5AtvxT1dGQA.jpeg",
+                  "originalWidth": 2500,
+                  "originalHeight": 1656,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "motivation",
+              "name": "Motivation",
+              "postCount": 55211,
+              "metadata": {
+                "postCount": 55211,
+                "coverImage": {
+                  "id": "1*0tmBPKA1YGo82VNeMS3KhA.jpeg",
+                  "originalWidth": 5184,
+                  "originalHeight": 3456,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "start-with-why",
+              "name": "Start With Why",
+              "postCount": 216,
+              "metadata": {
+                "postCount": 216,
+                "coverImage": {
+                  "id": "1*Dcjs_pmgOFqT8B-MwgP8SA.jpeg",
+                  "originalWidth": 1688,
+                  "originalHeight": 1126
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "teamwork",
+              "name": "Teamwork",
+              "postCount": 10249,
+              "metadata": {
+                "postCount": 10249,
+                "coverImage": {
+                  "id": "1*PO2g0bE3Jk88OAaEQF2IwQ.jpeg",
+                  "originalWidth": 640,
+                  "originalHeight": 426,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "people",
+              "name": "People",
+              "postCount": 11978,
+              "metadata": {
+                "postCount": 11978,
+                "coverImage": {
+                  "id": "1*8Zcyee_wdpHO4d0kuyeJBg.jpeg",
+                  "originalWidth": 4508,
+                  "originalHeight": 3220,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.linkedin.com/in/bertswinnen/",
+                "alts": [],
+                "httpStatus": 999
+              },
+              {
+                "url": "https://www.youtube.com/watch?v=hER0Qp6QJNU&t=59s",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "vnd.youtube://www.youtube.com/watch?v=hER0Qp6QJNU&feature=applinks"
+                  },
+                  {
+                    "type": 3,
+                    "url": "vnd.youtube://www.youtube.com/watch?v=hER0Qp6QJNU&feature=applinks"
+                  }
+                ],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1538489366246
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "I often hear older folk complain about how everything was better in the past. They tend to get carried away with nostalgia and I must say I gotta hand it to them, they did make some incredible cars…",
+          "totalClapCount": 64,
+          "sectionCount": 4,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "kind-words-for-generationy",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": false,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "generation-y-ec77a3f3cdeb",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*Lm67S_0BApjUuoCjVCCFXg.jpeg",
+                  "originalWidth": 2165,
+                  "originalHeight": 1012
+                }
+              },
+              {
+                "name": "previewTitle",
+                "type": 3,
+                "text": "Kind words for generationY.",
+                "alignment": 1
+              },
+              {
+                "name": "previewSubtitle",
+                "type": 13,
+                "text": "Working as a solutions architect the usual suspects to write about are…",
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "Working as a solutions architect the usual suspects to write about are things like coding, architectures and whatnot. Although tempting, …"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "d45b789a0b3a",
+        "versionId": "96670377951d",
+        "creatorId": "c4206c2f33e",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "Talking about design: Validation in the real world",
+        "detectedLanguage": "en",
+        "latestVersion": "96670377951d",
+        "latestPublishedVersion": "96670377951d",
+        "hasUnpublishedEdits": false,
+        "latestRev": 606,
+        "createdAt": 1532286205289,
+        "updatedAt": 1543219732186,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1532419261589,
+        "latestPublishedAt": 1543219732186,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*-cRX1ERcw9RpL48_-LjlBw.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 3763,
+            "originalHeight": 2091,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 956,
+          "imageCount": 6,
+          "readingTime": 4.557547169811321,
+          "subtitle": "Top tips you need to know when you start working as a design consultant — part 3 (final)",
+          "userPostRelation": {
+            "userId": "ac862c6d178f",
+            "postId": "d45b789a0b3a",
+            "readAt": 0,
+            "readLaterAddedAt": 0,
+            "votedAt": 0,
+            "collaboratorAddedAt": 0,
+            "notesAddedAt": 0,
+            "subscribedAt": 0,
+            "lastReadSectionName": "",
+            "lastReadVersionId": "",
+            "lastReadAt": 0,
+            "lastReadParagraphName": "",
+            "lastReadPercentage": 0,
+            "viewedAt": 0,
+            "presentedCountInResponseManagement": 0,
+            "clapCount": 0,
+            "seriesUpdateNotifsOptedInAt": 0,
+            "queuedAt": 0,
+            "seriesFirstViewedAt": 0,
+            "presentedCountInStream": 2,
+            "seriesLastViewedAt": 0,
+            "audioProgressSec": 0
+          },
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 6,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "design",
+              "name": "Design",
+              "postCount": 190391,
+              "metadata": {
+                "postCount": 190391,
+                "coverImage": {
+                  "id": "1*9HBxmCTAsK0_WHSzx6zZvw.jpeg"
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "design-process",
+              "name": "Design Process",
+              "postCount": 7087,
+              "metadata": {
+                "postCount": 7087,
+                "coverImage": {
+                  "id": "1*KxdNK2S2obUHs93obgq-Lg.jpeg",
+                  "originalWidth": 4032,
+                  "originalHeight": 3024,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "designer",
+              "name": "Designer",
+              "postCount": 4986,
+              "metadata": {
+                "postCount": 4986,
+                "coverImage": {
+                  "id": "1*Pqias-5e_JzocAQI0jAEOA.jpeg",
+                  "originalWidth": 6000,
+                  "originalHeight": 3736,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "principles",
+              "name": "Principles",
+              "postCount": 871,
+              "metadata": {
+                "postCount": 871,
+                "coverImage": {
+                  "id": "1*-5k55CifUrMgd5NbLyTrAw.jpeg",
+                  "originalWidth": 2880,
+                  "originalHeight": 980,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "design-systems",
+              "name": "Design Systems",
+              "postCount": 1451,
+              "metadata": {
+                "postCount": 1451,
+                "coverImage": {
+                  "id": "1*52jttIBY1lLSWsZh-pByfg.png",
+                  "originalWidth": 5000,
+                  "originalHeight": 2500
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://www.linkedin.com/in/lauradewinterdesign/",
+                "alts": [],
+                "httpStatus": 999
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.lauradewinterdesign.be/",
+                "alts": [],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1543219733276
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 91,
+          "sectionCount": 2,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "talking-about-design-validation-in-the-real-world",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": true,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "validation-in-the-real-world-d45b789a0b3a",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*-cRX1ERcw9RpL48_-LjlBw.jpeg",
+                  "originalWidth": 3763,
+                  "originalHeight": 2091,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "f668",
+                "type": 3,
+                "text": "Talking about design: Validation in the real world",
+                "markups": [],
+                "alignment": 1
+              },
+              {
+                "name": "0212",
+                "type": 13,
+                "text": "Top tips you need to know when you start working as…",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "Top tips you need to know when you start working as a design consultant — part 3 (final)"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 4,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "d406339f5f52",
+        "versionId": "328260625f8c",
+        "creatorId": "c4206c2f33e",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "Talking about design: stay inspired",
+        "detectedLanguage": "en",
+        "latestVersion": "328260625f8c",
+        "latestPublishedVersion": "328260625f8c",
+        "hasUnpublishedEdits": false,
+        "latestRev": 668,
+        "createdAt": 1531070903557,
+        "updatedAt": 1538489111198,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1531211461375,
+        "latestPublishedAt": 1538489111198,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*kBMqMj0WRxe42Tdh-LL9pg.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 2000,
+            "originalHeight": 1111,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 705,
+          "imageCount": 6,
+          "readingTime": 3.610377358490566,
+          "subtitle": "Top tips you need to know when you start working as a design consultant — part 2",
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 8,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "design",
+              "name": "Design",
+              "postCount": 190391,
+              "metadata": {
+                "postCount": 190391,
+                "coverImage": {
+                  "id": "1*9HBxmCTAsK0_WHSzx6zZvw.jpeg"
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "inspiration",
+              "name": "Inspiration",
+              "postCount": 84279,
+              "metadata": {
+                "postCount": 84279,
+                "coverImage": {
+                  "id": "1*PlvnszXynxE8qwo9zYdQEg.jpeg"
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "creative-process",
+              "name": "Creative Process",
+              "postCount": 5219,
+              "metadata": {
+                "postCount": 5219,
+                "coverImage": {
+                  "id": "1*Fyj-mRbQ-2RzC06Uw-lMbQ.jpeg",
+                  "originalWidth": 1920,
+                  "originalHeight": 783
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "design-process",
+              "name": "Design Process",
+              "postCount": 7087,
+              "metadata": {
+                "postCount": 7087,
+                "coverImage": {
+                  "id": "1*KxdNK2S2obUHs93obgq-Lg.jpeg",
+                  "originalWidth": 4032,
+                  "originalHeight": 3024,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "creativity",
+              "name": "Creativity",
+              "postCount": 69201,
+              "metadata": {
+                "postCount": 69201,
+                "coverImage": {
+                  "id": "1*l_a4u4eO-owLFDUNT6qYFw.jpeg"
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://www.linkedin.com/in/lauradewinterdesign/",
+                "alts": [],
+                "httpStatus": 999
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry/the-feedback-loop-59449647c2b4",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://p/59449647c2b4"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://p/59449647c2b4"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "http://tonyjuliendesign.com/blog/wp-content/uploads/2015/06/design-process-main.jpg",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.lauradewinterdesign.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "http://alirezabahrami.ir/wp-content/uploads/2016/12/matheson-process.jpg",
+                "alts": [],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1538489112552
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 35,
+          "sectionCount": 2,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "talking-about-design-stay-inspired",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": true,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "talking-about-design-stay-inspired-d406339f5f52",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*kBMqMj0WRxe42Tdh-LL9pg.jpeg",
+                  "originalWidth": 2000,
+                  "originalHeight": 1111,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "02b7",
+                "type": 3,
+                "text": "Talking about design: stay inspired",
+                "markups": [],
+                "alignment": 1
+              },
+              {
+                "name": "d257",
+                "type": 13,
+                "text": "Top tips you need to know when you start working as a design…",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "Top tips you need to know when you start working as a design consultant — part 2"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": true,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "7532803ead2c",
+        "versionId": "b483e261e0cb",
+        "creatorId": "6250c5e6e2e1",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "Pitfalls of coding emails — lessons learned (part 1)",
+        "detectedLanguage": "en",
+        "latestVersion": "b483e261e0cb",
+        "latestPublishedVersion": "b483e261e0cb",
+        "hasUnpublishedEdits": false,
+        "latestRev": 484,
+        "createdAt": 1530564440072,
+        "updatedAt": 1540115397751,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1530604861519,
+        "latestPublishedAt": 1540115397751,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*o6hiCteU7wHTzKhTauIPzg.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 1500,
+            "originalHeight": 834,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 1375,
+          "imageCount": 4,
+          "readingTime": 5.8886792452830194,
+          "subtitle": "Expects the reader to have a basic knowledge of coding (responsive) emails",
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 9,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "web-development",
+              "name": "Web Development",
+              "postCount": 85099,
+              "metadata": {
+                "postCount": 85099,
+                "coverImage": {
+                  "id": "1*2VozxYfmWwjphR5W_5tBWg.jpeg",
+                  "originalWidth": 630,
+                  "originalHeight": 417,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "adobe",
+              "name": "Adobe",
+              "postCount": 1916,
+              "metadata": {
+                "postCount": 1916,
+                "coverImage": {
+                  "id": "1*XuJQTJkSsQNlqd5-egr_nQ.jpeg",
+                  "originalWidth": 960,
+                  "originalHeight": 540,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "campaign",
+              "name": "Campaign",
+              "postCount": 2452,
+              "metadata": {
+                "postCount": 2452,
+                "coverImage": {
+                  "id": "1*hlDwGN7NXUxLJ0IOpWq9yg.jpeg",
+                  "originalWidth": 880,
+                  "originalHeight": 404
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "marketing-automation",
+              "name": "Marketing Automation",
+              "postCount": 2916,
+              "metadata": {
+                "postCount": 2916,
+                "coverImage": {
+                  "id": "1*EgAemazETiMSRF09GkHEWQ.png",
+                  "originalWidth": 985,
+                  "originalHeight": 394,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "email",
+              "name": "Email",
+              "postCount": 10961,
+              "metadata": {
+                "postCount": 10961,
+                "coverImage": {
+                  "id": "1*d8Y03ZZjBnBBxsR428COmA.png",
+                  "originalWidth": 2510,
+                  "originalHeight": 1388,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://litmus.com/blog/the-ultimate-guide-to-web-fonts",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://litmus.com/blog/a-guide-to-bulletproof-buttons-in-email-design",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://foundation.zurb.com/emails.html",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "http://twitter.com/font",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "twitter://user?screen_name=font"
+                  },
+                  {
+                    "type": 3,
+                    "url": "twitter://user?screen_name=font"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.fontsquirrel.com/tools/webfont-generator",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://mjml.io/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/nl/jobs.html",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.emailonacid.com/blog/article/email-development/stop_yahoo_mail_from_rendering_your_media_queries/",
+                "alts": [],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1540115400042
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 87,
+          "sectionCount": 5,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "pitfalls-of-coding-emails-lessons-learned-part-1",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": true,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "pitfalls-of-coding-emails-lessons-learned-part-1-7532803ead2c",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*o6hiCteU7wHTzKhTauIPzg.jpeg",
+                  "originalWidth": 1500,
+                  "originalHeight": 834,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "e059",
+                "type": 3,
+                "text": "Pitfalls of coding emails — lessons learned (part 1)",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "Expects the reader to have a basic knowledge of coding (responsive) emails"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "59449647c2b4",
+        "versionId": "1a2385763d90",
+        "creatorId": "c4206c2f33e",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "Talking about design: the feedback loop",
+        "detectedLanguage": "en",
+        "latestVersion": "1a2385763d90",
+        "latestPublishedVersion": "1a2385763d90",
+        "hasUnpublishedEdits": false,
+        "latestRev": 863,
+        "createdAt": 1529609959652,
+        "updatedAt": 1538489142599,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1530018062540,
+        "latestPublishedAt": 1538489142599,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*O_91SLl6oL9M86yIvAjMtw.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 3763,
+            "originalHeight": 2091,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 880,
+          "imageCount": 6,
+          "readingTime": 4.270754716981132,
+          "subtitle": "Top tips you need to know when you start working as a design consultant — part 1",
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 12,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "design",
+              "name": "Design",
+              "postCount": 190391,
+              "metadata": {
+                "postCount": 190391,
+                "coverImage": {
+                  "id": "1*9HBxmCTAsK0_WHSzx6zZvw.jpeg"
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "feedback-loop",
+              "name": "Feedback Loop",
+              "postCount": 174,
+              "metadata": {
+                "postCount": 174,
+                "coverImage": {
+                  "id": "1*KRY_DPYo-vzeB6xSXfkUbw.jpeg",
+                  "originalWidth": 1880,
+                  "originalHeight": 1254,
+                  "backgroundSize": "",
+                  "filter": "",
+                  "isFeatured": true,
+                  "externalSrc": "",
+                  "focusPercentX": -1,
+                  "focusPercentY": -1,
+                  "alt": "",
+                  "repairedAt": 0,
+                  "unsplashPhotoId": ""
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "iteration",
+              "name": "Iteration",
+              "postCount": 390,
+              "metadata": {
+                "postCount": 390,
+                "coverImage": {
+                  "id": "1*C1a82m99wpqpj-13TObPaA.png",
+                  "originalWidth": 820,
+                  "originalHeight": 312
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "creativity",
+              "name": "Creativity",
+              "postCount": 69201,
+              "metadata": {
+                "postCount": 69201,
+                "coverImage": {
+                  "id": "1*l_a4u4eO-owLFDUNT6qYFw.jpeg"
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "design-process",
+              "name": "Design Process",
+              "postCount": 7087,
+              "metadata": {
+                "postCount": 7087,
+                "coverImage": {
+                  "id": "1*KxdNK2S2obUHs93obgq-Lg.jpeg",
+                  "originalWidth": 4032,
+                  "originalHeight": 3024,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://spark.adobe.com/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://zeplin.io/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry/talking-about-design-stay-inspired-d406339f5f52",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://p/d406339f5f52"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://p/d406339f5f52"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.linkedin.com/in/lauradewinterdesign/",
+                "alts": [],
+                "httpStatus": 999
+              },
+              {
+                "url": "https://www.lauradewinterdesign.be/",
+                "alts": [],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1538489143647
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 150,
+          "sectionCount": 2,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "the-feedback-loop",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": true,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "the-feedback-loop-59449647c2b4",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*O_91SLl6oL9M86yIvAjMtw.jpeg",
+                  "originalWidth": 3763,
+                  "originalHeight": 2091,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "6dac",
+                "type": 3,
+                "text": "Talking about design: the feedback loop",
+                "markups": [],
+                "alignment": 1
+              },
+              {
+                "name": "a448",
+                "type": 13,
+                "text": "Top tips you need to know when you start working as a design…",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "Top tips you need to know when you start working as a design consultant — part 1"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 4,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "8fd09855439f",
+        "versionId": "40b6bdaa74b4",
+        "creatorId": "888ec6ecb796",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "The power of using a CMS to create email templates",
+        "detectedLanguage": "en",
+        "latestVersion": "40b6bdaa74b4",
+        "latestPublishedVersion": "40b6bdaa74b4",
+        "hasUnpublishedEdits": false,
+        "latestRev": 527,
+        "createdAt": 1528729819576,
+        "updatedAt": 1538488656348,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1528806630531,
+        "latestPublishedAt": 1538488656348,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*iunqbjxSmQgjYbY3MHdvQg.jpeg",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 1200,
+            "originalHeight": 667,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 512,
+          "imageCount": 5,
+          "readingTime": 2.7654088050314467,
+          "subtitle": "Please be aware that some prior knowledge about CMS systems, and AEM specifically, might be helpful to understand the content of this post.",
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 9,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "email-marketing",
+              "name": "Email Marketing",
+              "postCount": 13048,
+              "metadata": {
+                "postCount": 13048,
+                "coverImage": {
+                  "id": "1*Noo1wZDAEPEabYmGU-GRgQ.jpeg",
+                  "originalWidth": 1280,
+                  "originalHeight": 853,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "cms",
+              "name": "CMS",
+              "postCount": 2447,
+              "metadata": {
+                "postCount": 2447,
+                "coverImage": {
+                  "id": "1*rU6KNs9KfdROiENL-UQTNA.jpeg",
+                  "originalWidth": 3000,
+                  "originalHeight": 2000,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "marketing-automation",
+              "name": "Marketing Automation",
+              "postCount": 2916,
+              "metadata": {
+                "postCount": 2916,
+                "coverImage": {
+                  "id": "1*EgAemazETiMSRF09GkHEWQ.png",
+                  "originalWidth": 985,
+                  "originalHeight": 394,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "adobe-campaign",
+              "name": "Adobe Campaign",
+              "postCount": 1,
+              "metadata": {
+                "postCount": 1,
+                "coverImage": {
+                  "id": "1*ChSQA_XlvTUeuaDMKlX43w.jpeg",
+                  "originalWidth": 4272,
+                  "originalHeight": 2848
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "marketing",
+              "name": "Marketing",
+              "postCount": 174893,
+              "metadata": {
+                "postCount": 174893,
+                "coverImage": {
+                  "id": "1*2oWKibC7b2MC97cB44RP8w.jpeg",
+                  "originalWidth": 2000,
+                  "originalHeight": 1263,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "mailto:info@ida-mediafoundry.be",
+                "alts": [],
+                "httpStatus": 0
+              },
+              {
+                "url": "https://litmus.com/blog/tag/best-practices",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://foundation.zurb.com/emails.html",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.linkedin.com/in/stevenrymenans/",
+                "alts": [],
+                "httpStatus": 999
+              },
+              {
+                "url": "https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/campaign.html",
+                "alts": [],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1538488656921
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 84,
+          "sectionCount": 2,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "the-power-of-using-a-cms-to-create-email-templates",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": true,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "the-power-of-using-a-cms-to-create-email-templates-8fd09855439f",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*iunqbjxSmQgjYbY3MHdvQg.jpeg",
+                  "originalWidth": 1200,
+                  "originalHeight": 667,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "c5cb",
+                "type": 3,
+                "text": "The power of using a CMS to create email templates",
+                "markups": [
+                  {
+                    "type": 1,
+                    "start": 0,
+                    "end": 50
+                  }
+                ],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "Please be aware that some prior knowledge about CMS systems, and AEM specifically, might be helpful to understand the content of this post."
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      },
+      {
+        "id": "8a635a9de33b",
+        "versionId": "cd99398cf4be",
+        "creatorId": "888ec6ecb796",
+        "homeCollectionId": "a1a776694b7a",
+        "title": "Hackathon Time!",
+        "detectedLanguage": "en",
+        "latestVersion": "cd99398cf4be",
+        "latestPublishedVersion": "cd99398cf4be",
+        "hasUnpublishedEdits": false,
+        "latestRev": 195,
+        "createdAt": 1528445091295,
+        "updatedAt": 1538488824010,
+        "acceptedAt": 0,
+        "firstPublishedAt": 1528446876472,
+        "latestPublishedAt": 1538488824010,
+        "vote": false,
+        "experimentalCss": "",
+        "displayAuthor": "",
+        "virtuals": {
+          "statusForCollection": "APPROVED",
+          "allowNotes": true,
+          "previewImage": {
+            "imageId": "1*l3al-CwQ5XPe5kZdazTgDg.png",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 962,
+            "originalHeight": 504,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "wordCount": 935,
+          "imageCount": 10,
+          "readingTime": 4.778301886792453,
+          "subtitle": "At ida mediafoundry, we have many different profiles who love building, learning and growing every single day. In order to help our team in…",
+          "publishedInCount": 1,
+          "usersBySocialRecommends": [],
+          "noIndex": false,
+          "recommends": 10,
+          "isBookmarked": false,
+          "tags": [
+            {
+              "slug": "hackathons",
+              "name": "Hackathons",
+              "postCount": 8567,
+              "metadata": {
+                "postCount": 8567,
+                "coverImage": {
+                  "id": "1*BU46LufhEIhxIt_BUyPaRQ.jpeg",
+                  "originalWidth": 1000,
+                  "originalHeight": 504,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "ecommerce",
+              "name": "Ecommerce",
+              "postCount": 44909,
+              "metadata": {
+                "postCount": 44909,
+                "coverImage": {
+                  "id": "1*bUpTcFZZSw4H_5_ofxILqw.png",
+                  "originalWidth": 2098,
+                  "originalHeight": 920
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "react",
+              "name": "React",
+              "postCount": 22929,
+              "metadata": {
+                "postCount": 22929,
+                "coverImage": {
+                  "id": "1*m5aPLXkrWJs7xKsfYViJEg.png",
+                  "originalWidth": 1910,
+                  "originalHeight": 911,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "javascript",
+              "name": "JavaScript",
+              "postCount": 84531,
+              "metadata": {
+                "postCount": 84531,
+                "coverImage": {
+                  "id": "1*IwvkEcaGGVihZ8PBj_Y4hA.jpeg",
+                  "originalWidth": 2048,
+                  "originalHeight": 1531,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            },
+            {
+              "slug": "people",
+              "name": "People",
+              "postCount": 11978,
+              "metadata": {
+                "postCount": 11978,
+                "coverImage": {
+                  "id": "1*8Zcyee_wdpHO4d0kuyeJBg.jpeg",
+                  "originalWidth": 4508,
+                  "originalHeight": 3220,
+                  "isFeatured": true
+                }
+              },
+              "type": "Tag"
+            }
+          ],
+          "socialRecommendsCount": 0,
+          "responsesCreatedCount": 0,
+          "links": {
+            "entries": [
+              {
+                "url": "https://medium.com/ida-mediafoundry",
+                "alts": [
+                  {
+                    "type": 2,
+                    "url": "medium://ida-mediafoundry"
+                  },
+                  {
+                    "type": 3,
+                    "url": "medium://ida-mediafoundry"
+                  }
+                ],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/",
+                "alts": [],
+                "httpStatus": 200
+              },
+              {
+                "url": "https://www.ida-mediafoundry.be/nl/jobs.html",
+                "alts": [],
+                "httpStatus": 200
+              }
+            ],
+            "version": "0.3",
+            "generatedAt": 1538488824608
+          },
+          "isLockedPreviewOnly": false,
+          "takeoverId": "",
+          "metaDescription": "",
+          "totalClapCount": 72,
+          "sectionCount": 2,
+          "readingList": 0,
+          "topics": []
+        },
+        "coverless": true,
+        "slug": "hackathon-time",
+        "translationSourcePostId": "",
+        "translationSourceCreatorId": "",
+        "isApprovedTranslation": false,
+        "inResponseToPostId": "",
+        "inResponseToRemovedAt": 0,
+        "isTitleSynthesized": true,
+        "allowResponses": true,
+        "importedUrl": "",
+        "importedPublishedAt": 0,
+        "visibility": 0,
+        "uniqueSlug": "hackathon-time-8a635a9de33b",
+        "previewContent": {
+          "bodyModel": {
+            "paragraphs": [
+              {
+                "name": "previewImage",
+                "type": 4,
+                "text": "",
+                "layout": 10,
+                "metadata": {
+                  "id": "1*l3al-CwQ5XPe5kZdazTgDg.png",
+                  "originalWidth": 962,
+                  "originalHeight": 504,
+                  "isFeatured": true
+                }
+              },
+              {
+                "name": "0954",
+                "type": 3,
+                "text": "Hackathon Time!",
+                "markups": [],
+                "alignment": 1
+              },
+              {
+                "name": "dc3c",
+                "type": 1,
+                "text": "At ida mediafoundry, we have many different profiles who love building, learning and growing every single day. In order to help…",
+                "markups": [],
+                "alignment": 1
+              }
+            ],
+            "sections": [
+              {
+                "startIndex": 0
+              }
+            ]
+          },
+          "isFullContent": false,
+          "subtitle": "At ida mediafoundry, we have many different profiles who love building, learning and growing every single day. In order to help our team in…"
+        },
+        "license": 0,
+        "inResponseToMediaResourceId": "",
+        "canonicalUrl": "",
+        "approvedHomeCollectionId": "a1a776694b7a",
+        "newsletterId": "",
+        "webCanonicalUrl": "",
+        "mediumUrl": "",
+        "migrationId": "",
+        "notifyFollowers": true,
+        "notifyTwitter": false,
+        "notifyFacebook": false,
+        "responseHiddenOnParentPostAt": 0,
+        "isSeries": false,
+        "isSubscriptionLocked": false,
+        "seriesLastAppendedAt": 0,
+        "audioVersionDurationSec": 0,
+        "sequenceId": "",
+        "isNsfw": false,
+        "isEligibleForRevenue": false,
+        "isBlockedFromHightower": false,
+        "deletedAt": 0,
+        "lockedPostSource": 0,
+        "hightowerMinimumGuaranteeStartsAt": 0,
+        "hightowerMinimumGuaranteeEndsAt": 0,
+        "featureLockRequestAcceptedAt": 0,
+        "mongerRequestType": 1,
+        "layerCake": 0,
+        "socialTitle": "",
+        "socialDek": "",
+        "editorialPreviewTitle": "",
+        "editorialPreviewDek": "",
+        "curationEligibleAt": 0,
+        "type": "Post"
+      }
+    ],
+    "tagName": null,
+    "writerNames": [
+      "simonsomlai",
+      "mariovde",
+      "andro.delrue",
+      "yanadirkx",
+      "steven.rymenans",
+      "jonassimoens",
+      "bert.swinnen",
+      "lauradewinter_",
+      "geertsmichael"
+    ],
+    "references": {
+      "User": {
+        "1b77bf6e3cb4": {
+          "userId": "1b77bf6e3cb4",
+          "name": "iDA MediaFoundry",
+          "username": "ida.mediafoundry",
+          "createdAt": 1525856156970,
+          "imageId": "0*Cx2uOKwA3kn1lFXS.",
+          "backgroundImageId": "",
+          "bio": "",
+          "twitterScreenName": "iDAMediaFoundry",
+          "facebookAccountId": "",
+          "allowNotes": 1,
+          "mediumMemberAt": 0,
+          "isNsfw": false,
+          "type": "User"
+        },
+        "b8bb00bc8582": {
+          "userId": "b8bb00bc8582",
+          "name": "Bert Swinnen",
+          "username": "bert.swinnen",
+          "createdAt": 1528438363120,
+          "imageId": "1*vboTdjt4TUPAKKj0KU7hDg.jpeg",
+          "backgroundImageId": "",
+          "bio": "Solutions Architect@iDA Mediafoundry",
+          "twitterScreenName": "",
+          "facebookAccountId": "",
+          "allowNotes": 1,
+          "mediumMemberAt": 0,
+          "isNsfw": false,
+          "type": "User"
+        },
+        "2d09a386e2e7": {
+          "userId": "2d09a386e2e7",
+          "name": "Mario Van den Eynde",
+          "username": "mariovde",
+          "createdAt": 1528455458862,
+          "imageId": "0*3-j3J-oNBDVOM61H",
+          "backgroundImageId": "",
+          "bio": "",
+          "twitterScreenName": "",
+          "facebookAccountId": "",
+          "allowNotes": 1,
+          "mediumMemberAt": 0,
+          "isNsfw": false,
+          "type": "User"
+        },
+        "6250c5e6e2e1": {
+          "userId": "6250c5e6e2e1",
+          "name": "Andro Delrue",
+          "username": "andro.delrue",
+          "createdAt": 1530562547903,
+          "imageId": "1*4TnPprlpByC3OurXmvfX0A.jpeg",
+          "backgroundImageId": "",
+          "bio": "Webdeveloper @ iDA mediafoundry",
+          "twitterScreenName": "",
+          "facebookAccountId": "",
+          "allowNotes": 1,
+          "mediumMemberAt": 0,
+          "isNsfw": false,
+          "type": "User"
+        },
+        "17f10995e": {
+          "userId": "17f10995e",
+          "name": "Simon Somlai",
+          "username": "simonsomlai",
+          "createdAt": 1532176487880,
+          "imageId": "1*UfAGLf5TnWQ9R9e3OUln2Q.jpeg",
+          "backgroundImageId": "",
+          "bio": "",
+          "twitterScreenName": "",
+          "facebookAccountId": "1971780812868011",
+          "allowNotes": 1,
+          "mediumMemberAt": 0,
+          "isNsfw": false,
+          "type": "User"
+        },
+        "c4206c2f33e": {
+          "userId": "c4206c2f33e",
+          "name": "Laura De Winter",
+          "username": "lauradewinter_",
+          "createdAt": 1495576798414,
+          "imageId": "0*sdhqrAQkeA2COkVM.png",
+          "backgroundImageId": "",
+          "bio": "Creative Design Lead @iDAMediaFoundry",
+          "twitterScreenName": "lauradewinter_",
+          "facebookAccountId": "",
+          "allowNotes": 1,
+          "mediumMemberAt": 0,
+          "isNsfw": false,
+          "type": "User"
+        },
+        "e0932aedfa22": {
+          "userId": "e0932aedfa22",
+          "name": "Michaël Geerts",
+          "username": "geertsmichael",
+          "createdAt": 1515860003540,
+          "imageId": "0*AW09HttOuUnRhX-W.",
+          "backgroundImageId": "",
+          "bio": "Solutions Architect at iDA Mediafoundry",
+          "twitterScreenName": "",
+          "facebookAccountId": "",
+          "allowNotes": 1,
+          "mediumMemberAt": 0,
+          "isNsfw": false,
+          "type": "User"
+        },
+        "6d69c792d7ed": {
+          "userId": "6d69c792d7ed",
+          "name": "Yana Dirkx",
+          "username": "yanadirkx",
+          "createdAt": 1507929550157,
+          "imageId": "1*DlHhq_PhgdGf4SgsITItIg.jpeg",
+          "backgroundImageId": "",
+          "bio": "Digital Analyst at iDA Mediafoundry | Current project: Business Analyst for Philips Hue | Business Coach at my own company (blissandgold.com)",
+          "twitterScreenName": "",
+          "facebookAccountId": "10156384337396506",
+          "allowNotes": 1,
+          "mediumMemberAt": 0,
+          "isNsfw": false,
+          "type": "User"
+        },
+        "888ec6ecb796": {
+          "userId": "888ec6ecb796",
+          "name": "Steven Rymenans",
+          "username": "steven.rymenans",
+          "createdAt": 1444042925814,
+          "imageId": "1*XzqW4qSRaNU5WyjFX_lGLA.jpeg",
+          "backgroundImageId": "",
+          "bio": "Solutions architect @iDAMediaFoundry",
+          "twitterScreenName": "",
+          "facebookAccountId": "",
+          "allowNotes": 1,
+          "mediumMemberAt": 0,
+          "isNsfw": false,
+          "type": "User"
+        }
+      },
+      "Collection": {
+        "a1a776694b7a": {
+          "id": "a1a776694b7a",
+          "name": "ida mediafoundry",
+          "slug": "ida-mediafoundry",
+          "tags": [
+            "WEB DEVELOPMENT",
+            "JAVASCRIPT",
+            "MARKETING AUTOMATION",
+            "DESIGN",
+            "ECOMMERCE"
+          ],
+          "creatorId": "1b77bf6e3cb4",
+          "description": "Belgian company with a love for experience driven design and development.",
+          "shortDescription": "Belgian company with a love for experience driven design…",
+          "image": {
+            "imageId": "1*VGtPI86sYnHhj06NPp_YZA.png",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 200,
+            "originalHeight": 200,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "metadata": {
+            "followerCount": 77,
+            "activeAt": 1543219656897
+          },
+          "virtuals": {
+            "permissions": {
+              "canPublish": false,
+              "canPublishAll": false,
+              "canRepublish": false,
+              "canRemove": false,
+              "canManageAll": false,
+              "canSubmit": false,
+              "canEditPosts": false,
+              "canAddWriters": false,
+              "canViewStats": false,
+              "canSendNewsletter": false,
+              "canViewLockedPosts": false,
+              "canViewCloaked": false,
+              "canEditOwnPosts": false,
+              "canBeAssignedAuthor": false,
+              "canEnrollInHightower": false,
+              "canLockPostsForMediumMembers": false,
+              "canLockOwnPostsForMediumMembers": false
+            },
+            "isSubscribed": false,
+            "isNewsletterSubscribed": false,
+            "memberOfMembershipPlanId": "",
+            "isEnrolledInHightower": false,
+            "isEligibleForHightower": false
+          },
+          "logo": {
+            "imageId": "1*VGtPI86sYnHhj06NPp_YZA.png",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 200,
+            "originalHeight": 200,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "twitterUsername": "iDAMediaFoundry",
+          "facebookPageName": "idamediafoundry",
+          "publicEmail": "info@ida-mediafoundry.be",
+          "sections": [
+            {
+              "type": 2,
+              "collectionHeaderMetadata": {
+                "backgroundImage": {},
+                "logoImage": {
+                  "id": "1*RCHLi07Y7mkX2fJRINeYLA@2x.png",
+                  "originalWidth": 1600,
+                  "originalHeight": 200,
+                  "alt": "ida mediafoundry"
+                },
+                "alignment": 2,
+                "layout": 5
+              }
+            },
+            {
+              "type": 1,
+              "postListMetadata": {
+                "source": 1,
+                "layout": 2,
+                "number": 4,
+                "postIds": []
+              }
+            },
+            {
+              "type": 1,
+              "postListMetadata": {
+                "source": 1,
+                "layout": 5,
+                "number": 6,
+                "postIds": []
+              }
+            }
+          ],
+          "favicon": {
+            "imageId": "",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 0,
+            "originalHeight": 0,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "colorPalette": {
+            "defaultBackgroundSpectrum": {
+              "colorPoints": [
+                {
+                  "color": "#FF02B875",
+                  "point": 0
+                },
+                {
+                  "color": "#FF00AB6B",
+                  "point": 0.1
+                },
+                {
+                  "color": "#FF1C9963",
+                  "point": 0.2
+                },
+                {
+                  "color": "#FF092E20",
+                  "point": 1
+                }
+              ],
+              "backgroundColor": "#FFFFFFFF"
+            },
+            "highlightSpectrum": {
+              "colorPoints": [
+                {
+                  "color": "#FFFFFFFF",
+                  "point": 0
+                },
+                {
+                  "color": "#FFE9FDF0",
+                  "point": 0.1
+                },
+                {
+                  "color": "#FFE2FAEE",
+                  "point": 0.2
+                },
+                {
+                  "color": "#FFADFFCF",
+                  "point": 0.6
+                },
+                {
+                  "color": "#FF7DFFB3",
+                  "point": 1
+                }
+              ],
+              "backgroundColor": "#FFFFFFFF"
+            }
+          },
+          "navItems": [
+            {
+              "type": 1,
+              "title": "Development 🛠",
+              "tagSlug": "web-development",
+              "url": "https://medium.com/ida-mediafoundry/tagged/web-development",
+              "source": "tagSlug"
+            },
+            {
+              "type": 1,
+              "title": "Design ✏️",
+              "tagSlug": "design",
+              "url": "https://medium.com/ida-mediafoundry/tagged/design",
+              "source": "tagSlug"
+            },
+            {
+              "type": 1,
+              "title": "Marketing 💌",
+              "tagSlug": "marketing",
+              "url": "https://medium.com/ida-mediafoundry/tagged/marketing",
+              "source": "tagSlug"
+            },
+            {
+              "type": 1,
+              "title": "People 💪🏻",
+              "tagSlug": "people",
+              "url": "https://medium.com/ida-mediafoundry/tagged/people",
+              "source": "tagSlug"
+            },
+            {
+              "type": 3,
+              "title": "Who we are",
+              "url": "https://www.ida-mediafoundry.be/"
+            }
+          ],
+          "colorBehavior": 1,
+          "instantArticlesState": 0,
+          "acceleratedMobilePagesState": 0,
+          "ampLogo": {
+            "imageId": "",
+            "filter": "",
+            "backgroundSize": "",
+            "originalWidth": 0,
+            "originalHeight": 0,
+            "strategy": "resample",
+            "height": 0,
+            "width": 0
+          },
+          "header": {
+            "backgroundImage": {},
+            "logoImage": {
+              "id": "1*RCHLi07Y7mkX2fJRINeYLA@2x.png",
+              "originalWidth": 1600,
+              "originalHeight": 200,
+              "alt": "ida mediafoundry"
+            },
+            "alignment": 2,
+            "layout": 5
+          },
+          "type": "Collection"
+        }
+      }
+    },
+    "paging": {
+      "previous": {
+        "limit": 10,
+        "from": "1543219656439"
+      },
+      "next": {
+        "limit": 10,
+        "to": "1528446876472"
+      }
+    }
+  },
+  "v": 3,
+  "b": "36320-e307063"
+}
