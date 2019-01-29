@@ -12,6 +12,9 @@ import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.*;
 
 import static be.ida.medium.model.MediumPostModel.*;
@@ -94,7 +97,6 @@ public class MediumRepositoryImpl implements MediumRepository {
         return JCR_CONTENT_BASE_PATH + mediumPublication.getId() + "/posts";
     }
 
-
     private Map<String, Object> getCredentials() {
         Map<String, Object> credentials = new HashMap<>();
 
@@ -107,13 +109,19 @@ public class MediumRepositoryImpl implements MediumRepository {
     private Map<String, Object> extractProperties(MediumPost mediumPost) {
         Map<String, Object> properties = new HashMap<>();
 
+        LocalDate publicationDate =
+                Instant.ofEpochMilli(mediumPost.getPublicationDate()).atZone(ZoneId.systemDefault()).toLocalDate();
+
+        LocalDate updateDate =
+                Instant.ofEpochMilli(mediumPost.getUpdateDate()).atZone(ZoneId.systemDefault()).toLocalDate();
+
         properties.put(JcrConstants.JCR_PRIMARYTYPE, JcrConstants.NT_UNSTRUCTURED);
         properties.put(MEDIUM_POST_TITLE, mediumPost.getTitle());
         properties.put(MEDIUM_POST_LINK, mediumPost.getLink());
         properties.put(MEDIUM_POST_IMAGE_SOURCE, mediumPost.getImageSource());
         properties.put(MEDIUM_POST_CREATOR, mediumPost.getCreator());
-        properties.put(MEDIUM_POST_PUBLICATION_DATE, mediumPost.getPublicationDate());
-        properties.put(MEDIUM_POST_UPDATE_DATE, mediumPost.getUpdateDate());
+        properties.put(MEDIUM_POST_PUBLICATION_DATE, publicationDate.toString());
+        properties.put(MEDIUM_POST_UPDATE_DATE, updateDate.toString());
         properties.put(MEDIUM_POST_ID, mediumPost.getId());
 
         return properties;

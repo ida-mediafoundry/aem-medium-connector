@@ -3,7 +3,6 @@ package be.ida.medium.connector.config.impl;
 import be.ida.medium.connector.config.MediumConnectorConfig;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Modified;
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.Designate;
@@ -36,7 +35,7 @@ public class MediumConnectorConfigImpl implements MediumConnectorConfig {
             description = "Configure the Medium feed URL.")
     public static @interface Config {
         @AttributeDefinition(name = "Medium Feed URL")
-        String medium_feed_url() default "https://medium.com/feed/ida-mediafoundry";
+        String medium_feed_url() default "https://medium.com/ida-mediafoundry/latest?format=json&limit=30";
     }
 }
 

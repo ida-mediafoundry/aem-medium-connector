@@ -3,7 +3,7 @@ package be.ida.medium.connector;
 import be.ida.medium.bean.MediumPublication;
 import be.ida.medium.bean.publication.Publication;
 import be.ida.medium.connector.config.MediumConnectorConfig;
-import be.ida.medium.parser.MediumRssFeedParser;
+import be.ida.medium.parser.MediumJsonParser;
 import be.ida.medium.service.MediumService;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
@@ -29,21 +29,23 @@ public class MediumConnector {
     private MediumConnectorConfig mediumConnectorConfig;
 
     public void process() {
-        String json = retrieveJson();
+        String url = mediumConnectorConfig.getMediumFeedUrl();
 
-        final MediumRssFeedParser mediumRssFeedParser = new MediumRssFeedParser();
+        String json = retrieveJson(url);
 
-        Publication pub = mediumRssFeedParser.jsonToPublication(json);
+        final MediumJsonParser mediumJsonParser = new MediumJsonParser();
 
-        MediumPublication mediumPublication = mediumRssFeedParser.publicationToMediumPublication(pub);
+        Publication pub = mediumJsonParser.jsonToPublication(json);
+
+        MediumPublication mediumPublication = mediumJsonParser.publicationToMediumPublication(pub);
 
         mediumService.storeMediumPublication(mediumPublication);
     }
 
-    private String retrieveJson() {
+    private String retrieveJson(String url) {
         try {
             CloseableHttpClient httpclient = HttpClients.createDefault();
-            HttpGet httpget = new HttpGet("https://medium.com/ida-mediafoundry/latest?format=json&limit=30");
+            HttpGet httpget = new HttpGet(url);
             CloseableHttpResponse response = httpclient.execute(httpget);
 
             HttpEntity entity = response.getEntity();

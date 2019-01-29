@@ -1,4 +1,3 @@
-
 package be.ida.medium.bean.publication;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -23,10 +22,10 @@ public class Post {
     private String creatorId;
 
     @JsonProperty("createdAt")
-    private String createdAt;
+    private Long createdAt;
 
     @JsonProperty("updatedAt")
-    private String updatedAt;
+    private Long updatedAt;
 
     public String getId() {
         return id;
@@ -68,19 +67,19 @@ public class Post {
         this.creatorId = creatorId;
     }
 
-    public String getCreatedAt() {
+    public Long getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(String createdAt) {
+    public void setCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
     }
 
-    public String getUpdatedAt() {
+    public Long getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(String updatedAt) {
+    public void setUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
     }
 }

@@ -28,11 +28,11 @@ public class MediumPost {
 
     @Inject
     @Named(MEDIUM_POST_PUBLICATION_DATE)
-    private String publicationDate;
+    private Long publicationDate;
 
     @Inject
     @Named(MEDIUM_POST_UPDATE_DATE)
-    private String updateDate;
+    private Long updateDate;
 
     @Inject
     @Named(MEDIUM_POST_ID)
@@ -71,21 +71,20 @@ public class MediumPost {
         this.creator = creator;
     }
 
-    public String getUpdateDate() {
-        return updateDate;
-    }
-
-    public void setUpdateDate(String updateDate) {
-        this.updateDate = updateDate;
-    }
-
-    public String getPublicationDate() {
+    public Long getPublicationDate() {
         return publicationDate;
     }
 
-
-    public void setPublicationDate(String publicationDate) {
+    public void setPublicationDate(Long publicationDate) {
         this.publicationDate = publicationDate;
+    }
+
+    public Long getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Long updateDate) {
+        this.updateDate = updateDate;
     }
 
     public String getId() {

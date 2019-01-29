@@ -40,7 +40,8 @@ public class MediumRepositoryImplTest {
     private String MEDIUM_POST_CREATOR_VALUE = "Thijs Lanssens";
     private String MEDIUM_POST_LINK_VALUE = "google.be";
     private String MEDIUM_POST_IMAGE_SOURCE_VALUE = "google.be/image123";
-    private String MEDIUM_POST_PUBLICATION_DATE_VALUE = "2/2/2222";
+    private Long MEDIUM_POST_PUBLICATION_DATE_VALUE = 1543219656439L;
+    private Long MEDIUM_POST_UPDATE_DATE_VALUE = 1543219656439L;
 
     @Before
     public void init() throws LoginException {
@@ -61,7 +62,7 @@ public class MediumRepositoryImplTest {
         assertThat(mediumPostModel.getLink()).isEqualTo(MEDIUM_POST_LINK_VALUE);
         assertThat(mediumPostModel.getImageSource()).isEqualTo(MEDIUM_POST_IMAGE_SOURCE_VALUE);
         assertThat(mediumPostModel.getPublicationDate()).isEqualTo(MEDIUM_POST_PUBLICATION_DATE_VALUE);
-        assertThat(mediumPostModel.getPublicationDate()).isEqualTo(MEDIUM_POST_PUBLICATION_DATE_VALUE);
+        assertThat(mediumPostModel.getUpdateDate()).isEqualTo(MEDIUM_POST_UPDATE_DATE_VALUE);
     }
 
     private MediumPublication getMediumPostStub() {

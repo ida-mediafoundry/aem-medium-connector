@@ -15,17 +15,17 @@ import java.util.List;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
 @RunWith(JUnit4.class)
-public class MediumRssFeedParserTest {
+public class MediumJsonParserTest {
     private static String EXAMPLE_TITLE = "Dummy title";
     private static String EXAMPLE_LINK = "https://medium.com/p/dea34a3ec034";
     private static String EXAMPLE_IMAGE_SOURCE = "https://cdn-images-1.medium.com/max/1024/1*o6hiCteU7wHTzKhTauIPzg.jpeg";
     private static String EXAMPLE_CREATOR = "Dummy user";
     private static String EXAMPLE_PUBLICATION_DATE = "Tue Oct 16 10:01:01 CEST 2018";
-    MediumRssFeedParser mediumRssFeedParser = new MediumRssFeedParser();
+    MediumJsonParser mediumJsonParser = new MediumJsonParser();
 
     @Test
     public void test_syndFeedToMediumPosts_happyPath() throws IOException, FeedException {
-        List<MediumPost> mediumPublications = mediumRssFeedParser.publicationToMediumPublication(getMockPublication("medium-response-samples/medium-publication-dummy.json")).getPosts();
+        List<MediumPost> mediumPublications = mediumJsonParser.publicationToMediumPublication(getMockPublication("medium-response-samples/medium-publication-dummy.json")).getPosts();
 
         assertThat(mediumPublications).isNotEmpty();
         assertThat(mediumPublications.size()).isEqualTo(10);
