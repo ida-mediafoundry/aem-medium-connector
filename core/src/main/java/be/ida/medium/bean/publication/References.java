@@ -1,4 +1,3 @@
-
 package be.ida.medium.bean.publication;
 
 import com.fasterxml.jackson.annotation.*;

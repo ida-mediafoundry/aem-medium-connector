@@ -4,6 +4,7 @@ import be.ida.medium.bean.MediumPost;
 import be.ida.medium.bean.MediumPublication;
 import be.ida.medium.bean.publication.Post;
 import be.ida.medium.bean.publication.Publication;
+import be.ida.medium.bean.publication.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -14,12 +15,19 @@ public class MediumRssFeedParser {
     public MediumPublication publicationToMediumPublication(Publication publication) {
         MediumPublication mediumPublication = new MediumPublication();
         List<MediumPost> mediumPosts = new ArrayList<>();
-
+        publication.getPayload().getReferences().getUser().getAuthors();
 
         for (Post post : publication.getPayload().getPosts()) {
             MediumPost mediumPost = new MediumPost();
 
-            mediumPost.setCreator(post.getCreatorId());
+
+            List<User.Author> authors = publication.getPayload().getReferences().getUser().getAuthors();
+
+            for (User.Author author : authors) {
+                if (author.getId().equals(post.getCreatorId())) {
+                    mediumPost.setCreator(author.getName());
+                }
+            }
             mediumPost.setPublicationDate(post.getCreatedAt());
             mediumPost.setUpdateDate(post.getUpdatedAt());
             mediumPost.setLink(post.getUniqueSlug());

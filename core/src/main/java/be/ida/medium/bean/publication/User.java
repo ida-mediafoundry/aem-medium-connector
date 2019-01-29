@@ -1,4 +1,3 @@
-
 package be.ida.medium.bean.publication;
 
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -15,7 +14,15 @@ public class User {
         authors.add(new Author(id, value.get("name").toString()));
     }
 
-    class Author {
+    public List<Author> getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(List<Author> authors) {
+        this.authors = authors;
+    }
+
+    public class Author {
         private String id;
         private String name;
 
