@@ -36,7 +36,7 @@ public class MediumImportJob implements Runnable {
     public static @interface Config {
 
         @AttributeDefinition(name = "Cron-job expression")
-        String scheduler_expression() default "*/30 * * * * ?";
+        String scheduler_expression() default "*/5 * * * * ?";
 
         @AttributeDefinition(name = "Concurrent task",
                                                 description = "Whether or not to schedule this task concurrently")

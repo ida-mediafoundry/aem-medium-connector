@@ -5,7 +5,6 @@ import be.ida.medium.bean.publication.Publication;
 import be.ida.medium.connector.config.MediumConnectorConfig;
 import be.ida.medium.parser.MediumJsonParser;
 import be.ida.medium.service.MediumService;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -18,6 +17,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Component(name = "Medium Connector", service = MediumConnector.class, immediate = true)
 public class MediumConnector {
@@ -43,6 +44,8 @@ public class MediumConnector {
     }
 
     private String retrieveJson(String url) {
+        String jsonString = null;
+
         try {
             CloseableHttpClient httpclient = HttpClients.createDefault();
             HttpGet httpget = new HttpGet(url);
@@ -56,8 +59,14 @@ public class MediumConnector {
             LOG.error("unable to get HTTP request body");
 
         }
-        int startOfJson = StringUtils.indexOf(responseString, "succes");
-        String jsonString = StringUtils.substring(responseString, startOfJson - 2);
+
+        Pattern pattern = Pattern.compile("\\{.*\\:\\{.*\\:.*\\}\\}");
+        Matcher matcher = pattern.matcher(responseString);
+
+        if (matcher.find()) {
+            jsonString = matcher.group(0);
+        }
+
         return jsonString;
     }
 }
