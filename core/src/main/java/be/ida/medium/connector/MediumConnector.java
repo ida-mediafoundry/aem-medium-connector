@@ -1,8 +1,8 @@
 package be.ida.medium.connector;
 
-import be.ida.medium.bean.MediumPublication;
 import be.ida.medium.bean.publication.Publication;
 import be.ida.medium.connector.config.MediumConnectorConfig;
+import be.ida.medium.model.MediumPublication;
 import be.ida.medium.parser.MediumJsonParser;
 import be.ida.medium.parser.MediumPublicationMapper;
 import be.ida.medium.service.MediumService;
@@ -26,7 +26,6 @@ public class MediumConnector {
     private final static Logger LOG = LoggerFactory.getLogger(MediumConnector.class);
     final MediumJsonParser mediumJsonParser = new MediumJsonParser();
     final MediumPublicationMapper mediumPublicationMapper = new MediumPublicationMapper();
-    private String responseString;
 
     @Reference
     private MediumService mediumService;
@@ -43,10 +42,10 @@ public class MediumConnector {
 
     private String retrieveRawJson(String url) {
         String jsonString = null;
+        String responseString = null;
 
         if (url != null) {
-            try {
-                CloseableHttpClient httpclient = HttpClients.createDefault();
+            try (CloseableHttpClient httpclient = getDefaultHttpClient()) {
                 HttpGet httpget = new HttpGet(url);
                 CloseableHttpResponse response = httpclient.execute(httpget);
 
@@ -56,10 +55,9 @@ public class MediumConnector {
                 }
             } catch (IOException e) {
                 LOG.error("unable to get HTTP request body");
-
             }
 
-            Pattern pattern = Pattern.compile("\\{.*\\:\\{.*\\:.*\\}\\}");
+            Pattern pattern = Pattern.compile("\\{.*\\:\\{.*\\:.*\\}");
             Matcher matcher = pattern.matcher(responseString);
 
             if (matcher.find()) {
@@ -68,5 +66,9 @@ public class MediumConnector {
         }
 
         return jsonString;
+    }
+
+    protected CloseableHttpClient getDefaultHttpClient() {
+        return HttpClients.createDefault();
     }
 }

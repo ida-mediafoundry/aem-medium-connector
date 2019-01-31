@@ -1,6 +1,6 @@
 package be.ida.medium.repository;
 
-import be.ida.medium.bean.MediumPublication;
+import be.ida.medium.model.MediumPublication;
 
 public interface MediumRepository {
     void storeMediumPublication(MediumPublication mediumPublication);

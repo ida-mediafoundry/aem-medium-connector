@@ -1,6 +1,6 @@
 package be.ida.medium.service.impl;
 
-import be.ida.medium.bean.MediumPublication;
+import be.ida.medium.model.MediumPublication;
 import be.ida.medium.repository.MediumRepository;
 import be.ida.medium.service.MediumService;
 import org.osgi.service.component.annotations.Component;

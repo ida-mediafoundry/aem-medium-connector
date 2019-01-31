@@ -15,7 +15,7 @@
  */
 package be.ida.component.general;
 
-import be.ida.medium.bean.MediumPublication;
+import be.ida.medium.model.MediumPublication;
 import be.ida.medium.service.MediumService;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Default;

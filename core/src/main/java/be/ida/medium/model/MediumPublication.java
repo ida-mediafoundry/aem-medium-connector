@@ -1,4 +1,4 @@
-package be.ida.medium.bean;
+package be.ida.medium.model;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;

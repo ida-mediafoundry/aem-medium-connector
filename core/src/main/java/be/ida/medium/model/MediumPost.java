@@ -1,4 +1,4 @@
-package be.ida.medium.bean;
+package be.ida.medium.model;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
@@ -6,10 +6,16 @@ import org.apache.sling.models.annotations.Model;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import static be.ida.medium.model.MediumPostModel.*;
-
 @Model(adaptables = Resource.class)
 public class MediumPost {
+    public static final String MEDIUM_POST_TITLE = "mediumPostTitle";
+    public static final String MEDIUM_POST_LINK = "mediumPostLink";
+    public static final String MEDIUM_POST_IMAGE_SOURCE = "mediumPostImageSource";
+    public static final String MEDIUM_POST_CREATOR = "mediumPostCreator";
+    public static final String MEDIUM_POST_PUBLICATION_DATE = "mediumPostPublicationDate";
+    public static final String MEDIUM_POST_UPDATE_DATE = "mediumPostUpdateDate";
+    public static final String MEDIUM_POST_ID = "mediumPostId";
+
     @Inject
     @Named(MEDIUM_POST_TITLE)
     private String title;

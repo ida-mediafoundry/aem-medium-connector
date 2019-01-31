@@ -1,8 +1,8 @@
 package be.ida.medium.repository.impl;
 
-import be.ida.medium.bean.MediumPost;
-import be.ida.medium.bean.MediumPublication;
 import be.ida.medium.connector.MediumConnector;
+import be.ida.medium.model.MediumPost;
+import be.ida.medium.model.MediumPublication;
 import be.ida.medium.repository.MediumRepository;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jackrabbit.vault.util.JcrConstants;
@@ -17,7 +17,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.*;
 
-import static be.ida.medium.model.MediumPostModel.*;
+import static be.ida.medium.model.MediumPost.*;
 
 
 @Component(name = "Medium Repository", service = MediumRepository.class, immediate = true)
@@ -120,8 +120,8 @@ public class MediumRepositoryImpl implements MediumRepository {
         properties.put(MEDIUM_POST_LINK, mediumPost.getLink());
         properties.put(MEDIUM_POST_IMAGE_SOURCE, mediumPost.getImageSource());
         properties.put(MEDIUM_POST_CREATOR, mediumPost.getCreator());
-        properties.put(MEDIUM_POST_PUBLICATION_DATE, publicationDate.toString());
-        properties.put(MEDIUM_POST_UPDATE_DATE, updateDate.toString());
+        properties.put(MEDIUM_POST_PUBLICATION_DATE, mediumPost.getPublicationDate());
+        properties.put(MEDIUM_POST_UPDATE_DATE, mediumPost.getPublicationDate());
         properties.put(MEDIUM_POST_ID, mediumPost.getId());
 
         return properties;
