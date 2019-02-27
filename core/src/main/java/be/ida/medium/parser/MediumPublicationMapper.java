@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MediumPublicationMapper {
+    //TODO: place in config
     protected static final String IMAGE_BASE_PATH = "https://cdn-images-1.medium.com/";
+    protected static final String POST_BASE_PATH = "https://medium.com/ida-mediafoundry/";
 
     public MediumPublication publicationToMediumPublication(Publication publication) {
         MediumPublication mediumPublication = new MediumPublication();
@@ -33,7 +35,7 @@ public class MediumPublicationMapper {
 
                         mediumPost.setPublicationDate(post.getCreatedAt());
                         mediumPost.setUpdateDate(post.getUpdatedAt());
-                        mediumPost.setLink(post.getUniqueSlug());
+                        mediumPost.setLink(POST_BASE_PATH + post.getUniqueSlug());
                         mediumPost.setTitle(post.getTitle());
                         mediumPost.setId(post.getId());
 

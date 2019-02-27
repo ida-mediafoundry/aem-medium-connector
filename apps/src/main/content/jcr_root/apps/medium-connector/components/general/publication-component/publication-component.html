@@ -2,9 +2,7 @@
     <div class="medium-component" data-sly-list="${component.mediumPublication.posts}">
         <div class="medium-component-tile">
             <a class="medium-component-tile__image"
-               style="background: url('${item.ImageSource @ context='styleString'}') center top"
-
-            >
+               style="background: url('${item.ImageSource @ context='styleString'}') center top" href="${item.Link}">
                 <div class="medium-component-tile__foreground">
                     <p class="medium-component-tile__foreground__title">
                         ${item.Title}
