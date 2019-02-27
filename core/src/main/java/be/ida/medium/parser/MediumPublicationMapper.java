@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MediumPublicationMapper {
+    protected static final String IMAGE_BASE_PATH = "https://cdn-images-1.medium.com/";
+
     public MediumPublication publicationToMediumPublication(Publication publication) {
         MediumPublication mediumPublication = new MediumPublication();
         List<MediumPost> mediumPosts = new ArrayList<>();
@@ -34,7 +36,9 @@ public class MediumPublicationMapper {
                         mediumPost.setLink(post.getUniqueSlug());
                         mediumPost.setTitle(post.getTitle());
                         mediumPost.setId(post.getId());
-                        mediumPost.setImageSource(post.getVirtuals().getPreviewImage().getImageId());
+
+                        //TODO: null checks + less naive url creation
+                        mediumPost.setImageSource(IMAGE_BASE_PATH + post.getVirtuals().getPreviewImage().getImageId());
 
                         mediumPosts.add(mediumPost);
                     }

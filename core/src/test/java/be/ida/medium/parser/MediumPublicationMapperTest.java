@@ -17,7 +17,7 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
 public class MediumPublicationMapperTest {
     private static String EXAMPLE_ID = "a54a084bb59f";
     private static String EXAMPLE_LINK = "silicon-valley-musings-a54a084bb59f";
-    private static String EXAMPLE_IMAGE_SOURCE = "1*rv5iOqDoWuJ5CoZdyRXj8g.png";
+    private static String EXAMPLE_IMAGE_SOURCE = MediumPublicationMapper.IMAGE_BASE_PATH + "1*rv5iOqDoWuJ5CoZdyRXj8g.png";
     private static String EXAMPLE_CREATOR = "Bert Swinnen";
     private static Long EXAMPLE_PUBLICATION_DATE = 1535595788571L;
     MediumPublicationMapper mediumPublicationMapper = new MediumPublicationMapper();
