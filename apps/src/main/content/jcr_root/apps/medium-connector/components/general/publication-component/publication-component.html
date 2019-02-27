@@ -1,5 +1,25 @@
-<pre data-sly-use.component="be.ida.component.general.PublicationComponent">
-Param value:
-    <a>${component.message}</a>
+<div data-sly-use.component="be.ida.component.general.PublicationComponent">
+    <div class="medium-component" data-sly-list="${component.mediumPublication.posts}">
+        <div class="medium-component-tile">
+            <a class="medium-component-tile__image"
+               style="background: url('${item.ImageSource @ context='styleString'}') center top"
 
-</pre>
+            >
+                <div class="medium-component-tile__foreground">
+                    <p class="medium-component-tile__foreground__title">
+                        ${item.Title}
+                    </p>
+                    <div class="medium-component-tile__foreground__author-info">
+                        <img class="medium-component-tile__foreground__author-info__image"
+                             src="../etc/designs/medium-connector/assets/icons/usuario-png-5.png"/>
+                        <div>
+                            <p class="medium-component-tile__foreground__author-info__name">${item.Creator}</p>
+                            <p class="medium-component-tile__foreground__author-info__publication-date">
+                                ${item.PublicationDate}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

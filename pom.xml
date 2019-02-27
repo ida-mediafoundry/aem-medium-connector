@@ -14,7 +14,8 @@
  |  See the License for the specific language governing permissions and
  |  limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>be.ida</groupId>
     <artifactId>medium-connector</artifactId>
@@ -215,7 +216,8 @@
                     <configuration>
                         <exportScr>true</exportScr>
                         <instructions>
-                            <_plugin>org.apache.sling.bnd.models.ModelsScannerPlugin;generatePackagesHeader=true</_plugin>
+                            <_plugin>org.apache.sling.bnd.models.ModelsScannerPlugin;generatePackagesHeader=true
+                            </_plugin>
                             <_dsannotations>*</_dsannotations>
                             <_metatypeannotations>*</_metatypeannotations>
                         </instructions>
@@ -412,7 +414,9 @@
                                         <goal>install</goal>
                                     </goals>
                                     <configuration>
-                                        <targetURL>http://${aem.publish.host}:${aem.publish.port}/crx/packmgr/service.jsp</targetURL>
+                                        <targetURL>
+                                            http://${aem.publish.host}:${aem.publish.port}/crx/packmgr/service.jsp
+                                        </targetURL>
                                     </configuration>
                                 </execution>
                             </executions>
@@ -430,14 +434,20 @@
     <!-- ====================================================================== -->
     <dependencyManagement>
 
+
         <dependencies>
+            <!-- HTTP request Dependenies -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5.2</version>
+            </dependency>
             <!-- used for string parsing -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>3.7</version>
             </dependency>
-
             <!-- Rss Feed Parsing Dependencies -->
             <dependency>
                 <groupId>org.jsoup</groupId>
@@ -448,6 +458,17 @@
                 <groupId>com.rometools</groupId>
                 <artifactId>rome</artifactId>
                 <version>1.10.0</version>
+            </dependency>
+            <!-- Jackson JSON Parsing Dependencies -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.9.4</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-osgi</artifactId>
+                <version>2.9.4</version>
             </dependency>
             <!-- OSGi Dependencies -->
             <dependency>
