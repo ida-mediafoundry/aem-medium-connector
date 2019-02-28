@@ -5,4 +5,12 @@
     <filter root="/etc/designs/medium-connector" mode="replace"/>
 
     <filter root="/apps/dependencies/install" mode="replace"/>
+
+    <filter root="/apps/cq/experience-fragments/components/xfmediumpage" mode="replace"/>
+    <filter root="/apps/settings/experience-fragments/templates/medium-experience-fragment-template" mode="replace"/>
+    <filter root="/apps/settings/experience-fragments/templates/experience-fragment-template" mode="replace"/>
+
+    <filter root="/conf/medium" mode="replace"/>
+
+    <filter root="/content/experience-fragments" mode="replace"/>
 </workspaceFilter>

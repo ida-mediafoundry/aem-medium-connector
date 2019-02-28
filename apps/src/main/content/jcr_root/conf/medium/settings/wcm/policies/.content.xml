@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <slingshot jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <structure jcr:primaryType="nt:unstructured">
+                <page jcr:primaryType="nt:unstructured">
+                    <policy_default_page
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default Page policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[brands.hue.css.all,slingshot.vendor.lazysizes,slingshot.vendor.core-dynamic-image]"
+                        displayviews="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Theme"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="theme--black"
+                                        cq:styleId="theme-black"
+                                        cq:styleLabel="Black"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="theme--grey"
+                                        cq:styleId="theme-grey"
+                                        cq:styleLabel="Grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_default_page>
+                </page>
+            </structure>
+            <general jcr:primaryType="nt:unstructured">
+                <text-component jcr:primaryType="nt:unstructured">
+                    <policy_basic_rte_text_component
+                        jcr:description="This disabled all advanced RTE options in the Text Component"
+                        jcr:lastModified="{Date}2019-02-20T09:11:28.755+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic RTE for Text Component Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="-">
+                                <formats
+                                    jcr:primaryType="nt:unstructured"
+                                    override="true">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Paragraph"
+                                        tag="p"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 1"
+                                        tag="h1"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 2"
+                                        tag="h2"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 3"
+                                        tag="h3"/>
+                                </formats>
+                            </paraformat>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="-">
+                                <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                    <chars
+                                        jcr:primaryType="nt:unstructured"
+                                        override="true"/>
+                                </specialCharsConfig>
+                            </misctools>
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <findreplace
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <undo
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <spellcheck
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <table
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <justify
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="bold,italic"/>
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <lists
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                features="modifylink,unlink"/>
+                        </rtePlugins>
+                    </policy_basic_rte_text_component>
+                </text-component>
+                <title-component jcr:primaryType="nt:unstructured">
+                    <policy_default_title_component
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default Title Component Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h1,h2,h3,h4,h5,h6]"
+                        type="h1">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <aligment
+                                cq:styleGroupLabel="Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <left
+                                        cq:styleClasses="title-component--styles-left"
+                                        cq:styleId="alignment-left"
+                                        cq:styleLabel="Left"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <center
+                                        cq:styleClasses="title-component--styles-center"
+                                        cq:styleId="alignment-center"
+                                        cq:styleLabel="Center"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <right
+                                        cq:styleClasses="title-component--styles-right"
+                                        cq:styleId="alignment-right"
+                                        cq:styleLabel="Right"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </aligment>
+                        </cq:styleGroups>
+                    </policy_default_title_component>
+                </title-component>
+                <link-button-component jcr:primaryType="nt:unstructured">
+                    <policy_default_link_button_component
+                        cq:styleDefaultClasses="link-button-component--styles-left"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default Button Component Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <alignment
+                                cq:styleGroupLabel="Alignment"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <left
+                                        cq:styleClasses="link-button-component--styles-left"
+                                        cq:styleId="alignment-left"
+                                        cq:styleLabel="Left"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <center
+                                        cq:styleClasses="link-button-component--styles-center"
+                                        cq:styleId="alignment-center"
+                                        cq:styleLabel="Center"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <right
+                                        cq:styleClasses="link-button-component--styles-right"
+                                        cq:styleId="alignment-right"
+                                        cq:styleLabel="Right"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </alignment>
+                        </cq:styleGroups>
+                    </policy_default_link_button_component>
+                </link-button-component>
+                <dynamic-media-image-component jcr:primaryType="nt:unstructured">
+                    <policy_default_dynamic_media_image
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default Dynamic Media Image Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="[301,601,769,1280,2000]"
+                        allowUpload="false"
+                        altValueFromDAM="false"
+                        disableLazyLoading="true"
+                        displayPopupTitle="false"
+                        isDecorative="false"
+                        jpegQuality="{Long}82"
+                        titleValueFromDAM="false"
+                        uuidDisabled="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <plugins jcr:primaryType="nt:unstructured">
+                            <crop
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <aspectRatios jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Wide Landscape"
+                                        ratio="0.6180"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Landscape"
+                                        ratio="0.8284"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Square"
+                                        ratio="1"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Portrait"
+                                        ratio="1.6180"/>
+                                </aspectRatios>
+                            </crop>
+                            <rotate
+                                jcr:primaryType="nt:unstructured"
+                                features="right"/>
+                            <flip
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                        </plugins>
+                    </policy_default_dynamic_media_image>
+                </dynamic-media-image-component>
+                <image-component jcr:primaryType="nt:unstructured">
+                    <policy_default_image
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default Image Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        enableLazyLoading="true"
+                        enforceRenditions="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_default_image>
+                </image-component>
+                <image-banner-component jcr:primaryType="nt:unstructured">
+                    <policy_default_image_banner
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default Image Banner Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_default_image_banner>
+                </image-banner-component>
+                <teaser-component jcr:primaryType="nt:unstructured">
+                    <policy_default_teaser
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default Teaser Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <theme
+                                cq:styleGroupLabel="Theme"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <theme-dark
+                                        cq:styleClasses="theme--dark"
+                                        cq:styleId="theme-dark"
+                                        cq:styleLabel="Dark"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <theme-white
+                                        cq:styleClasses="theme--white"
+                                        cq:styleId="theme-white"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <theme-light-grey
+                                        cq:styleClasses="theme--light-grey"
+                                        cq:styleId="theme-light-grey"
+                                        cq:styleLabel="Light Grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </theme>
+                        </cq:styleGroups>
+                    </policy_default_teaser>
+                </teaser-component>
+            </general>
+            <layout jcr:primaryType="nt:unstructured">
+                <section-component jcr:primaryType="nt:unstructured">
+                    <policy_default_section_component
+                        cq:styleDefaultClasses="theme--white-white"
+                        jcr:lastModified="{Date}2019-02-22T08:48:42.842+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default Section Component Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        hideBackground="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Theme"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="theme--white"
+                                        cq:styleId="theme-white"
+                                        cq:styleLabel="White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="theme--white-grey"
+                                        cq:styleId="theme-white-grey"
+                                        cq:styleLabel="White-grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="theme--white-black"
+                                        cq:styleId="theme-white-black"
+                                        cq:styleLabel="White-black"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item3
+                                        cq:styleClasses="theme--black-white"
+                                        cq:styleId="theme-black-white"
+                                        cq:styleLabel="Black-white"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item4
+                                        cq:styleClasses="theme--black-alternate"
+                                        cq:styleId="theme-black-alternate"
+                                        cq:styleLabel="Black-alternate"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item5
+                                        cq:styleClasses="theme--black"
+                                        cq:styleId="theme-black"
+                                        cq:styleLabel="Black"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item6
+                                        cq:styleClasses="theme--grey-white"
+                                        cq:styleId="theme-grey-white"
+                                        cq:styleLabel="Grey-white"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item7
+                                        cq:styleClasses="theme--grey-black"
+                                        cq:styleId="theme-grey-black"
+                                        cq:styleLabel="Grey-black"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item8
+                                        cq:styleClasses="theme--grey"
+                                        cq:styleId="theme-grey"
+                                        cq:styleLabel="Grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_default_section_component>
+                </section-component>
+            </layout>
+        </components>
+    </slingshot>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <policy_default_template_structure
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default Template Structure Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/dam/cfm/components/contentfragment,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/foundation/components/responsivegrid,group:Slingshot Navigation]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_default_template_structure>
+                    <policy_default_parsys
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Default Parsys Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/cq/experience-fragments/editor/components/buildingblock,/libs/cq/experience-fragments/editor/components/experiencefragment,group:Slingshot General,group:Slingshot Layout]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <mapping_xf
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="cq/experience-fragments/editor/components/experiencefragment"/>
+                                <mapping_image
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="[image/jpeg,image/png,image/svg+xml]"
+                                    droptarget="image"
+                                    resourceType="slingshot/components/general/image-component"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                    </policy_default_parsys>
+                    <policy_xf
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Experience fragment Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/cq/experience-fragments/editor/components/buildingblock,group:Slingshot General,group:Slingshot Layout,group:Slingshot Navigation]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <mapping_xf
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="cq/experience-fragments/editor/components/experiencefragment"/>
+                                <mapping_image
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="[image/jpeg,image/png,image/svg+xml]"
+                                    droptarget="image"
+                                    resourceType="slingshot/components/general/image-component"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                    </policy_xf>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
+    <rep:policy/>
+</jcr:root>
