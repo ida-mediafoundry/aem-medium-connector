@@ -3,7 +3,4 @@
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="cq:Page">
     <rep:policy/>
-    <experience-fragment-template/>
-    <experience-fragment-template-pinterest/>
-    <experience-fragment-template-facebook/>
 </jcr:root>
