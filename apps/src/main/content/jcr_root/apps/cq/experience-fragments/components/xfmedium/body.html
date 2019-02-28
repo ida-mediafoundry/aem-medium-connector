@@ -14,36 +14,30 @@
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
 
-<sly data-sly-use.facebook="/libs/granite/sightly/templates/clientlib.html"
-     data-sly-call="${ facebook.css @ categories='cq.experience-fragments.facebook'}"/>
+<sly data-sly-use.coralui2="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${ coralui2.css @ categories='coralui2'}"/>
+
+<sly data-sly-use.medium="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${ medium.css @ categories='cq.experience-fragments.medium'}"/>
 
 <!--Facebook decoration wrapper-->
-<div class="xf-facebook-body">
-    <div class="xf-facebook-content">
-        <sly data-sly-include="facebook-top.html"/>
+<div class="xf-medium-body">
+    <div class="xf-medium-content">
+        <sly data-sly-include="medium-top.html"/>
 
         <!--Actual editable content-->
         <sly data-sly-use.body="body.js"
              data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"/>
         <sly data-sly-test="${!templatedContainer.hasStructureSupport}"
              data-sly-resource="${body.resourcePath @ resourceType='wcm/foundation/components/parsys'}"/>
-
         <sly data-sly-test="${templatedContainer.hasStructureSupport}"
-             data-sly-repeat.child="${templatedContainer.structureResources}">
-            <sly data-sly-use.social="social.js">
-                <p>${social.text}</p>
-            </sly>
-            <sly data-sly-repeat.grandchild="${child.children}">
-                <sly data-sly-test="${grandchild.resourceType == 'wcm/foundation/components/image'}">
-                    <sly data-sly-resource="${grandchild.path @ resourceType=grandchild.resourceType}"/>
-                </sly>
-            </sly>
-        </sly>
+             data-sly-repeat.child="${templatedContainer.structureResources}"
+             data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"/>
         <div data-sly-resource="${'cloudservices' @ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"
              data-sly-unwrap></div>
         <sly data-sly-include="footerlibs.html"/>
 
         <!--Facebook bottom decoration-->
-        <sly data-sly-include="facebook-bottom.html"/>
+        <sly data-sly-include="medium-bottom.html"/>
     </div>
 </div>

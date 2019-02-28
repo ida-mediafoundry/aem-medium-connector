@@ -4,14 +4,14 @@
     <jcr:content
         cq:lastModified="{Date}2016-08-01T12:13:41.936+03:00"
         cq:lastModifiedBy="admin"
-        cq:tags="[experience-fragments:variation/facebook]"
-        cq:template="/conf/experience-fragments/settings/wcm/templates/experience-fragment-template-facebook"
+        cq:tags="[experience-fragments:variation/medium]"
+        cq:template="/conf/experience-fragments/settings/wcm/templates/experience-fragment-template-medium"
         cq:xfShowInEditor="false"
         cq:xfSocialVariation="true"
-        cq:xfVariantType="facebook"
+        cq:xfVariantType="medium"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Facebook"
-        sling:resourceType="cq/experience-fragments/components/xffacebook">
+        jcr:title="Medium"
+        sling:resourceType="cq/experience-fragments/components/xfmedium">
         <root
             jcr:lastModified="{Date}2016-08-01T12:13:20.297+03:00"
             jcr:lastModifiedBy="admin"
