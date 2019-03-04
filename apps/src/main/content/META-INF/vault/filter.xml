@@ -12,4 +12,7 @@
     <filter root="/conf/medium" mode="replace"/>
 
     <filter root="/content/experience-fragments" mode="replace"/>
+
+    <filter root="/etc/workflow/launcher/config/mediumpost_convertor" mode="replace"/>
+    <filter root="/etc/workflow/models/medium-post-processor" mode="replace"/>
 </workspaceFilter>

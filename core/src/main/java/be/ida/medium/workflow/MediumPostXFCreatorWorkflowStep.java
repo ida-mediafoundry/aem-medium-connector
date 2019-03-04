@@ -25,19 +25,33 @@ public class MediumPostXFCreatorWorkflowStep implements WorkflowProcess {
 
     @Override
     public void execute( final WorkItem workItem, final WorkflowSession workflowSession, final MetaDataMap metaDataMap ) throws WorkflowException {
+        LOG.info("MediumPost node is about to get processed");
         final MetaDataMap transferredMetaDataMap = workItem.getWorkflowData().getMetaDataMap();
         final String resourcePath = workItem.getWorkflowData().getPayload().toString();
 
         if ( StringUtils.isNotEmpty(resourcePath) ) {
-            final String mediumPublicationId = StringUtils.substringAfterLast(StringUtils.substringBeforeLast(resourcePath, "/posts"), "/");
+            final String mediumPublicationId = extractMediumPublicationId(resourcePath);
 
-            final MediumPublication mediumPublication = mediumservice.getMediumPublication(mediumPublicationId);
+            if ( mediumPublicationId != null ) {
+                final MediumPublication mediumPublication = mediumservice.getMediumPublication(mediumPublicationId);
 
-            if ( mediumPublication != null ) {
-                
+                if ( mediumPublication != null ) {
+                    LOG.info("mediumPost about to get conversed");
+
+                    //TODO: start conversion
+                }
             }
         }
+    }
 
+    private String extractMediumPublicationId( final String resourcePath ) {
+        String mediumPublicationId = null;
+        final String postInfoExcluded = StringUtils.substringBeforeLast(resourcePath, "/posts");
+
+        if ( StringUtils.isNotEmpty(postInfoExcluded) ) {
+            mediumPublicationId = StringUtils.substringAfterLast(postInfoExcluded, "/");
+        }
+        return mediumPublicationId;
     }
 }
 
