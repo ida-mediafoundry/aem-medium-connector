@@ -43,8 +43,9 @@ public class MediumRepositoryImpl implements MediumRepository {
             for ( final MediumPost mediumPost : mediumPublication.getPosts() ) {
                 try {
                     resourceResolver.create(mediumResource, mediumPost.getId(), extractProperties(mediumPost));
+                    LOG.info("Node created for: " + mediumPost.getId());
                 } catch ( final PersistenceException e ) {
-                    LOG.error("Could not create new node in JCR", e);
+                    LOG.info("Node already exists for: " + mediumPost.getId());
                 }
             }
             resourceResolver.commit();
