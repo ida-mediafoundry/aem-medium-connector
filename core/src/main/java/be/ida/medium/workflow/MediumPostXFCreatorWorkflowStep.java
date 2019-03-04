@@ -29,9 +29,12 @@ public class MediumPostXFCreatorWorkflowStep implements WorkflowProcess {
         final String resourcePath = workItem.getWorkflowData().getPayload().toString();
 
         if ( StringUtils.isNotEmpty(resourcePath) ) {
-            final MediumPublication mediumPublication = mediumservice.getMediumPublication(resourcePath);
-            if ( mediumPublication != null ) {
+            final String mediumPublicationId = StringUtils.substringAfterLast(StringUtils.substringBeforeLast(resourcePath, "/posts"), "/");
 
+            final MediumPublication mediumPublication = mediumservice.getMediumPublication(mediumPublicationId);
+
+            if ( mediumPublication != null ) {
+                
             }
         }
 

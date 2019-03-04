@@ -31,60 +31,67 @@ public class MediumRepositoryImpl implements MediumRepository {
     private ResourceResolverFactory resourceResolverFactory;
 
     @Override
-    public void storeMediumPublication(MediumPublication mediumPublication) {
-        try (ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())) {
+    public void storeMediumPublication( final MediumPublication mediumPublication ) {
+        try ( final ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials()) ) {
             Resource mediumResource = resourceResolver.getResource(getPublicationFolder(mediumPublication));
 
-            if (mediumResource == null) {
+            if ( mediumResource == null ) {
                 mediumResource = createMediumResource(resourceResolver, mediumPublication);
                 setPublicationNodeName(mediumPublication, resourceResolver);
             }
 
-            for (MediumPost mediumPost : mediumPublication.getPosts()) {
+            for ( final MediumPost mediumPost : mediumPublication.getPosts() ) {
                 try {
                     resourceResolver.create(mediumResource, mediumPost.getId(), extractProperties(mediumPost));
-                } catch (PersistenceException e) {
+                } catch ( final PersistenceException e ) {
                     LOG.error("Could not create new node in JCR", e);
                 }
             }
             resourceResolver.commit();
-        } catch (LoginException e) {
+        } catch ( final LoginException e ) {
             LOG.error("Could not open ResourceResolver properly", e);
-        } catch (PersistenceException e) {
+        } catch ( final PersistenceException e ) {
             LOG.error("Could not commit changes to JCR", e);
         }
     }
 
     @Override
-    public MediumPublication getMediumPublication(String resourcePath) {
+    public MediumPublication getMediumPublication( final String mediumPublicationId ) {
         MediumPublication mediumPublication = new MediumPublication();
 
-        try (ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials())) {
-            mediumPublication = Optional.ofNullable(resourceResolver.getResource(JCR_CONTENT_BASE_PATH + resourcePath))
+        try ( final ResourceResolver resourceResolver = resourceResolverFactory.getServiceResourceResolver(getCredentials()) ) {
+            mediumPublication = Optional.ofNullable(resourceResolver.getResource(JCR_CONTENT_BASE_PATH + mediumPublicationId))
                     .map(resource -> resource.adaptTo(MediumPublication.class))
                     .orElse(null);
-        } catch (LoginException e) {
+        } catch ( final LoginException e ) {
             LOG.error("Could not open ResourceResolver properly", e);
         }
 
         return mediumPublication;
     }
 
-    private Resource createMediumResource(ResourceResolver resourceResolver, MediumPublication mediumPublication) {
-        String pathWithPubTitle = getPublicationFolder(mediumPublication);
-        String[] nodesList = StringUtils.split(pathWithPubTitle, "/");
+    //TODO: work with lucine index, only mediumPostId is needed as param
+    @Override
+    public MediumPost getMediumPost( final String mediumPublicationId, final String mediumPostId ) {
+        final MediumPublication mediumPublication = getMediumPublication(mediumPublicationId);
+        return mediumPublication.getPosts().stream().filter(post -> post.getId().equals(mediumPostId)).findFirst().orElse(null);
+    }
 
-        Iterator<String> nodesIterator = Arrays.stream(nodesList).iterator();
+    private Resource createMediumResource( final ResourceResolver resourceResolver, final MediumPublication mediumPublication ) {
+        final String pathWithPubTitle = getPublicationFolder(mediumPublication);
+        final String[] nodesList = StringUtils.split(pathWithPubTitle, "/");
+
+        final Iterator<String> nodesIterator = Arrays.stream(nodesList).iterator();
 
 
         Resource resource = resourceResolver.getResource("/" + nodesIterator.next());
 
-        while (nodesIterator.hasNext()) {
-            String currentNode = nodesIterator.next();
-            String newPath = resource.getPath() + "/" + currentNode;
+        while ( nodesIterator.hasNext() ) {
+            final String currentNode = nodesIterator.next();
+            final String newPath = resource.getPath() + "/" + currentNode;
             try {
                 resourceResolver.create(resource, currentNode, new HashMap<>());
-            } catch (PersistenceException e) {
+            } catch ( final PersistenceException e ) {
                 LOG.error("Unable to create node: " + currentNode, e);
             }
             resource = resourceResolver.getResource(newPath);
@@ -93,12 +100,12 @@ public class MediumRepositoryImpl implements MediumRepository {
         return resource;
     }
 
-    private String getPublicationFolder(MediumPublication mediumPublication) {
+    private String getPublicationFolder( final MediumPublication mediumPublication ) {
         return JCR_CONTENT_BASE_PATH + mediumPublication.getId() + "/posts";
     }
 
     private Map<String, Object> getCredentials() {
-        Map<String, Object> credentials = new HashMap<>();
+        final Map<String, Object> credentials = new HashMap<>();
 
         credentials.put(ResourceResolverFactory.USER, DEFAULT_USER);
         credentials.put(ResourceResolverFactory.SUBSERVICE, DEFAULT_SERVICE);
@@ -106,13 +113,13 @@ public class MediumRepositoryImpl implements MediumRepository {
         return credentials;
     }
 
-    private Map<String, Object> extractProperties(MediumPost mediumPost) {
-        Map<String, Object> properties = new HashMap<>();
+    private Map<String, Object> extractProperties( final MediumPost mediumPost ) {
+        final Map<String, Object> properties = new HashMap<>();
 
-        LocalDate publicationDate =
+        final LocalDate publicationDate =
                 Instant.ofEpochMilli(mediumPost.getPublicationDate()).atZone(ZoneId.systemDefault()).toLocalDate();
 
-        LocalDate updateDate =
+        final LocalDate updateDate =
                 Instant.ofEpochMilli(mediumPost.getUpdateDate()).atZone(ZoneId.systemDefault()).toLocalDate();
 
         properties.put(JcrConstants.JCR_PRIMARYTYPE, JcrConstants.NT_UNSTRUCTURED);
@@ -127,9 +134,9 @@ public class MediumRepositoryImpl implements MediumRepository {
         return properties;
     }
 
-    private void setPublicationNodeName(MediumPublication mediumPublication, ResourceResolver resourceResolver) {
-        Resource resource = resourceResolver.getResource(JCR_CONTENT_BASE_PATH + mediumPublication.getId());
-        ModifiableValueMap map = resource.adaptTo(ModifiableValueMap.class);
+    private void setPublicationNodeName( final MediumPublication mediumPublication, final ResourceResolver resourceResolver ) {
+        final Resource resource = resourceResolver.getResource(JCR_CONTENT_BASE_PATH + mediumPublication.getId());
+        final ModifiableValueMap map = resource.adaptTo(ModifiableValueMap.class);
         map.put("name", mediumPublication.getName());
     }
 
