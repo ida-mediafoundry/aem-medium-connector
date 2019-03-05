@@ -6,6 +6,7 @@ import be.ida.medium.model.MediumPublication;
 import be.ida.medium.parser.MediumJsonParser;
 import be.ida.medium.parser.MediumPublicationMapper;
 import be.ida.medium.service.MediumService;
+import be.ida.medium.service.MediumXFManagerService;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -29,38 +30,44 @@ public class MediumConnector {
 
     @Reference
     private MediumService mediumService;
+
+    @Reference
+    private MediumXFManagerService mediumXFManagerService;
+
     @Reference
     private MediumConnectorConfig mediumConnectorConfig;
 
     public void process() {
-        String url = mediumConnectorConfig.getMediumFeedUrl();
-        String rawJsonString = retrieveRawJson(url);
-        Publication pub = mediumJsonParser.jsonToPublication(rawJsonString);
-        MediumPublication mediumPublication = mediumPublicationMapper.publicationToMediumPublication(pub);
-        mediumService.storeMediumPublication(mediumPublication);
+        final String url = mediumConnectorConfig.getMediumFeedUrl();
+        final String rawJsonString = retrieveRawJson(url);
+        final Publication pub = mediumJsonParser.jsonToPublication(rawJsonString);
+        final MediumPublication mediumPublication = mediumPublicationMapper.publicationToMediumPublication(pub);
+//        mediumService.storeMediumPublication(mediumPublication);
+
+        mediumXFManagerService.createMediumXF(mediumPublication.getPosts().get(0), mediumPublication.getId());
     }
 
-    private String retrieveRawJson(String url) {
+    private String retrieveRawJson( final String url ) {
         String jsonString = null;
         String responseString = null;
 
-        if (url != null) {
-            try (CloseableHttpClient httpclient = getDefaultHttpClient()) {
-                HttpGet httpget = new HttpGet(url);
-                CloseableHttpResponse response = httpclient.execute(httpget);
+        if ( url != null ) {
+            try ( final CloseableHttpClient httpclient = getDefaultHttpClient() ) {
+                final HttpGet httpget = new HttpGet(url);
+                final CloseableHttpResponse response = httpclient.execute(httpget);
 
-                HttpEntity entity = response.getEntity();
-                if (entity != null) {
+                final HttpEntity entity = response.getEntity();
+                if ( entity != null ) {
                     responseString = EntityUtils.toString(entity, "UTF-8");
                 }
-            } catch (IOException e) {
+            } catch ( final IOException e ) {
                 LOG.error("unable to get HTTP request body");
             }
 
-            Pattern pattern = Pattern.compile("\\{.*\\:\\{.*\\:.*\\}");
-            Matcher matcher = pattern.matcher(responseString);
+            final Pattern pattern = Pattern.compile("\\{.*\\:\\{.*\\:.*\\}");
+            final Matcher matcher = pattern.matcher(responseString);
 
-            if (matcher.find()) {
+            if ( matcher.find() ) {
                 jsonString = matcher.group(0);
             }
         }
