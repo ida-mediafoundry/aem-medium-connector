@@ -3,6 +3,7 @@ package be.ida.medium.workflow;
 
 import be.ida.medium.model.MediumPost;
 import be.ida.medium.service.MediumService;
+import be.ida.medium.service.MediumXFManagerService;
 import com.day.cq.workflow.WorkflowException;
 import com.day.cq.workflow.WorkflowSession;
 import com.day.cq.workflow.exec.WorkItem;
@@ -23,35 +24,38 @@ public class MediumPostXFCreatorWorkflowStep implements WorkflowProcess {
     @Reference
     MediumService mediumservice;
 
+    @Reference
+    MediumXFManagerService mediumXfManagerService;
+
     @Override
-    public void execute( final WorkItem workItem, final WorkflowSession workflowSession, final MetaDataMap metaDataMap ) throws WorkflowException {
+    public void execute(final WorkItem workItem, final WorkflowSession workflowSession, final MetaDataMap metaDataMap) throws WorkflowException {
         LOG.info("MediumPost node is about to get processed");
         final String resourcePath = workItem.getWorkflowData().getPayload().toString();
 
-        if ( StringUtils.isNotEmpty(resourcePath) ) {
+        if (StringUtils.isNotEmpty(resourcePath)) {
             final String mediumPublicationId = extractMediumPublicationId(resourcePath);
 
-            if ( mediumPublicationId != null ) {
+            if (mediumPublicationId != null) {
                 final MediumPost mediumPost = mediumservice.getMediumPost(mediumPublicationId, getMediumPostId(resourcePath));
 
-                if ( mediumPost != null ) {
+                if (mediumPost != null) {
                     LOG.info("mediumPost about to get conversed");
 
-
+                    mediumXfManagerService.createMediumXF(mediumPost, mediumPublicationId);
                 }
             }
         }
     }
 
-    private String getMediumPostId( final String resourcePath ) {
+    private String getMediumPostId(final String resourcePath) {
         return StringUtils.substringAfterLast(resourcePath, "/");
     }
 
-    private String extractMediumPublicationId( final String resourcePath ) {
+    private String extractMediumPublicationId(final String resourcePath) {
         String mediumPublicationId = null;
         final String postInfoExcluded = StringUtils.substringBeforeLast(resourcePath, "/posts");
 
-        if ( StringUtils.isNotEmpty(postInfoExcluded) ) {
+        if (StringUtils.isNotEmpty(postInfoExcluded)) {
             mediumPublicationId = getMediumPostId(postInfoExcluded);
         }
         return mediumPublicationId;
