@@ -1,13 +1,13 @@
 package be.ida.medium.workflow;
 
 
-import be.ida.medium.model.MediumPublication;
+import be.ida.medium.model.MediumPost;
 import be.ida.medium.service.MediumService;
-import com.adobe.granite.workflow.WorkflowException;
-import com.adobe.granite.workflow.WorkflowSession;
-import com.adobe.granite.workflow.exec.WorkItem;
-import com.adobe.granite.workflow.exec.WorkflowProcess;
-import com.adobe.granite.workflow.metadata.MetaDataMap;
+import com.day.cq.workflow.WorkflowException;
+import com.day.cq.workflow.WorkflowSession;
+import com.day.cq.workflow.exec.WorkItem;
+import com.day.cq.workflow.exec.WorkflowProcess;
+import com.day.cq.workflow.metadata.MetaDataMap;
 import org.apache.commons.lang3.StringUtils;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -26,22 +26,25 @@ public class MediumPostXFCreatorWorkflowStep implements WorkflowProcess {
     @Override
     public void execute( final WorkItem workItem, final WorkflowSession workflowSession, final MetaDataMap metaDataMap ) throws WorkflowException {
         LOG.info("MediumPost node is about to get processed");
-        final MetaDataMap transferredMetaDataMap = workItem.getWorkflowData().getMetaDataMap();
         final String resourcePath = workItem.getWorkflowData().getPayload().toString();
 
         if ( StringUtils.isNotEmpty(resourcePath) ) {
             final String mediumPublicationId = extractMediumPublicationId(resourcePath);
 
             if ( mediumPublicationId != null ) {
-                final MediumPublication mediumPublication = mediumservice.getMediumPublication(mediumPublicationId);
+                final MediumPost mediumPost = mediumservice.getMediumPost(mediumPublicationId, getMediumPostId(resourcePath));
 
-                if ( mediumPublication != null ) {
+                if ( mediumPost != null ) {
                     LOG.info("mediumPost about to get conversed");
 
-                    //TODO: start conversion
+
                 }
             }
         }
+    }
+
+    private String getMediumPostId( final String resourcePath ) {
+        return StringUtils.substringAfterLast(resourcePath, "/");
     }
 
     private String extractMediumPublicationId( final String resourcePath ) {
@@ -49,7 +52,7 @@ public class MediumPostXFCreatorWorkflowStep implements WorkflowProcess {
         final String postInfoExcluded = StringUtils.substringBeforeLast(resourcePath, "/posts");
 
         if ( StringUtils.isNotEmpty(postInfoExcluded) ) {
-            mediumPublicationId = StringUtils.substringAfterLast(postInfoExcluded, "/");
+            mediumPublicationId = getMediumPostId(postInfoExcluded);
         }
         return mediumPublicationId;
     }

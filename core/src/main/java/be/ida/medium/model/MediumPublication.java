@@ -13,23 +13,24 @@ public class MediumPublication {
     private String name;
 
     @Inject
+    private String id;
+
+    @Inject
     private List<MediumPost> posts;
 
-    private String Id;
-
     public String getId() {
-        return Id;
+        return id;
     }
 
-    public void setId(String id) {
-        Id = id;
+    public void setId( final String id ) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName( final String name ) {
         this.name = name;
     }
 
@@ -37,7 +38,7 @@ public class MediumPublication {
         return posts;
     }
 
-    public void setPosts(List<MediumPost> posts) {
+    public void setPosts( final List<MediumPost> posts ) {
         this.posts = posts;
     }
 }

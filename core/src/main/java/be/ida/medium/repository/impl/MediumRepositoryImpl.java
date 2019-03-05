@@ -36,16 +36,16 @@ public class MediumRepositoryImpl implements MediumRepository {
             Resource mediumResource = resourceResolver.getResource(getPublicationFolder(mediumPublication));
 
             if ( mediumResource == null ) {
-                mediumResource = createMediumResource(resourceResolver, mediumPublication);
-                setPublicationNodeName(mediumPublication, resourceResolver);
+                mediumResource = createMediumPublicationResource(resourceResolver, mediumPublication);
+                setMediumPublicationNodeName(mediumPublication, resourceResolver);
             }
 
             for ( final MediumPost mediumPost : mediumPublication.getPosts() ) {
                 try {
-                    resourceResolver.create(mediumResource, mediumPost.getId(), extractProperties(mediumPost));
+                    resourceResolver.create(mediumResource, mediumPost.getId(), extractMediumPostProperties(mediumPost));
                     LOG.info("Node created for: " + mediumPost.getId());
                 } catch ( final PersistenceException e ) {
-                    LOG.info("Node already exists for: " + mediumPost.getId());
+//                    LOG.info("Node already exists for: " + mediumPost.getId());
                 }
             }
             resourceResolver.commit();
@@ -78,12 +78,11 @@ public class MediumRepositoryImpl implements MediumRepository {
         return mediumPublication.getPosts().stream().filter(post -> post.getId().equals(mediumPostId)).findFirst().orElse(null);
     }
 
-    private Resource createMediumResource( final ResourceResolver resourceResolver, final MediumPublication mediumPublication ) {
+    private Resource createMediumPublicationResource( final ResourceResolver resourceResolver, final MediumPublication mediumPublication ) {
         final String pathWithPubTitle = getPublicationFolder(mediumPublication);
         final String[] nodesList = StringUtils.split(pathWithPubTitle, "/");
 
         final Iterator<String> nodesIterator = Arrays.stream(nodesList).iterator();
-
 
         Resource resource = resourceResolver.getResource("/" + nodesIterator.next());
 
@@ -114,7 +113,7 @@ public class MediumRepositoryImpl implements MediumRepository {
         return credentials;
     }
 
-    private Map<String, Object> extractProperties( final MediumPost mediumPost ) {
+    private Map<String, Object> extractMediumPostProperties( final MediumPost mediumPost ) {
         final Map<String, Object> properties = new HashMap<>();
 
         final LocalDate publicationDate =
@@ -135,10 +134,11 @@ public class MediumRepositoryImpl implements MediumRepository {
         return properties;
     }
 
-    private void setPublicationNodeName( final MediumPublication mediumPublication, final ResourceResolver resourceResolver ) {
+    private void setMediumPublicationNodeName( final MediumPublication mediumPublication, final ResourceResolver resourceResolver ) {
         final Resource resource = resourceResolver.getResource(JCR_CONTENT_BASE_PATH + mediumPublication.getId());
         final ModifiableValueMap map = resource.adaptTo(ModifiableValueMap.class);
         map.put("name", mediumPublication.getName());
+        map.put("id", mediumPublication.getId());
     }
 
 
