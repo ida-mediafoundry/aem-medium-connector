@@ -3,23 +3,13 @@
           xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:description="Template for initial or main page of the site."
           jcr:primaryType="cq:Template"
-          jcr:title="medium-connector Content Page"
+          jcr:title="medium-connector XF Page"
           allowedPaths="[/content(/.*)?]"
           ranking="{Long}100">
     <jcr:content
             jcr:primaryType="cq:PageContent"
-            sling:resourceType="medium-connector/components/page/medium-page">
-        <par
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/parsys">
-
-            <list
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/list">
-
-            </list>
-
-        </par>
+            cq:designPath="/etc/designs/medium-connector"
+            sling:resourceType="medium-connector/components/page/medium-xf-page">
     </jcr:content>
 </jcr:root>
 
