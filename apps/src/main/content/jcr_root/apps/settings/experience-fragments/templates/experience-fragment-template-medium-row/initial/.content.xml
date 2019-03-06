@@ -10,7 +10,7 @@
             cq:xfShowInEditor="false"
             cq:xfSocialVariation="true"
             cq:xfVariantType="medium"
-            cq:xfMasterVariation="{Boolean}true"
+            cq:xfMasterVariation="{Boolean}false"
             jcr:primaryType="cq:PageContent"
             jcr:title="Medium Row"
             sling:resourceType="cq/experience-fragments/components/xfmedium-tile">

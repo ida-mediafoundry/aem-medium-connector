@@ -2,6 +2,10 @@ package be.ida.medium.repository.impl;
 
 import be.ida.medium.model.MediumPost;
 import be.ida.medium.repository.MediumXFManagerRepository;
+import be.ida.medium.strategy.AbstractXFVariationCreationStrategy;
+import be.ida.medium.strategy.XFRegularVariationCreationStrategy;
+import be.ida.medium.strategy.XFRowVariationCreationStrategy;
+import be.ida.medium.strategy.XFTileVariationCreationStrategy;
 import be.ida.medium.util.MediumResourceUtil;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
@@ -11,8 +15,6 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import static be.ida.medium.model.MediumPost.*;
 
 @Component(name = "XF Manager Repo", service = MediumXFManagerRepository.class, immediate = true)
 public class MediumXFManagerRepositoryImpl implements MediumXFManagerRepository {
@@ -36,9 +38,14 @@ public class MediumXFManagerRepositoryImpl implements MediumXFManagerRepository 
                     if ( resource == null ) {
                         final Page experienceFragment = pageManager.create(baseResource.getPath(), mediumPost.getId(), "/libs/cq/experience-fragments/components/experiencefragment/template", mediumPost.getTitle());
 
-                        final Page experienceFragmentVariation = pageManager.create(experienceFragment.getPath(), "medium-master-variation", "/apps/settings/experience-fragments/templates/experience-fragment-template-medium", mediumPost.getTitle());
+                        final AbstractXFVariationCreationStrategy rowCreationStrategy = new XFRowVariationCreationStrategy();
+                        rowCreationStrategy.createXFVariation(experienceFragment, mediumPost, pageManager);
 
-                        resolveVariationProperties(experienceFragmentVariation, mediumPost);
+                        final AbstractXFVariationCreationStrategy tileCreationStrategy = new XFTileVariationCreationStrategy();
+                        tileCreationStrategy.createXFVariation(experienceFragment, mediumPost, pageManager);
+
+                        final AbstractXFVariationCreationStrategy regularCreationStrategy = new XFRegularVariationCreationStrategy();
+                        regularCreationStrategy.createXFVariation(experienceFragment, mediumPost, pageManager);
 
                         resourceResolver.commit();
                     }
@@ -52,32 +59,6 @@ public class MediumXFManagerRepositoryImpl implements MediumXFManagerRepository 
             e.printStackTrace();
         } catch ( final PersistenceException e ) {
             e.printStackTrace();
-        }
-    }
-
-    private void resolveVariationProperties( final Page experienceFragmentVariation, final MediumPost mediumPost ) {
-        final Resource variationContentResource = experienceFragmentVariation.getContentResource();
-
-        if ( variationContentResource != null ) {
-            final Resource variationRootResource = variationContentResource.getChild("root");
-
-            if ( variationRootResource != null ) {
-                updateSpecificVariationNode(variationRootResource, MEDIUM_POST_CREATOR, mediumPost.getId());
-                updateSpecificVariationNode(variationRootResource, MEDIUM_POST_CREATOR, mediumPost.getCreator());
-                updateSpecificVariationNode(variationRootResource, MEDIUM_POST_IMAGE_SOURCE, mediumPost.getImageSource());
-                updateSpecificVariationNode(variationRootResource, MEDIUM_POST_LINK, mediumPost.getLink());
-                updateSpecificVariationNode(variationRootResource, MEDIUM_POST_PUBLICATION_DATE, mediumPost.getPublicationDate());
-                updateSpecificVariationNode(variationRootResource, MEDIUM_POST_TITLE, mediumPost.getTitle());
-                updateSpecificVariationNode(variationRootResource, MEDIUM_POST_UPDATE_DATE, mediumPost.getUpdateDate());
-            }
-        }
-    }
-
-    private void updateSpecificVariationNode( final Resource variationRootResource, final String childName, final Object value ) {
-        final ModifiableValueMap modifiableValueMap = variationRootResource.getChild(childName).adaptTo(ModifiableValueMap.class);
-
-        if ( modifiableValueMap != null ) {
-            modifiableValueMap.put("text", value);
         }
     }
 }
