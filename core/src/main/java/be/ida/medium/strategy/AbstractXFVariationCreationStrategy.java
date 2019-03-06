@@ -9,7 +9,7 @@ import org.apache.sling.api.resource.Resource;
 
 import static be.ida.medium.model.MediumPost.*;
 
-public class AbstractXFVariationCreationStrategy {
+public abstract class AbstractXFVariationCreationStrategy {
     final String templatePath;
     final String variationNodeName;
 
@@ -19,7 +19,7 @@ public class AbstractXFVariationCreationStrategy {
     }
 
     public void createXFVariation( final Page experienceFragment, final MediumPost mediumPost, final PageManager pageManager ) throws WCMException {
-        final Page experienceFragmentVariation = pageManager.create(experienceFragment.getPath(), variationNodeName, templatePath, mediumPost.getTitle());
+        final Page experienceFragmentVariation = pageManager.create(experienceFragment.getPath(), variationNodeName, templatePath, variationNodeName);
 
         resolveVariationProperties(experienceFragmentVariation, mediumPost);
     }
