@@ -11,6 +11,6 @@
         rep:privileges="{Name}[crx:replicate]"/>
     <allow2
         jcr:primaryType="rep:GrantACE"
-        rep:principalName="template-authors"
+        rep:principalName="medium-service-user"
         rep:privileges="{Name}[jcr:versionManagement,crx:replicate,rep:write,jcr:lockManagement]"/>
 </jcr:root>

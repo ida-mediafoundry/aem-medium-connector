@@ -2,8 +2,8 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="cq:Page">
-    <content-page/>
-    <experience-fragment-web-variation/>
-    <redirect-page/>
+    <experience-fragment-template-medium-regular/>
+    <experience-fragment-template-medium-row/>
+    <experience-fragment-template-medium-tile/>
     <rep:policy/>
 </jcr:root>

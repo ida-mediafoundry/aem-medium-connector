@@ -6,5 +6,5 @@
     <jcr:content
         jcr:description="Generic template for empty experience fragments variations"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Medium Empty Experience Fragment"/>
+        jcr:title="Hue Empty Experience Fragment"/>
 </jcr:root>

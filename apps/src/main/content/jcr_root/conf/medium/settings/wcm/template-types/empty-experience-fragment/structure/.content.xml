@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:template="/conf/medium/settings/wcm/templates/experience-fragment-web-variation"
+        cq:template="/conf/medium/settings/wcm/template-types/empty-experience-fragment"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="slingshot/components/structure/page">
         <root
