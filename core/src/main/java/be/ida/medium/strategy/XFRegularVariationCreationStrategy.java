@@ -1,7 +1,7 @@
 package be.ida.medium.strategy;
 
 public class XFRegularVariationCreationStrategy extends AbstractXFVariationCreationStrategy {
-    static final String TEMPLATE_PATH = "/apps/settings/experience-fragments/templates/experience-fragment-template-regular";
+    static final String TEMPLATE_PATH = "/apps/settings/experience-fragments/templates/experience-fragment-template-medium-regular";
     static final String VARIATION_NAME = "medium-regular-variation";
 
     public XFRegularVariationCreationStrategy() {

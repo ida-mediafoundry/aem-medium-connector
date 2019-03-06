@@ -13,7 +13,7 @@
             cq:xfMasterVariation="{Boolean}true"
             jcr:primaryType="cq:PageContent"
             jcr:title="Medium Regular"
-            sling:resourceType="cq/experience-fragments/components/xfmedium-tile">
+            sling:resourceType="cq/experience-fragments/components/xfmedium-regular">
         <root
                 jcr:lastModified="{Date}2016-08-01T12:13:20.297+03:00"
                 jcr:lastModifiedBy="admin"
