@@ -42,9 +42,7 @@ public class MediumConnector {
         final String rawJsonString = retrieveRawJson(url);
         final Publication pub = mediumJsonParser.jsonToPublication(rawJsonString);
         final MediumPublication mediumPublication = mediumPublicationMapper.publicationToMediumPublication(pub);
-//        mediumService.storeMediumPublication(mediumPublication);
-
-        mediumXFManagerService.createMediumXF(mediumPublication.getPosts().get(0), mediumPublication.getId());
+        mediumService.storeMediumPublication(mediumPublication);
     }
 
     private String retrieveRawJson( final String url ) {
