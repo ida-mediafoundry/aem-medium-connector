@@ -2,77 +2,25 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-            cq:lastModified="{Date}2016-08-01T12:13:41.936+03:00"
-            cq:lastModifiedBy="admin"
-            cq:tags="[experience-fragments:variation/medium]"
-            cq:xfShowInEditor="false"
-            cq:template="/conf/medium/settings/wcm/templates/experience-fragment-template-medium-row"
-            cq:xfSocialVariation="true"
-            cq:xfVariantType="medium"
-            cq:xfMasterVariation="{Boolean}false"
+            cq:deviceGroups="[/etc/mobile/groups/responsive]"
+            cq:template="/conf/experience-fragments/settings/wcm/templates/experience-fragment-template-medium"
             jcr:primaryType="cq:PageContent"
-            jcr:title="Medium Row"
-            sling:resourceType="cq/experience-fragments/components/xfmedium-row">
+            sling:resourceType="cq/experience-fragments/components/xfmedium">
         <root
-                jcr:lastModified="{Date}2016-08-01T12:13:20.297+03:00"
-                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-            <variationTitle jcr:created="{Date}2016-08-01T12:13:40.288+03:00"
-                            jcr:createdBy="admin"
-                            jcr:lastModified="{Date}2016-08-01T12:13:40.288+03:00"
-                            jcr:lastModifiedBy="admin"
-                            jcr:primaryType="nt:unstructured"
-                            fieldLabel="Row variation"
-                            sling:resourceType="wcm/foundation/components/title"/>
-            <mediumPostId jcr:created="{Date}2016-08-01T12:13:40.288+03:00"
-                          jcr:createdBy="admin"
-                          jcr:lastModified="{Date}2016-08-01T12:13:40.288+03:00"
-                          jcr:lastModifiedBy="admin"
-                          jcr:primaryType="nt:unstructured"
-                          sling:resourceType="wcm/foundation/components/text"/>
-            <mediumPostCreator
-                    jcr:created="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/text"/>
-            <mediumPostTitle
-                    jcr:created="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/text"/>
-            <mediumPostImageSource
-                    jcr:created="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/text"/>
-            <mediumPostPublicationDate
-                    jcr:created="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/text"/>
-            <mediumPostUpdateDate
-                    jcr:created="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/text"/>
-            <mediumPostLink
-                    jcr:created="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-08-01T12:13:40.288+03:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/text"/>
-        </root>
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true"/>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                        jcr:primaryType="nt:unstructured"
+                        title="Smaller Screen"
+                        width="{Long}650"/>
+                <tablet
+                        jcr:primaryType="nt:unstructured"
+                        title="Tablet"
+                        width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
     </jcr:content>
 </jcr:root>

@@ -5,11 +5,11 @@
     <jcr:content
             cq:lastModified="{Date}2016-08-01T12:13:41.936+03:00"
             cq:lastModifiedBy="admin"
-            cq:tags="[experience-fragments:variation/medium]"
+            cq:tags="[experience-fragments:variation/mediumrow]"
             cq:xfShowInEditor="false"
             cq:template="/conf/medium/settings/wcm/templates/experience-fragment-template-medium-row"
             cq:xfSocialVariation="true"
-            cq:xfVariantType="medium"
+            cq:xfVariantType="mediumrow"
             cq:xfMasterVariation="{Boolean}false"
             jcr:primaryType="cq:PageContent"
             jcr:title="Medium Row"
