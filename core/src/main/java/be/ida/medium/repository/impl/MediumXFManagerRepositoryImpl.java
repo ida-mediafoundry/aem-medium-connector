@@ -38,6 +38,8 @@ public class MediumXFManagerRepositoryImpl implements MediumXFManagerRepository 
                     if ( resource == null ) {
                         final Page experienceFragment = pageManager.create(baseResource.getPath(), mediumPost.getId(), "/libs/cq/experience-fragments/components/experiencefragment/template", mediumPost.getTitle());
 
+                        resourceResolver.getResource("/conf/medium/settings/wcm/templates/experience-fragment-template-medium-row/initial");
+
                         final AbstractXFVariationCreationStrategy rowCreationStrategy = new XFRowVariationCreationStrategy();
                         rowCreationStrategy.createXFVariation(experienceFragment, mediumPost, pageManager);
 
