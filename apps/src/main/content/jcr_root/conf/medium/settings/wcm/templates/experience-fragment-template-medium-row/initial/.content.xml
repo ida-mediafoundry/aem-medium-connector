@@ -17,7 +17,7 @@
         <root
                 jcr:lastModified="{Date}2016-08-01T12:13:20.297+03:00"
                 jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
+                jcr:primaryType="nt:unstructured" css="row-variation"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
             <variationTitle jcr:created="{Date}2016-08-01T12:13:40.288+03:00"
                             jcr:createdBy="admin"
