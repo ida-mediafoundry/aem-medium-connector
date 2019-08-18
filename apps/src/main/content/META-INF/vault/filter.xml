@@ -3,7 +3,7 @@
     <filter root="/apps/medium-connector" mode="replace"/>
     <filter root="/apps/sling" mode="replace"/>
     <filter root="/etc/designs/medium-connector" mode="replace"/>
-
+    <filter root="/home/users/system/jetpack-medium-service" mode="replace" />
     <filter root="/apps/dependencies/install" mode="replace"/>
 
     <filter root="/apps/cq" mode="replace"/>
@@ -12,6 +12,7 @@
     <filter root="/conf/medium" mode="replace"/>
 
     <filter root="/content/experience-fragments" mode="update"/>
+    <filter root="/content/data" mode="update"/>
 
     <filter root="/etc/workflow/launcher/config/mediumpost_convertor" mode="replace"/>
     <filter root="/etc/workflow/models/medium-post-processor" mode="replace"/>

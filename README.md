@@ -18,7 +18,7 @@ Additionally these posts are processed in Experience Fragments.
 
 1. Login on `http://localhost:4502/crx/explorer/index.jsp`
 2. Navigate to User Administration > Create System User
-3. Create `medium-service-user` 
+3. Create `jetpack-medium-service` 
 4. Assign permissions to `/apps/cq/experience-fragments` in `http://localhost:4502/useradmin`
     - /conf/medium
     - /apps/cq/experience-fragments

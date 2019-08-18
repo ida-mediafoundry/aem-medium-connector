@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
     jcr:primaryType="rep:ACL">
-    <allow
+    <allow100
         jcr:primaryType="rep:GrantACE"
         rep:principalName="jetpack-medium-service"
-        rep:privileges="{Name}[jcr:read]"/>
+        rep:privileges="{Name}[jcr:all]"/>
 </jcr:root>

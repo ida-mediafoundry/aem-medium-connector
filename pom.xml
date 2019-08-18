@@ -17,11 +17,19 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>be.ida</groupId>
+    <groupId>be.ida.jetpack</groupId>
     <artifactId>medium-connector</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <description>medium-connector</description>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>Jetpack Medium Connector</name>
+    <description>Jetpack Medium Connector - Creates Experience fragments based on a Medium rss feed.</description>
+
+
+    <organization>
+        <name>iDA Mediafoundry</name>
+        <url>https://www.ida-mediafoundry.be</url>
+    </organization>
 
     <modules>
         <module>core</module>
@@ -205,6 +213,9 @@
                         <failOnMissingEmbed>true</failOnMissingEmbed>
                         <userId>${vault.user}</userId>
                         <password>${vault.password}</password>
+                        <properties>
+                            <acHandling>merge_preserve</acHandling>
+                        </properties>
                     </configuration>
                 </plugin>
                 <!-- Apache Felix Bundle Plugin -->
@@ -520,7 +531,7 @@
             <dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>uber-jar</artifactId>
-                <version>6.3.0</version>
+                <version>6.5.0</version>
                 <classifier>apis</classifier>
                 <scope>provided</scope>
             </dependency>

@@ -22,7 +22,7 @@
                 sling:resourceType="cq/workflow/components/model/process">
                 <metaData
                     jcr:primaryType="nt:unstructured"
-                    PROCESS="be.ida.medium.workflow.MediumPostXFCreatorWorkflowStep"
+                    PROCESS="be.ida.jetpack.medium.workflow.MediumPostXFCreatorWorkflowStep"
                     PROCESS_AUTO_ADVANCE="true"/>
             </process>
         </flow>

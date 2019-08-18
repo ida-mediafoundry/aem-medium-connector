@@ -3,12 +3,12 @@
     <primaryNodeType>sling:OsgiConfig</primaryNodeType>
     <property>
         <name>user.default</name>
-        <value>medium-service-user</value>
+        <value>jetpack-medium-service</value>
     </property>
     <property>
         <name>user.mapping</name>
         <values>
-            <value>be.ida.medium=medium-service-user</value>
+            <value>be.ida.jetpack.medium=jetpack-medium-service</value>
         </values>
     </property>
 </node>

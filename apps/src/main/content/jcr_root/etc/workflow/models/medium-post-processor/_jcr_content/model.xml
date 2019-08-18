@@ -23,7 +23,7 @@
             type="PROCESS">
             <metaData
                 jcr:primaryType="nt:unstructured"
-                PROCESS="be.ida.medium.workflow.MediumPostXFCreatorWorkflowStep"/>
+                PROCESS="be.ida.jetpack.medium.workflow.MediumPostXFCreatorWorkflowStep"/>
         </node1>
         <node2
             jcr:primaryType="cq:WorkflowNode"
